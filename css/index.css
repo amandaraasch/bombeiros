@@ -1,0 +1,51 @@
+body
+{
+    margin: 0px;
+    padding: 0px;
+    width: 100%;
+    height: 100vh;
+     background-color: red;
+    overflow: hidden;
+
+}
+
+.principal
+{
+    width: 99%;
+    height: 99vh;
+}
+
+
+
+.logo
+{
+    border-radius: 75px;
+    position: absolute;
+    top: 240px;
+    left: 69px; 
+    animation: zoomIn 1s;
+    width:190px;
+}
+
+
+  
+
+
+
+
+.carregando {
+  border: 4px solid #e5e5e5;
+  border-top-color: #080304;
+  height: 200px;
+  width: 200px;
+  margin-top:230px;
+  margin-left: 60px;
+  animation: is-rotating 1s infinite;
+  border-radius: 50%;
+}
+
+@keyframes is-rotating {
+    to {
+      transform: rotate(1turn);
+    }
+  }
