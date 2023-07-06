@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/pagina1.css">
+    <script src="../jquery.js"></script>
+    <title>pg1</title>
+</head>
+<body>
+    <div class="principal">
+
+
+        <div class="menu">
+            <img class="logo" src="../img/logo.png" width="50px">
+            <p><B>OCORRÊNCIA</B></p>
+        </div>
+       <div class="dentro">
+        <div onclick="toggleDiv(conteudo1)" id="conteudo1" class="conteudo">
+            <span><B>DADOS INICIAIS</B></span>
+            <h2>Conteúdo da Div 1</h2>
+            <p>Esta é a Div 1.</p>
+          </div>
+        
+          <div onclick="toggleDiv(conteudo2)" id="conteudo2" class="conteudo">
+            <span><B>TIPO DE OCORRÊNCIA</B></span>
+            <h2>Conteúdo da Div 2</h2>
+            <p>Esta é a Div 2.</p>
+          </div>
+          <div onclick="toggleDiv(conteudo3)" id="conteudo3" class="conteudo">
+            <span><B>AVALIAÇÃO DO PACIENTE</B></span>
+            <h2>Conteúdo da Div 2</h2>
+            <p>Esta é a Div 2.</p>
+          </div>
+          <div onclick="toggleDiv(conteudo4)" id="conteudo4" class="conteudo">
+            <span><B>SINAIS VITAIS</B></span>
+            <h2>Conteúdo da Div 2</h2>
+            <p>Esta é a Div 2.</p>
+          </div>
+          <div onclick="toggleDiv(conteudo5)" id="conteudo5" class="conteudo">
+            <span><B>PROBLEMAS ENCONTRADOS </B></span>
+            <h2>Conteúdo da Div 2</h2>
+            <p>Esta é a Div 2.</p>
+          </div>
+          <div onclick="toggleDiv(conteudo6)" id="conteudo6" class="conteudo">
+            <span><B>LOCALIZAÇÃO DOS TRAUMAS</B></span>
+            <h2>Conteúdo da Div 2</h2>
+            <p>Esta é a Div 2.</p>
+          </div>
+          <div onclick="toggleDiv(conteudo7)" id="conteudo7" class="conteudo">
+            <span><B>SINAIS E SINTOMAS</B></span>
+            <h2>Conteúdo da Div 2</h2>
+            <p>Esta é a Div 2.</p>
+          </div>
+          <div onclick="toggleDiv(conteudo8)" id="conteudo8" class="conteudo">
+            <span><B>FORMA DE CONDUÇÃO</B></span>
+            <h2>Conteúdo da Div 2</h2>
+            <p>Esta é a Div 2.</p>
+          </div>
+          <div onclick="toggleDiv(conteudo9)" id="conteudo9" class="conteudo">
+            <span><B>DECISÃO DE TRANSPORTE</B></span>
+            <h2>Conteúdo da Div 2</h2>
+            <p>Esta é a Div 2.</p>
+          </div>
+          <div onclick="toggleDiv(conteudo10)" id="conteudo10" class="conteudo">
+            <span><B>VÍTIMA ERA</B></span>
+            <h2>Conteúdo da Div 2</h2>
+            <p>Esta é a Div 2.</p>
+          </div>
+     </div> 
+          
+    </div>
+</body>
+<script>
+    
+    var divAberta = null;
+
+    function toggleDiv(div) {
+      if (divAberta === div) {
+        // Se a div clicada já estiver aberta, feche-a
+        div.classList.remove("aberta");
+        divAberta = null;
+      } else {
+        // Feche a div atualmente aberta, se existir
+        if (divAberta !== null) {
+          divAberta.classList.remove("aberta");
+        }
+        // Abra a nova div clicada e atualize a variável divAberta
+        div.classList.add("aberta");
+        divAberta = div;
+      }
+    }
+</script>
+</html>
