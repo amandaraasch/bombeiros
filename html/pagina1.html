@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/pagina1.css">
+    <script src="../jquery.js"></script>
+    <title>pg1</title>
+</head>
+<body>
+    <div class="principal">
+
+
+        <div class="menu">
+            <img class="logo" src="../img/medicina.png" width="70px">
+            <p><B>OCORRÊNCIA</B></p>
+        </div>
+       <div class="dentro">
+        <div onclick="toggleDiv(conteudo1)" id="conteudo1" class="conteudo">
+           <span><B>DADOS INICIAIS</B></span>
+           <h2>DADOS INICIAIS</h2>
+
+           <p><legend> <b>DATA</b></legend>
+          <input  class="caixa2" type="date" name="aniversario"></p>
+          <p><legend> <b>SEXO</b></legend>
+          <input type="checkbox" id="Feminino" name="feminino"> &nbsp; Feminino <br> <br>
+          <input type="checkbox" id="Masculino" name="Masculino"> &nbsp; Masculino <br>
+
+          <p><legend> <b>NOME HOSPITAL</b></legend>
+          <input  class="caixa2" type="text" name="nome_hospital" PLACEHOLDER="nome"></p><p><legend> 
+          <DIV class="ni"> <p><legend> <b>NOME / IDADE DO PACIENTE:</b></legend> 
+          <input  class="caixa2" type="text" name="NOMEPAC" PLACEHOLDER="nome">
+          <input  class="caixa" type="number" name="IDADEPAC" PLACEHOLDER="idade"></p><p><legend>
+          </DIV> 
+          <p><legend> <b>PACIENTE:</b></legend> 
+          <input  class="caixa2" type="number" name="NOMEPAC" PLACEHOLDER="rg/cpf">
+          <input max="14" class="caixa3" type="text" id="telefone" name="telefone" PLACEHOLDER="fone">
+          <p><legend> <b>ACOMPANHANTE:</b></legend> 
+          <input  class="caixa2" type="text" name="NOMEPAC" PLACEHOLDER="nome">
+          <input  class="caixa" type="number" name="IDADEPAC" PLACEHOLDER="idade"></p><p><legend>
+          <p><legend> <b>LOCAL DA OCORRÊNCIA</b></legend>
+          <input  class="caixa2" type="text" name="Local_ocorrencia" PLACEHOLDER="endereço"></p><p><legend> 
+                     
+      </div>
+        
+          <div onclick="toggleDiv(conteudo2)" id="conteudo2" class="conteudo">
+            <span><B>TIPO DE OCORRÊNCIA</B></span>
+            <h2>TIPO DE OCORRÊNCIA</h2>
+            <p> 
+              <input type="checkbox" id="" name=""> &nbsp; CAUSADO POR ANIMAIS <br> 
+              <input type="checkbox" id="" name=""> &nbsp; COM MEIO DE TRANSPORTE  <br> 
+              <input type="checkbox" id="" name=""> &nbsp; DESMORONAMENTO  <br> 
+              <input type="checkbox" id="" name=""> &nbsp; EMERGÊNCIA MÉDICA <br> 
+              <input type="checkbox" id="" name=""> &nbsp; QUEDA DE ALTURA 2M  <br>  
+              <input type="checkbox" id="" name=""> &nbsp; TENTATIVA DE SUICÍDIO <br>
+              <input type="checkbox" id="" name=""> &nbsp; QUEDA PRÓPIA DE ALTURA <br> 
+              <input type="checkbox" id="" name=""> &nbsp; AFOGAMENTO <br>  
+              <input type="checkbox" id="" name=""> &nbsp; AGRESSÃO <br>  
+              <input type="checkbox" id="" name=""> &nbsp; ATROPELAMENTO<br>  
+              <input type="checkbox" id="" name=""> &nbsp; CHOQUE ELÉTRICO <br>
+              <input type="checkbox" id="" name=""> &nbsp; DESABAMENTO <br>  
+              <input type="checkbox" id="" name=""> &nbsp; DOMÉSTICO <br>  
+              <input type="checkbox" id="" name=""> &nbsp; ESPORTIVO  <br>  
+              <input type="checkbox" id="" name=""> &nbsp; INTOXICAÇÃO <br>  
+              <input type="checkbox" id="" name=""> &nbsp; QUEDA BICICLETA  <br>  
+              <input type="checkbox" id="" name=""> &nbsp; QUEDA MOTO <br>  
+              <input type="checkbox" id="" name=""> &nbsp; QUEDA NIVEL < 2M <br> 
+              <input type="checkbox" id="" name=""> &nbsp; TRABALHO <br>  
+              <input type="checkbox" id="" name=""> &nbsp; TRANSFERÊNCIA<br>
+              <div class="outros">  
+              <p><legend> <b>OUTROS:</b></legend> 
+                <input type="checkbox" id="" name=""> &nbsp; 
+                <input  class="caixa1" type="TEXT" name="outros" PLACEHOLDER="digite">
+            </p> 
+          </div>
+        </div>
+          <div onclick="toggleDiv(conteudo3)" id="conteudo3" class="conteudo">
+            <span><B>AVALIAÇÃO DO PACIENTE</B></span>
+            <h2>Conteúdo da Div 2</h2>
+            <p>Esta é a Div 2.</p>
+          </div>
+          <div onclick="toggleDiv(conteudo4)" id="conteudo4" class="conteudo">
+            <span><B>SINAIS VITAIS</B></span>
+            <h2>Conteúdo da Div 2</h2>
+            <p>Esta é a Div 2.</p>
+          </div>
+          
+     </div> 
+          
+    </div>
+</body>
+<script>
+    
+    var divAberta = null;
+
+
+    function toggleDiv(div) {
+     
+        if (divAberta !== null) {
+          conteudo1.scrollTo({top: 0,behavior: 'smooth'});
+          conteudo2.scrollTo({top: 0,behavior: 'smooth'});
+          conteudo3.scrollTo({top: 0,behavior: 'smooth'});
+          conteudo4.scrollTo({top: 0,behavior: 'smooth'});
+          divAberta.classList.remove("aberta");
+        }
+        // Abra a nova div clicada e atualize a variável divAberta
+        div.classList.add("aberta");
+        divAberta = div;
+      }
+    
+</script>
+</html>
