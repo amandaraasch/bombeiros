@@ -1,0 +1,139 @@
+
+body
+{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    justify-items: center;
+    align-content: center;
+    align-items: center;
+    overflow: hidden;
+    background-color: #343186;
+    
+}
+.logo
+{
+ 
+    margin-top:-100px
+}
+.um
+{
+    color: white;
+    justify-content: center;
+    justify-items: center;
+    align-content: center;
+    align-items: center;
+    margin-top: 20px;
+    font-size: 30px;
+    font-family: 'Effra Heavy', sans-serif;
+font-family: 'Effra Light', sans-serif;
+font-family: 'Effra Medium', sans-serif;
+font-family: 'Effra', sans-serif;
+   
+   
+
+}
+.dois
+{
+    color:white;
+    justify-content: center;
+    justify-items: center;
+    align-content: center;
+    align-items: center;
+    margin-top: 5px;
+    font-size: 13px;
+    font-family: 'Poppins', sans-serif;
+
+
+   
+}
+.tres
+{
+    flex-direction: column;  
+    justify-content: center;
+    justify-items: center;
+    align-content: center;
+    align-items: center;
+}
+.usuario
+{
+    
+    justify-content: center;
+    justify-items: center;
+    align-content: center;
+    align-items: center;
+    margin-top: 50px;
+
+}
+.senha
+{
+    
+    justify-content: center;
+    justify-items: center;
+    align-content: center;
+    align-items: center;
+    margin-top: 10px;
+
+}
+.caixa
+{
+    width: 200px;
+    height: 40px;
+    border-radius: 50px;
+    background-color: #e2353b;
+    justify-content: center;
+    justify-items: center;
+    align-content: center;
+    align-items: center;
+    color: aliceblue;
+
+
+}
+.user
+{
+    justify-content: center;
+    justify-items: center;
+    align-content: center;
+    align-items: center;
+}
+.entrar
+{
+    width: 100px;
+    height: 40px;
+    border-radius: 20px;
+    background-color:#FFFFFF ;
+    justify-content: center;
+    justify-items: center;
+    align-content: center;
+    align-items: center;
+    color: #343186;
+    margin-top: 50px;
+    margin-left: 50px;
+    font-size: 15px;
+    font-family: 'Effra Heavy', sans-serif;
+font-family: 'Effra Light', sans-serif;
+font-family: 'Effra Medium', sans-serif;
+font-family: 'Effra', sans-serif;
+}
+.escrita
+{
+    margin-left:18px;
+    margin-top: 10px;
+}
+#mensagemErro
+ {
+    color: rgb(168, 141, 141);
+    position: absolute;
+   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    z-index: 10;
+    display: flex;
+    margin-top:20px;
+    font-size: 13px;
+    justify-content: center;
+    justify-items: center;
+    align-content: center;
+    align-items: center;
+    margin-left: -10px;
+ }

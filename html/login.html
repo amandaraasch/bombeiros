@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/login.css">
+    <link href="https://fonts.cdnfonts.com/css/effra-heavy" rel="stylesheet">
+    <link rel="Website Icon" type="png"
+    href="../img/noar.png">
+    <title>LOGIN</title>
+
+</head>
+<body>
+
+    <img class="logo" src="../img/noar.png" width="170px">
+    <div class="um">
+       <b> LOGIN</b>
+    </div>
+    <div class="dois">
+     Preencha os campos com os dados necessários
+    </div>
+    <form action="../verifica.php" method="post" onsubmit="return validarCampo()">
+    <div class="tres">
+      
+        <div class="usuario">
+            <input class="caixa" type="login" id="login" name="login" placeholder="Usuário">
+        </div>
+        <div class="senha">
+            <input class="caixa" type="senha" id="senha" name="senha" placeholder="Senha">
+        </div>
+        <div id="mensagemErro" ></div>
+        
+    </div>
+    <button class="entrar" type="submit">ENTRAR</button>
+    
+</form>
+</body>
+<script>
+    function validarCampo() {
+      var campo = document.getElementById('login').value;
+      
+      if (campo === '') {
+        document.getElementById('mensagemErro').innerHTML = 'Campo vazio! Por favor, preencha o campo.';
+        return false;
+      }
+      
+      
+    
+        var campo = document.getElementById('senha').value;
+      
+      if (campo === '') {
+        document.getElementById('mensagemErro').innerHTML = 'Campo vazio! Por favor, preencha o campo.';
+        return false;
+      }
+      
+      return true;
+    }
+</script>
+</html>

@@ -1,0 +1,153 @@
+body
+{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    justify-items: center;
+    align-content: center;
+    align-items: center;
+    overflow: hidden;
+    background-color:#FFFFFF;
+    
+}
+.menu
+{
+    background-color:#E2353C ;
+    margin-left: -10px ;
+   
+    width: 365px;
+    height: 70px;
+}
+.um
+{
+    flex-direction: row;
+
+}
+.logo
+{
+    margin-top: 10px;
+    margin-left: -35px;
+}
+.escrita
+{
+    flex-direction: column;
+   
+}
+.titulo
+{
+    font-size: 18px;
+    font-family: 'Effra Heavy', sans-serif;
+font-family: 'Effra Light', sans-serif;
+font-family: 'Effra Medium', sans-serif;
+font-family: 'Effra', sans-serif;
+margin-left: 80px;
+margin-top:-90px ;
+}
+.sub
+{
+    font-family: 'Poppins', sans-serif;
+    margin-left: 80px;
+    font-size: 15px;
+
+
+}
+
+.conteudo {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease;
+    background-color: #D9D9D9;
+    padding: 18px;
+    color:#343186;
+    font-family: 'AkzidenzGrotesk', sans-serif;
+    border:10px;
+    width: 200px;
+   
+    margin: 10px auto;
+    cursor: pointer;
+  }
+
+ 
+  
+  .conteudo span {
+    margin-top: -10px;
+    display: block;
+    display: flex;
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
+    align-content: center;
+    
+    
+    
+  }
+
+  .conteudo.aberta span {
+    display: none;
+    
+  }
+    
+.conteudo.aberta {
+ max-height: 500px;
+ border-radius: 10px;
+ overflow-y: scroll;
+;
+ 
+ }
+    
+buttoN {
+display: block;
+height: 150px;
+background-color: white;
+border-radius: 10px;
+
+ margin: 10px auto; /* Centraliza os botões horizontalmente */
+}
+.ocorrencia
+{
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
+    align-content: center;
+    display: flex;
+    margin-top: 40px;
+    height: 700px;
+    flex-direction: column;
+    overflow-y: scroll;
+    /*background-color: black;*/
+    width: 300px;
+    height: 400px;
+    margin-top:100px ;
+}
+.ni
+{
+  display: flex;
+  flex-direction: row;
+  
+}
+.caixa
+{
+  width: 40px;
+  
+}
+
+.caixa1
+{
+width: 90px;
+}
+
+/*caixa2{}*/
+.caixa3
+{
+  width: 60px;
+}
+.ok
+{
+    height: 50px;
+    background-color: #343186;
+    color: #D9D9D9;
+    font-size: 12px;
+}
+
