@@ -77,17 +77,28 @@ font-family: 'Effra', sans-serif;
     margin-top: 10px;
 
 }
+.caixa::placeholder
+{
+    justify-content: center;
+    justify-items: center;
+    align-content: center;
+    align-items: center;
+    display: flex;
+    color:rgba(255, 255, 255, 0.753);
+    font-size: 15px;
+}
 .caixa
 {
-    width: 200px;
-    height: 40px;
+    width: 250px;
+    height: 35px;
     border-radius: 50px;
     background-color: #e2353b;
     justify-content: center;
     justify-items: center;
     align-content: center;
     align-items: center;
-    color: aliceblue;
+    color: white;
+    text-align: center;
 
 
 }
@@ -100,7 +111,7 @@ font-family: 'Effra', sans-serif;
 }
 .entrar
 {
-    width: 100px;
+    width: 150px;
     height: 40px;
     border-radius: 20px;
     background-color:#FFFFFF ;
@@ -135,5 +146,5 @@ font-family: 'Effra', sans-serif;
     justify-items: center;
     align-content: center;
     align-items: center;
-    margin-left: -10px;
+    margin-left: 12px;
  }
