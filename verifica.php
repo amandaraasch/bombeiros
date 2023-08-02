@@ -6,7 +6,7 @@ echo($login);
 echo($senha);
     include("conecta.php"); //conecta com o banco de dados
 
-        $comando = $pdo->prepare("SELECT * FROM cadastro where login= '$login' and senha= '$senha' ");
+        $comando = $pdo->prepare("SELECT * FROM usuarios where login= '$login' and senha= '$senha' ");
         $resultado = $comando->execute();
         $n = 0;
         $admin = "n";
