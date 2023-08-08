@@ -97,6 +97,23 @@ font-family: 'Effra', sans-serif;
 }
 
 
+.inicial
+{
+margin-left: 10px;
+width: 90%;
+height: 40px;
+background-color: pink;
+}
+
+.esconder
+{
+margin-top: 10px;
+margin-left: 10px;
+width: 90%;
+height: 100px;
+background-color: aqua;
+display: none;
+}
 /*
 .b
 {

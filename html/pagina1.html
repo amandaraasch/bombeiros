@@ -27,9 +27,21 @@
 
     <div id="principal" class="principal">
 
-        <div id="d1" class="d1" onclick="animar('d1');"></div>   <br>
-        <div id="d2" class="d2" onclick="animar('d2');"></div>   <br>
-        <div id="d3" class="d3" onclick="animar('d3');"></div>   <br>
+        <div id="d1" class="d1" onclick="animar('d1');">
+          <div class="inicial"></div>
+            <div class="esconder" id="esconder1"></div>
+        </div>   <br>
+
+        <div id="d2" class="d2" onclick="animar('d2');">
+          <div class="inicial"></div>
+            <div class="esconder" id="esconder2"></div>
+        </div>   <br>
+
+        <div id="d3" class="d3" onclick="animar('d3');">
+          <div class="inicial"></div>
+            <div class="esconder" id="esconder3"></div>
+        
+        </div>   <br>
 
     </div>
     
@@ -50,11 +62,30 @@
     function animar(ID) {
     var divHeight = $("#" + ID).height();
 
+    esconder1.style.display="none"
+    esconder2.style.display="none"
+    esconder3.style.display="none"
+    
     // Se a div estiver aberta (com altura maior que 130px), fechar a div
     if (divHeight > 130) {
         $("#" + ID).animate({ height: "130px" });
-    } else { // Caso contrário, abrir a div para 200px
+    } else { // Caso contrário, abrir a div para 300px
         $("#" + ID).animate({ height: "300px" });
+        if(ID=="d1")
+        {
+          esconder1.style.display="block"// esconder as div com os dados
+        }
+
+        if(ID=="d2")
+        {
+          esconder2.style.display="block"
+        }
+
+        if(ID=="d3")
+        {
+          esconder3.style.display="block"
+        }
+
 
         // Fechar as outras divs, caso estejam abertas
         if (ID !== "d1") {
