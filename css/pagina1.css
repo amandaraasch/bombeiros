@@ -1,106 +1,146 @@
-body 
+body
 {
-    font-size: 16px;
-    background-color: rgb(107, 175, 187);
-}
-    
-
-.conteudo {
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height 0.2s ease;
-    background-color: white;
-    padding: 18px;
-    border:10px;
-    width: 300px;
-    margin: 10px auto;
-    cursor: pointer;
-  }
-
- 
-  
-  .conteudo span {
-    margin-top: -10px;
-    display: block;
+    width: 100%;
+    height: 100vh;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     justify-items: center;
-    align-items: center;
     align-content: center;
+    align-items: center;
+    overflow: hidden;
+    background-color:#FFFFFF;
+    margin: 0px;
     
-  }
+}
 
-  .conteudo.aberta span {
-    display: none;
-    
-  }
-    
+.menu
+{
+  background-color: #e2353b;
+  top: 0px;
+  width: 100%;
+  height: 60px;
+}
+
+.menu2
+{
+  background-color: #e2353b;
+  margin-top: 10px;
+  width: 360px;
+  height: 60px;
+  overflow: hidden;
+}
+.um
+{
+  display: flex;
+  flex-direction: row;
+  margin-top: 20px;
+  margin-left: -20px;
+}
+
+.escrita
+{
+  height: 70px;
+  display: flex;
+  flex-direction: column;
+  margin-top: 30px;
+}
+
+.titulo
+{
+  font-size: 18px;
+  font-family: 'Effra Heavy', sans-serif;
+font-family: 'Effra Light', sans-serif;
+font-family: 'Effra Medium', sans-serif;
+font-family: 'Effra', sans-serif;
+}
+
+.sub
+{
+  font-family: 'Poppins', sans-serif;
+  font-size: 15px;
+}
+
+.principal{
+  width: 320px;
+  height: 500px;
+  /*background-color: black;*/
+  overflow: scroll;
+}
+
+.d1{
+  width: 250px;
+  height: 130px;
+  border-radius: 10px;
+  border-color: rgb(143, 137, 137);
+  background-color: silver;
+  margin-top: 25px;
+  margin-left: 40px;
+}
+
+.d2{
+  width: 250px;
+  height: 130px;
+  border-radius: 10px;
+  background-color: silver;
+  margin-top: 25px;
+  margin-left: 40px;
+}
+
+.d3{
+  width: 250px;
+  height: 130px;
+  background-color: silver;
+  border-radius: 10px;
+  margin-top: 25px;
+  margin-left: 40px;
+}
+
+
+/*
+.b
+{
+font-size: 20px;
+color: #343186;
+}
+.conteudo 
+{
+  max-height: 90px;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+  background-color: #e4dbdb;
+  padding: 10px;
+  border: 2px solid #d3d3d3;
+  border-radius: 15px;
+  width: 230px;
+  margin: 10px auto;
+  cursor: pointer;
+  color: black;
+  
+}
+
 .conteudo.aberta {
- max-height: 500px;
- border-radius: 10px;
- overflow-y: scroll;
- 
- }
-    
-buttoN {
+  max-height: 700px;
+}
+
+.conteudo .texto-inicial
+{
+  display: block;
+  justify-content: center;
+  justify-items: center;
+  align-items: center;
+  align-content: center;
+  
+}
+.conteudo.aberta .texto-inicial {
+  display: none; /* Oculta o texto inicial quando a div estiver aberta */
+
+
+.ok {
 display: block;
-height: 50px;
-background-color: white;
+height: 150px;
+background-color: rgb(172, 52, 52);
 border-radius: 10px;
 
  margin: 10px auto; /* Centraliza os botões horizontalmente */
 }
-.menu
-{
-    background-color: rgba(44, 102, 136, 0.699);
-    margin-left: -10px ;
-    margin-top: -10px;
-    width: 365px;
-    height: 70px;
-   
-}
-.menu P
-{
-    color: white;
-    margin-top: 50px;
-    margin-left: 80px;
-    font-size: 30px;
-}
-.logo
-{
-    margin-left: 0px;
-    margin-top: 10px;
-} 
-.dentro
-{
-   
-    justify-content: center;
-    justify-items: center;
-    align-items: center;
-    align-content: center;
-    display: flex;
-    margin-top: 40px;
-    height: 700px;
-    flex-direction: column;
-}  
-.ni
-{
-  display: flex;
-  flex-direction: row;
-}
-.caixa
-{
-  width: 40px;
-}
-
-.caixa1
-{
-width: 90px;
-}
-
-/*caixa2{}*/
-.caixa3
-{
-  width: 60px;
-}
-
