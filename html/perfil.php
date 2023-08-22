@@ -18,12 +18,30 @@
                         include ("../conecta.php");
                         $logado = $_SESSION["logado"];
 
-                        $comando = $pdo->prepare("SELECT * FROM usuarios where login='$logado'");
+                        $comando = $pdo->prepare("SELECT * FROM cadastro where login='$logado'");
                         $resultado = $comando->execute();
-                
+                        $cep="";
                         while( $linhas = $comando->fetch()){
                     
                             $login = $linhas["login"];
+                            $cep = $linhas["cep"];
+                            $descricao = $linhas["descricao"];
+
+                            $url = "https://viacep.com.br/ws/{$cep}/json/";
+
+                            $ch = curl_init();
+                            curl_setopt($ch, CURLOPT_URL, $url);
+                            curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
+                            curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
+                            $response = curl_exec($ch);
+                            curl_close($ch);
+
+                            $data = json_decode($response, true);
+                            $logradouro = $data['logradouro'];
+                            $bairro = $data['bairro'];
+                            $cidade = $data['localidade'];
+                            $estado = $data['uf'];
+
 
 
 
@@ -45,8 +63,9 @@
                 BOMBEIRO
                 <br>
                 <div class= "local">
-                <img class="localizacao" src="../img/local.png">
-               <p> Joinville, SC<p>
+                <img class="localizacao" src="../img/local.png"> <p><?php echo("$cidade, $estado "); ?> <p> 
+               
+
                 </div>
                 
             </div>
@@ -60,11 +79,14 @@
         </div>
     </div>
     <div class="descricao">
-        <div class="titulo">
+        <div class="titulo"  > 
             Descrição
         </div>
+       <p> <?php echo("$descricao "); ?> <P>
     </div>
-    <button class="ok"><b>FECHAR PERFIL</b></button></a> 
+    <a href="pagina1.html">
+    <button class="ok"><b>FECHAR PERFIL</b></button>
+</a>
     <div class="rodape"></div>
 
     
