@@ -27,7 +27,7 @@
                 <input class="caixa" type="senha" id="senha" name="senha" placeholder="Senha">
             </div>
             <div class="cpf">
-                <input class="caixa" type="cpf" id="cpf" name="cpf" placeholder="CPF"  onkeyup="ValidarCPF()";>
+                <input class="caixa" type="cep" id="cep" name="cep" placeholder="CEP"  onkeyup="ValidarCEP()";>
             </div>
             <div class="descricao">
                 <input class="caixa" type="descricao" id="descricao" name="descricao" placeholder="Descrição Pessoal">
@@ -41,32 +41,20 @@
     
 </body>
 <script>
-  function ValidarCPF() {
-            //ACESSE O SITE regex101.com
-            expressao = /[0-9].{3}[0-9]{3}.[0-9]{3}-[0-9]{2}/g;
-            texto = cpf.value;
-            resposta = expressao.test(texto);
-   
-            if (texto.length==3) {
-                cpf.value = texto + '.';
-            }
-            if (texto.length==7) {
-                cpf.value = texto + '.';
-            }
-            if (texto.length==11) {
-                cpf.value = texto + '-';
-            }
-   
-            if (resposta == true){
-                cpf.classList.remove("errado");
-                cpf.classList.add("certo");
-            }
-            if (resposta == false){
-                cpf.classList.remove("certo");
-                cpf.classList.add("errado");
+    function validarCEP() {
+            const cepInput = document.getElementById("cep");
+            const resultadoElement = document.getElementById("resultado");
+
+            const cepRegex = /^\d{5}-\d{3}$/; // Formato esperado: 00000-000
+
+            if (cepRegex.test(cepInput.value)) {
+                resultadoElement.textContent = "CEP válido!";
+                resultadoElement.style.color = "green";
+            } else {
+                resultadoElement.textContent = "CEP inválido. Use o formato 00000-000.";
+                resultadoElement.style.color = "red";
             }
         }
-
     function validarCampo() {
       var campo = document.getElementById('login').value;
       
