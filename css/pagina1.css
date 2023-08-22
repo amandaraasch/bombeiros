@@ -76,7 +76,7 @@ font-family: 'Effra', sans-serif;
   background-color: silver;
   margin-top: 25px;
   margin-left: 40px;
-  
+  position:relative
 }
 
 .d2{
@@ -86,6 +86,7 @@ font-family: 'Effra', sans-serif;
   background-color: silver;
   margin-top: 25px;
   margin-left: 40px;
+  position:relative
 }
 
 .d3{
@@ -95,8 +96,35 @@ font-family: 'Effra', sans-serif;
   border-radius: 10px;
   margin-top: 25px;
   margin-left: 40px;
+  position:relative
 }
 
+
+.teste
+{
+  margin-left: 0px;
+  left: 0px;
+  top: 0px;
+  background-color: #343186;
+  width: 100%;
+  height: 30px;
+  margin-top: 0px;
+  position: absolute;
+  border-radius:  10px 10px 0px 0px;
+  /*226, 30, 30*/
+}
+
+.esconder
+{
+margin-top: 10px;
+margin-left: 10px;
+width: 90%;
+height: 600px;
+background-color: rgb(180, 179, 179);
+border-radius: 10px;
+display: none;
+
+}
 .empurrar
 {
 width: 90%;
@@ -112,22 +140,11 @@ height: 40px;
 /*background-color: pink;*/
 }
 
-.esconder
-{
-margin-top: 10px;
-margin-left: 10px;
-width: 90%;
-height: 100px;
-background-color: aqua;
-display: none;
-
-}
-
 p
 {
   margin-top: 10px;
 font-size: 25px;
-color: blue;
+color: #343186;
 display: flex;
 justify-content: center;
 justify-items: center;

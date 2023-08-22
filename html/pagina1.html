@@ -27,9 +27,12 @@
 
     <div id="principal" class="principal">
 
-        <div id="d1" class="d1" onclick="animar('d1');">
+        <div id="d1" class="d1" >
           <div class="empurrar"></div>
           <div class="inicial">
+
+            <div class="teste" id="teste" onclick="animar('d1');"></div>
+
             <p>Dados Iniciais</p>
           </div>
             <div class="esconder" id="esconder1">
@@ -38,7 +41,7 @@
                 <input  class="caixa2" type="date" name="aniversario">
                 <legend> <b>SEXO</b></legend>
 
-                <input type="checkbox" id="Feminino" name="feminino"> &nbsp; Feminino <br> <br>
+                <input type="checkbox" id="Feminino" name="feminino"> &nbsp; Feminino <br> 
                 <input type="checkbox" id="Masculino" name="Masculino"> &nbsp; Masculino <br>
                 
                 <legend> <b>NOME HOSPITAL</b></legend>
@@ -64,17 +67,22 @@
             </div>
         </div>   <br>
 
-        <div id="d2" class="d2" onclick="animar('d2');">
+        <div id="d2" class="d2">
           <div class="empurrar"></div>
           <div class="inicial">
-            <p></p>
+            <div class="teste" id="teste" onclick="animar('d2');"></div>
+
+            <p>Dados iniciais</p>
           </div>
             <div class="esconder" id="esconder2"></div>
         </div>   <br>
 
-        <div id="d3" class="d3" onclick="animar('d3');">
+        
+        <div id="d3" class="d3">
           <div class="empurrar"></div>
           <div class="inicial">
+          <div class="teste" id="teste" onclick="animar('d3');"></div>
+          
             <p>Dados Iniciais</p>
           </div>
             <div class="esconder" id="esconder3"></div>
@@ -108,7 +116,7 @@
     if (divHeight > 130) {
         $("#" + ID).animate({ height: "130px" });
     } else { // Caso contrário, abrir a div para 300px
-        $("#" + ID).animate({ height: "300px" });
+        $("#" + ID).animate({ height: "700px" });
         if(ID=="d1")
         {
           esconder1.style.display="block"// esconder as div com os dados
