@@ -103,6 +103,49 @@ font-family: 'Effra', sans-serif;
   
 }
 
+.caixinha
+{
+  margin-top: 5px;
+  min-width: 20px;
+  min-height: 20px;
+}
+.caixa
+{
+width: 140px;
+height: 30px;
+border-radius: 10px;
+margin-top: 5px;
+font-size: 15px;
+}
+
+.caixa2
+{
+width: 140px;
+height: 30px;
+border-radius: 10px;
+margin-top: 5px;
+font-size: 15px;
+}
+
+.caixa3
+{
+width: 140px;
+height: 30px;
+border-radius: 10px;
+margin-top: 5px;
+font-size: 15px;
+}
+
+.Enviar
+{
+margin-left: 65px;
+width: 80px;
+height: 40px;
+border-radius: 5px;
+background-color: #e2353b;
+color: white;
+align-items: center;
+}
 
 .teste
 {
@@ -120,10 +163,10 @@ font-family: 'Effra', sans-serif;
 
 .esconder
 {
-margin-top: 10px;
+margin-top: 5px;
 margin-left: 10px;
 width: 90%;
-height: 600px;
+height: 785px;
 background-color: rgb(180, 179, 179);
 border-radius: 10px;
 display: none;
@@ -161,7 +204,8 @@ align-content: center;
 
 }
 
-.ok {
+.ok 
+{
 display: block;
 height: 150px;
 background-color: rgb(172, 52, 52);
@@ -169,6 +213,7 @@ border-radius: 10px;
 
  margin: 10px auto; /* Centraliza os botões horizontalmente */
 }
+
 #menu {
   position: fixed;
   top: 0;
@@ -193,18 +238,18 @@ border-radius: 10px;
    }
   
    #menu li {
-   margin-bottom: 20px;
+   margin-bottom: 15px;
+   display: flex;
+   flex-direction: row;
+   justify-items: center;
    }
   
    #menu a {
     text-decoration: none;
+    margin-left: 10px;
+    margin-top: 5px;
     color: #fff;
-    margin-left:35px;
-    top:-50px;
     font-family: 'Poppins', sans-serif;
-  font-size: 15px;
-    
-       
    }
   
    #menu-button {
@@ -214,12 +259,12 @@ border-radius: 10px;
   cursor: pointer;
   z-index: 1000;
   color:white;
-  
 }
+
+
 .boneco
 {
-  z-index: 21;
   width: 25PX;
   height: 25PX;
-  margin-top:20PX
+  top: 0px;
 }

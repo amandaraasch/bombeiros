@@ -16,18 +16,18 @@
 <body>
 
     <div class="verm"> 
-      <div id="menu-button">&#9776; </div>
+      <div id="menu-button">&#9776;  </div>
+
        <div id="menu">
         
         <ul>
-          <img class="boneco" src="../img/bombeiro (1).png"> <li><a href="#">Perfil </a></li>
-       
-        
+          <li><img class="boneco" src="../img/bombeiro (1).png"><a href="perfil.php">Perfil </a></li>
         </ul>
+
        </div>
 </div>
 
-      </div>  
+       
     </div>
 
     <div class="um">
@@ -48,36 +48,47 @@
 
             <br><p>Dados Iniciais</p></br>
           </div>
-            <div class="esconder" id="esconder1">
-               <legend> <b>DATA</b></legend>
+          <br>
 
-                <input  class="caixa2" type="date" name="aniversario"><BR>
-                
+            <div class="esconder" id="esconder1">
+
+          <form>
+            <br>
+              <legend> <b>DATA</b></legend>
+
+                <input class="caixa2" type="date" name="aniversario"><BR>
+                <br>
                 <legend> <b>SEXO</b></legend>
                 
-
-                <input type="checkbox" id="Feminino" name="feminino"> &nbsp; Feminino <br> 
-                <input type="checkbox" id="Masculino" name="Masculino"> &nbsp; Masculino <br>
-                
+                <input class="caixinha" type="checkbox" id="Feminino" name="feminino"> &nbsp; FEMININO <br> 
+                <input class="caixinha" type="checkbox" id="Masculino" name="Masculino"> &nbsp; MASCULINO <br>
+                  <br>
                 <legend> <b>NOME HOSPITAL</b></legend>
-                <input  class="caixa2" type="text" name="nome_hospital" PLACEHOLDER="nome"><legend> 
-
+                <input class="caixa2" type="text" name="nome_hospital" PLACEHOLDER="nome"><legend> 
                 <div class="ni"> <legend> <b>NOME / IDADE DO PACIENTE:</b></legend> 
-                <input  class="caixa2" type="text" name="NOMEPAC" PLACEHOLDER="nome">
-                <input  class="caixa" type="number" name="IDADEPAC" PLACEHOLDER="idade"><legend>
+                <input class="caixa2" type="text" name="NOMEPAC" PLACEHOLDER="nome">
+
+                <input class="caixa" type="number" name="IDADEPAC" PLACEHOLDER="idade"><legend>
                 </div> 
-                
+                <br>
                 <legend> <b>PACIENTE:</b></legend> 
-                <input  class="caixa2" type="number" name="NOMEPAC" PLACEHOLDER="rg/cpf">
+                <input class="caixa2" type="number" name="NOMEPAC" PLACEHOLDER="rg/cpf">
+
                 <input max="14" class="caixa3" type="text" id="telefone" name="telefone" PLACEHOLDER="fone">
+
+                <br><br>
                 <legend> <b>ACOMPANHANTE:</b></legend> 
-                <input  class="caixa2" type="text" name="NOMEPAC" PLACEHOLDER="nome">
-                <input  class="caixa" type="number" name="IDADEPAC" PLACEHOLDER="idade"><legend>
+                <input class="caixa2" type="text" name="NOMEPAC" PLACEHOLDER="nome">
+
+                <input class="caixa" type="number" name="IDADEPAC" PLACEHOLDER="idade">
+
+                <br><br>
                 <legend> <b>LOCAL DA OCORRÊNCIA</b></legend>
-                <input  class="caixa2" type="text" name="Local_ocorrencia" PLACEHOLDER="endereço"><legend> 
+                <input class="caixa2" type="text" name="Local_ocorrencia" PLACEHOLDER="endereço"> 
 
-
-
+                <br><br>
+                <Button class="Enviar" type="submit" name="enviar1">ENVIAR</Button>
+            </form>
 
             </div>
         </div>   <br>
@@ -130,8 +141,8 @@
     // Se a div estiver aberta (com altura maior que 130px), fechar a div
     if (divHeight > 130) {
         $("#" + ID).animate({ height: "130px" });
-    } else { // Caso contrário, abrir a div para 300px
-        $("#" + ID).animate({ height: "700px" });
+    } else { // Caso contrário, abrir a div para 850px
+        $("#" + ID).animate({ height: "900px" });
         if(ID=="d1")
         {
           esconder1.style.display="block"// esconder as div com os dados
