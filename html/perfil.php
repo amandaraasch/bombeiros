@@ -55,7 +55,7 @@
                             echo("$login");
                         ?>
             </div>
-        <img class="foto" src="../img/perfil.png" width="200px">
+        <img class="foto" src="../img/perfil2.png" width="200px">
     </div>
     <div class= "texto">
         <div class="um">

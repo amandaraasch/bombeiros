@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Tempo de geração: 08-Ago-2023 às 17:01
+-- Tempo de geração: 24-Ago-2023 às 12:42
 -- Versão do servidor: 10.4.28-MariaDB
 -- versão do PHP: 8.2.4
 
@@ -30,7 +30,7 @@ SET time_zone = "+00:00";
 CREATE TABLE `cadastro` (
   `login` varchar(45) NOT NULL,
   `senha` varchar(3) NOT NULL,
-  `cpf` varchar(14) NOT NULL,
+  `cep` varchar(14) NOT NULL,
   `descricao` varchar(200) NOT NULL,
   `adm` varchar(1) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
@@ -39,9 +39,13 @@ CREATE TABLE `cadastro` (
 -- Extraindo dados da tabela `cadastro`
 --
 
-INSERT INTO `cadastro` (`login`, `senha`, `cpf`, `descricao`, `adm`) VALUES
+INSERT INTO `cadastro` (`login`, `senha`, `cep`, `descricao`, `adm`) VALUES
 ('amanda raasch', '187', '15255443905-', 'Estudante de desenvolvimento de sistemas', 'n'),
-('André Baschirotto Alexandre', '298', '138.013.199-54', 'Estudante de desenvolvimento de sistemas', 'n');
+('André Baschirotto Alexandre', '298', '138.013.199-54', 'Estudante de desenvolvimento de sistemas', 'n'),
+('joão ferreira', '131', '547.686.597-87', 'Estudante de Desenvolvimento de sistemas', 'n'),
+('NATÃ ', '123', '88220000', 'ALUNO SENAI SUL', 'n'),
+('kauã', '261', '88220000', 'ALUNO SENAI SUL', 'n'),
+('gustavo', '154', '89209466', 'irmão', 'n');
 
 -- --------------------------------------------------------
 
@@ -65,8 +69,10 @@ INSERT INTO `usuarios` (`login`, `senha`, `adm`) VALUES
 ('Amanda Caroline Raasch', 187, 's'),
 ('André Baschirotto Alexandre', 298, 'n'),
 ('João Victor Ferreira', 131, 'n'),
-('amanda raasch', 187, 'n'),
-('André Baschirotto Alexandre', 298, 'n');
+('joão ferreira', 131, 'n'),
+('NATÃ ', 123, 'n'),
+('kauã', 2612, 'n'),
+('gustavo', 154, 'n');
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
