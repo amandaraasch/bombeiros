@@ -45,7 +45,10 @@
           <div class="inicial">
 
             <div class="teste" id="teste" onclick="animar('d1');">
-              <img id="okay" src="../img/okay.png" alt="okay" width="20px"></div>
+
+              <div id="imageDiv"> <img id="okay" src="../img/okay.png" alt="okay" width="20px"></div>
+
+              </div>
 
             <br><p>DADOS INICIAIS</p></br>
           </div>
@@ -53,7 +56,7 @@
 
             <div class="esconder" id="esconder1">
 
-          <form>
+          <form method="post" action="" id="form1">
             <br>
               <legend> <b>DATA</b></legend>
 
@@ -87,8 +90,10 @@
                 <input class="caixa2" type="text" name="Local_ocorrencia" PLACEHOLDER="endereço"> 
 
                 <br><br>
-                <Button class="Enviar" type="submit" name="enviar1">ENVIAR</Button>
+
+                <button class="Enviar" type="submit" name="enviar1" id="showButton">Enviar</button>
                 
+                    <p id="message" style="display: none;">Foi preenchido e enviado</p>
 
               </form>
 
@@ -180,6 +185,24 @@ menuButton.addEventListener('click', () => {
 menu.classList.toggle('open');
 });
 
+
+document.addEventListener
+("DOMContentLoaded", 
+
+function() 
+
+    {const showButton = document.getElementById("showButton");
+      const imageDiv = document.getElementById("imageDiv");
+      const message = document.getElementById("message");
+      showButton.addEventListener
+      ("click", function() 
+        {
+          imageDiv.style.display = "block";
+          message.style.display = "block"; 
+        }
+      );
+    }
+);
     
 
 </script>
