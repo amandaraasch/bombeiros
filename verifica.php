@@ -15,13 +15,13 @@ echo($senha);
 
         {
             $n = 1;
-            $admin = $linhas["admin"];
+            $admin = $linhas["adm"];
             echo("entrei aqui");
         }
 
         if($n ==0)
         {
-           // header("Location: index.html");
+            header("Location: index.html");
         }
         if($n ==1)
         {
@@ -29,7 +29,7 @@ echo($senha);
         {
             
             $_SESSION["logado"] = $login;
-           header("Location: pedidospendentes_adm.php");
+           header("Location: html/adm.php");
         }
         else
         {
