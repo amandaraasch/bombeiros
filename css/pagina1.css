@@ -159,6 +159,11 @@ color: white;
 align-items: center;
 }
 
+#imageDiv 
+{
+  display: none;
+}
+
 .teste
 {
   margin-left: 0px;
