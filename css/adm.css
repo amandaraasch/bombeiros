@@ -9,7 +9,7 @@ body
     align-content: center;
     align-items: center;
     overflow: hidden;
-    background-color:#FFFFFF;
+   
     
 }
 .menu
@@ -34,16 +34,7 @@ body
     flex-direction: column;
     color: #FFFFFF;
 }
-.letraperfil
-{
-    color: #FFFFFF;
-    font-size: 50px;
-    font-family: 'Effra Heavy', sans-serif;
-    font-family: 'Effra Light', sans-serif;
-    font-family: 'Effra Medium', sans-serif;
-    font-family: 'Effra', sans-serif;
-   
-}
+
 .add2
 {
     width: 30px;
@@ -94,4 +85,144 @@ body
     font-family: 'Effra', sans-serif;
     margin-left: 30px;
     top:20px
+}
+.bemvindo p{
+    margin-top: -20px;
+}
+.nome
+{
+    margin-top: -20px;
+    margin-left: 30px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 15px;
+
+}
+.bombe
+{
+    width: 140px;
+    height: 160px;
+    margin-left: 400px;
+    margin-top:-130px ;
+}
+.cadastrados
+{
+    background-color: silver; 
+    width: 100%;
+    height: 70vh; 
+    margin-top: 30px;
+    border-radius: 20px;
+    overflow-y: scroll;
+    overflow: hidden;
+
+}
+.cada
+{
+    font-family: 'Effra Heavy', sans-serif;
+    font-family: 'Effra Light', sans-serif;
+    font-family: 'Effra Medium', sans-serif;
+    font-family: 'Effra', sans-serif;
+    margin-left: 30px;
+    margin-top: 20px;
+    font-size: 20px;
+}
+.prin
+{
+    width: 100%;
+    height: 90vh;
+    margin-top: -20px;
+    justify-content: space-around;
+    justify-items: center;
+    align-items: center;
+    align-content: center;
+    flex-direction: row;
+    display: flex;
+}
+.tabela
+{
+    
+    width: 100%;
+    height: 75vh;
+    align-items: center;
+    align-content: center;
+    flex-direction: column;
+    display: flex;
+    
+    padding-left: 0px;
+    border-radius: 8px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 25px;
+   
+}
+
+table 
+{
+    width: 98%;
+    
+   
+}
+  
+th 
+{
+    height: 50px;
+   
+   
+    
+}
+
+td
+{
+    font-family: 'Poppins', sans-serif;
+   text-align: center;
+   font-size: 15px;
+   
+}
+
+.table_heading {
+    background-color: yellow;
+}
+
+.table_heading:first-child {
+    border-top-left-radius: 100%;
+}
+
+
+/* 
+    Arredondar Bordas da Tabela -> aplicar na classe .tabelinha
+    Ele arredonda somente o primeiro e o último elemento da <table class="tabelinha"/>
+    (:first-child) / (:last-child)
+*/
+.tabela_redonda {
+    border-radius: 10px;
+  }
+  
+  .tabela_redonda th:first-child {
+    border-top-left-radius: 10px;
+  }
+  
+  .tabela_redonda th:last-child {
+    border-top-right-radius: 10px;
+  }
+  
+  .tabela_redonda tr:first-child td:first-child {
+    border-bottom-left-radius: 10px;
+  }
+  
+  .tabela_redonda tr:last-child td:last-child {
+    border-bottom-right-radius: 10px;
+  }
+
+a
+{
+    
+    color: black;
+}
+.excluir
+{
+    color:red
+}
+
+
+.linha
+{
+ background-color:red;
 }
