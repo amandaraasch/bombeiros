@@ -65,8 +65,68 @@ body
 {
     width: 40%;
     height: 95vh; 
-   /* background-color: red;*/
+    /* background-color: red;*/
+     flex-direction: column;
     margin-left: 10px;
+    display: flex;
+}
+.numeross
+{
+    flex-direction: row;
+    display: flex;
+   /* background-color: #343186;*/
+    width: 640px;
+    height: 150px;
+    justify-content: space-around;
+    margin-bottom: 20px;
+}
+.numerousu
+{
+    background-color: silver;
+    width: 270px;
+    height: 90px;
+    margin-top: 20px;
+    border-radius: 10px;
+    font-size: 55px;
+    padding-left: 30px;
+    font-family: 'Effra Heavy', sans-serif;
+    font-family: 'Effra Light', sans-serif;
+    font-family: 'Effra Medium', sans-serif;
+    font-family: 'Effra', sans-serif;
+    padding-top: 20px;
+
+
+}
+.numerousu p 
+{
+    font-size: 15px;
+    font-family: 'Poppins', sans-serif;
+    margin-left: 50px;
+    margin-top: -40px;
+}
+.numeroadm p 
+{
+    font-size: 15px;
+    font-family: 'Poppins', sans-serif;
+    margin-left: 50px;
+    margin-top: -40px;
+}
+.numeroadm
+{
+    background-color: silver;
+    width: 270px;
+    height: 90px;
+    margin-top: 20px;
+    border-radius: 10px;
+    font-size: 55px;
+    padding-left: 30px;
+    font-family: 'Effra Heavy', sans-serif;
+    font-family: 'Effra Light', sans-serif;
+    font-family: 'Effra Medium', sans-serif;
+    font-family: 'Effra', sans-serif;
+    padding-top: 20px;
+x;
+
 }
 .ola
 {
@@ -127,16 +187,56 @@ body
 }
 .prin
 {
-    width: 100%;
-    height: 90vh;
-    margin-top: -20px;
+    width: 65%;
+    height: 20vh;
+    margin-top: 20px;
+    margin-left: 20px;
+    background-color: rgba(255, 255, 255, 0.76);
     justify-content: space-around;
     justify-items: center;
+    border-radius: 10px;
+   margin-bottom: 30px;
     align-items: center;
     align-content: center;
+    font-family: 'Poppins', sans-serif;
     flex-direction: row;
     display: flex;
+    font-size: 14px;
+    overflow-x: auto;
+    white-space: nowrap; 
+    padding-left: 185px; 
+   
+
 }
+.prin::-webkit-scrollbar {
+    width: 10px;  /* Largura do scrollbar */
+    height: 5px; /* Altura do scrollbar, relevante se você também tiver um scrollbar horizontal */
+}
+
+/* Estilo do thumb (parte móvel) */
+.prin::-webkit-scrollbar-thumb {
+    background: #888;  /* Cor do thumb */
+    border-radius: 5px; /* Arredondar bordas do thumb */
+}
+
+.prin::-webkit-scrollbar-thumb:hover {
+    background: #555;  /* Cor do thumb quando o mouse passa por cima */
+}
+
+/* Estilo da track (parte imóvel) */
+.prin::-webkit-scrollbar-track {
+    background: #f1f1f1; /* Cor de fundo */
+    border-radius: 5px;  /* Arredondar bordas da track */
+}
+.usuario
+{
+    margin: 10px 0;
+    margin: 10px 5px;
+    padding-left:20px ;
+    margin-left: 20px;
+    
+}
+
 .tabela
 {
     
@@ -152,6 +252,15 @@ body
     font-family: 'Poppins', sans-serif;
     font-size: 25px;
    
+}
+.exclui
+{
+    border-radius: 20px;
+    border:transparent;
+    font-family: 'Poppins', sans-serif;
+    margin-left: 15px;
+    background-color: #e2353be5;
+    color: aliceblue;
 }
 
 table 
@@ -226,3 +335,42 @@ a
 {
  background-color:red;
 }
+.motivacional
+{
+    flex-direction: row;
+    width: 500px;
+    height: 200px;
+    background-color: rgba(255, 255, 255, 0.815);
+    border-width: 3px;
+    margin-left: 60px;
+    border-style: solid;
+    border-radius: 20px;
+    display: flex;
+    border-color: rgba(255, 255, 255, 0.733)
+}
+.lembre
+{
+ font-size: 20px;
+ width: 500px;
+ margin-top: 20px;
+ margin-left: 20px;
+ font-family: 'Effra Heavy', sans-serif;
+    font-family: 'Effra Light', sans-serif;
+    font-family: 'Effra Medium', sans-serif;
+    font-family: 'Effra', sans-serif;
+}
+.motivacional p
+{
+  margin-top: 70px;
+  font-size: 14px;
+  margin-left: 20px;
+  font-family: 'Poppins', sans-serif;
+}
+.cora
+{
+    width: 70px;
+    margin-right: 20px;
+   margin-top: -20px;
+
+}
+
