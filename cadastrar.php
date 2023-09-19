@@ -1,6 +1,6 @@
 <?php
 include("conecta.php");
-
+$id = $_POST["id"];
 $login = $_POST["login"];
 $senha     = $_POST["senha"];
 $cep   = $_POST["cep"];
@@ -34,10 +34,10 @@ if (isset($data['erro'])) {
 
 //SE CLICOU NO BOTÃO INSERIR
 
-    $comando = $pdo->prepare("INSERT INTO cadastro VALUES('$login','$senha','$cep','$descricao','n')");
+    $comando = $pdo->prepare("INSERT INTO cadastro VALUES('$id','$login','$senha','$cep','$descricao','n')");
     $resultado = $comando->execute();
     $comando = $pdo->prepare("INSERT INTO usuarios VALUES('$login','$senha','n')");
     $resultado = $comando->execute();
-    header("Location: html/login.html");
+    header("Location: html/adm.php");
 ?>
 

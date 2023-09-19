@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Tempo de geração: 24-Ago-2023 às 12:42
+-- Tempo de geração: 19-Set-2023 às 17:32
 -- Versão do servidor: 10.4.28-MariaDB
 -- versão do PHP: 8.2.4
 
@@ -28,6 +28,7 @@ SET time_zone = "+00:00";
 --
 
 CREATE TABLE `cadastro` (
+  `id` int(11) NOT NULL,
   `login` varchar(45) NOT NULL,
   `senha` varchar(3) NOT NULL,
   `cep` varchar(14) NOT NULL,
@@ -39,13 +40,13 @@ CREATE TABLE `cadastro` (
 -- Extraindo dados da tabela `cadastro`
 --
 
-INSERT INTO `cadastro` (`login`, `senha`, `cep`, `descricao`, `adm`) VALUES
-('amanda raasch', '187', '15255443905-', 'Estudante de desenvolvimento de sistemas', 'n'),
-('André Baschirotto Alexandre', '298', '138.013.199-54', 'Estudante de desenvolvimento de sistemas', 'n'),
-('joão ferreira', '131', '547.686.597-87', 'Estudante de Desenvolvimento de sistemas', 'n'),
-('NATÃ ', '123', '88220000', 'ALUNO SENAI SUL', 'n'),
-('kauã', '261', '88220000', 'ALUNO SENAI SUL', 'n'),
-('gustavo', '154', '89209466', 'irmão', 'n');
+INSERT INTO `cadastro` (`id`, `login`, `senha`, `cep`, `descricao`, `adm`) VALUES
+(3, 'maicol', '123', '89209466', 'professor', 'n'),
+(4, 'josi', '154', '89209466', 'mae', 'n'),
+(5, 'Henrique Osmar', '123', '89209466', 'Estudante', 'n'),
+(6, 'João filipe Tissi', '187', '89209466', 'aluno', 'n'),
+(7, 'prof', '187', '89209466', 'prof', 'n'),
+(8, 'emily', '145', '89209466', 'aluna', 'n');
 
 -- --------------------------------------------------------
 
@@ -65,14 +66,34 @@ CREATE TABLE `usuarios` (
 
 INSERT INTO `usuarios` (`login`, `senha`, `adm`) VALUES
 ('Amanda Caroline Raasch', 187, 's'),
-('André Baschirotto Alexandre', 298, 'n'),
 ('Amanda Caroline Raasch', 187, 's'),
-('André Baschirotto Alexandre', 298, 'n'),
 ('João Victor Ferreira', 131, 'n'),
-('joão ferreira', 131, 'n'),
-('NATÃ ', 123, 'n'),
-('kauã', 2612, 'n'),
-('gustavo', 154, 'n');
+('maicol', 123, 'n'),
+('josi', 154, 'n'),
+('Henrique Osmar', 123, 'n'),
+('João filipe Tissi', 187, 'n'),
+('prof', 187, 'n'),
+('emily', 145, 'n');
+
+--
+-- Índices para tabelas despejadas
+--
+
+--
+-- Índices para tabela `cadastro`
+--
+ALTER TABLE `cadastro`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- AUTO_INCREMENT de tabelas despejadas
+--
+
+--
+-- AUTO_INCREMENT de tabela `cadastro`
+--
+ALTER TABLE `cadastro`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

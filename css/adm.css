@@ -64,18 +64,22 @@ body
 }
 .div3
 {
-    width: 40%;
+    width: 100%;
     height: 95vh; 
-    /* background-color: red;*/
+    /*background-color: red;*/
      flex-direction: column;
     margin-left: 10px;
+    justify-content: center;
+    justify-items: center;
+    align-content: center;
+    align-items: center;
     display: flex;
 }
 .numeross
 {
     flex-direction: row;
     display: flex;
-   /* background-color: #343186;*/
+   /*background-color: #343186;*/
     width: 640px;
     height: 150px;
     justify-content: space-around;
@@ -96,6 +100,12 @@ body
     font-family: 'Effra', sans-serif;
     padding-top: 20px;
 
+
+}
+.add2{
+     width: 60px;
+     height: 50px;
+     margin-left: 5px;
 
 }
 .numerousu p 
@@ -172,9 +182,36 @@ x;
     height: 70vh; 
     margin-top: 30px;
     border-radius: 20px;
-    overflow-y: scroll;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
     overflow: hidden;
 
+}
+.cada{
+    font-size: 50px;
+    font-family: 'Effra Heavy', sans-serif;
+font-family: 'Effra Light', sans-serif;
+font-family: 'Effra Medium', sans-serif;
+font-family: 'Effra', sans-serif;
+color: white;
+   
+}
+.inserir
+{
+    background-color: silver; 
+    width: 90%;
+    height: 70vh; 
+    margin-top: 0px;
+    border-radius: 20px;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+    overflow: hidden;
 }
 .cada
 {
@@ -188,10 +225,10 @@ x;
 }
 .prin
 {
-    width: 65%;
-    height: 20vh;
+    width:500px;
+    height: 320px;
     margin-top: 20px;
-    margin-left: 20px;
+    
     background-color: rgba(255, 255, 255, 0.76);
     justify-content: space-around;
     justify-items: center;
@@ -200,12 +237,12 @@ x;
     align-items: center;
     align-content: center;
     font-family: 'Poppins', sans-serif;
-    flex-direction: row;
-    display: flex;
+    
+  
     font-size: 14px;
-    overflow-x: auto;
-    white-space: nowrap; 
-    padding-left: 185px; 
+    overflow-x: hidden;
+   
+    padding-left: 0px; 
    
 
 }
@@ -231,10 +268,21 @@ x;
 }
 .usuario
 {
-    margin: 10px 0;
+   
+    background-color: silver;
     margin: 10px 5px;
-    padding-left:20px ;
-    margin-left: 20px;
+    width: 90%;
+    border-radius: 20px;
+    height: 50px;
+    margin-top:10px ;
+    margin-left: 30px;
+    justify-items: center;
+    align-items: center;
+    align-content: center;
+    flex-direction: row;
+    display: flex;
+    justify-content: space-around;
+    
     
 }
 
@@ -259,7 +307,11 @@ x;
     border-radius: 20px;
     border:transparent;
     font-family: 'Poppins', sans-serif;
-    margin-left: 15px;
+   justify-content: center;
+   justify-items: center;
+   align-items: center;
+   align-content: center;
+   
     background-color: #e2353be5;
     color: aliceblue;
 }
@@ -340,25 +392,32 @@ a
 {
     flex-direction: row;
     width: 500px;
-    height: 200px;
+    height: 100px;
     background-color: rgba(255, 255, 255, 0.815);
     border-width: 3px;
-    margin-left: 60px;
+    justify-content: center;
     border-style: solid;
+    justify-items: center;
+    align-items: center;
+    align-content: center;
     border-radius: 20px;
     display: flex;
     border-color: rgba(255, 255, 255, 0.733)
 }
+.alerta
+{
+    width:50px;
+    height:50px;
+    margin-top: 5px;
+    margin-left: 20px;
+}
 .lembre
 {
- font-size: 20px;
+ font-size: 15px;
  width: 500px;
  margin-top: 20px;
  margin-left: 20px;
- font-family: 'Effra Heavy', sans-serif;
-    font-family: 'Effra Light', sans-serif;
-    font-family: 'Effra Medium', sans-serif;
-    font-family: 'Effra', sans-serif;
+ font-family: 'Poppins', sans-serif;
 }
 .motivacional p
 {
@@ -374,4 +433,140 @@ a
    margin-top: -20px;
 
 }
+.um
+{
+    color: white;
+    justify-content: center;
+    justify-items: center;
+    align-content: center;
+    align-items: center;
+    margin-top: -50px;
+    font-size: 30px;
+    font-family: 'Effra Heavy', sans-serif;
+font-family: 'Effra Light', sans-serif;
+font-family: 'Effra Medium', sans-serif;
+font-family: 'Effra', sans-serif;
+   
+   
 
+}
+.tres
+{
+    flex-direction: column;  
+    justify-content: center;
+    justify-items: center;
+    align-content: center;
+    align-items: center;
+}
+.HOMI
+{
+    
+    justify-content: center;
+    justify-items: center;
+    align-content: center;
+    align-items: center;
+    margin-top: 50px;
+
+}
+
+.senha
+{
+    
+    justify-content: center;
+    justify-items: center;
+    align-content: center;
+    align-items: center;
+    margin-top: 10px;
+
+}
+.cpf
+{
+    
+    justify-content: center;
+    justify-items: center;
+    align-content: center;
+    align-items: center;
+    margin-top: 20px;
+
+}
+.descricao
+{
+    
+    justify-content: center;
+    justify-items: center;
+    align-content: center;
+    align-items: center;
+    margin-top: 20px;
+
+}
+.caixa::placeholder
+{
+    justify-content: center;
+    justify-items: center;
+    align-content: center;
+    align-items: center;
+    display: flex;
+    color:rgba(255, 255, 255, 0.753);
+    font-size: 15px;
+}
+.caixa
+{
+    width: 250px;
+    height: 35px;
+    border-radius: 50px;
+    background-color: #e2353b;
+    justify-content: center;
+    justify-items: center;
+    align-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+
+
+}
+.user
+{
+    justify-content: center;
+    justify-items: center;
+    align-content: center;
+    align-items: center;
+}
+.entrar
+{
+    width: 150px;
+    height: 40px;
+    border-radius: 20px;
+    background-color: #343186;
+    justify-content: center;
+    justify-items: center;
+    align-content: center;
+    align-items: center;
+    color: #FFFFFF;
+    margin-top: 50px;
+    margin-left: 50px;
+    font-size: 15px;
+    font-family: 'Effra Heavy', sans-serif;
+font-family: 'Effra Light', sans-serif;
+font-family: 'Effra Medium', sans-serif;
+font-family: 'Effra', sans-serif;
+}
+.escrita
+{
+    margin-left:18px;
+    margin-top: 10px;
+}
+#mensagemErro
+ {
+    color: black;
+    position: absolute;
+   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    z-index: 10;
+    display: flex;
+    margin-top:20px;
+    font-size: 13px;
+    justify-content: center;
+    justify-items: center;
+    align-content: center;
+    align-items: center;
+    margin-left: 12px;
+ }
