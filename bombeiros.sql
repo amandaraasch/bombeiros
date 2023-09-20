@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Tempo de geração: 19-Set-2023 às 17:32
+-- Tempo de geração: 20/09/2023 às 02:47
 -- Versão do servidor: 10.4.28-MariaDB
--- versão do PHP: 8.2.4
+-- Versão do PHP: 8.0.28
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -24,7 +24,7 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Estrutura da tabela `cadastro`
+-- Estrutura para tabela `cadastro`
 --
 
 CREATE TABLE `cadastro` (
@@ -37,7 +37,7 @@ CREATE TABLE `cadastro` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
--- Extraindo dados da tabela `cadastro`
+-- Despejando dados para a tabela `cadastro`
 --
 
 INSERT INTO `cadastro` (`id`, `login`, `senha`, `cep`, `descricao`, `adm`) VALUES
@@ -51,7 +51,26 @@ INSERT INTO `cadastro` (`id`, `login`, `senha`, `cep`, `descricao`, `adm`) VALUE
 -- --------------------------------------------------------
 
 --
--- Estrutura da tabela `usuarios`
+-- Estrutura para tabela `paciente`
+--
+
+CREATE TABLE `paciente` (
+  `Data` date NOT NULL,
+  `Sexo` varchar(7) NOT NULL,
+  `Nome_hospital` varchar(45) NOT NULL,
+  `Nomepac` varchar(45) NOT NULL,
+  `Idadepac` int(11) NOT NULL,
+  `CPFpac` int(11) NOT NULL,
+  `Telefone` int(11) NOT NULL,
+  `NOMEACOM` varchar(45) NOT NULL,
+  `IDADEACOM` int(11) NOT NULL,
+  `Localidade` varchar(45) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+-- --------------------------------------------------------
+
+--
+-- Estrutura para tabela `usuarios`
 --
 
 CREATE TABLE `usuarios` (
@@ -61,7 +80,7 @@ CREATE TABLE `usuarios` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
--- Extraindo dados da tabela `usuarios`
+-- Despejando dados para a tabela `usuarios`
 --
 
 INSERT INTO `usuarios` (`login`, `senha`, `adm`) VALUES
@@ -80,13 +99,13 @@ INSERT INTO `usuarios` (`login`, `senha`, `adm`) VALUES
 --
 
 --
--- Índices para tabela `cadastro`
+-- Índices de tabela `cadastro`
 --
 ALTER TABLE `cadastro`
   ADD PRIMARY KEY (`id`);
 
 --
--- AUTO_INCREMENT de tabelas despejadas
+-- AUTO_INCREMENT para tabelas despejadas
 --
 
 --

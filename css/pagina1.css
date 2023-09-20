@@ -57,6 +57,7 @@ font-family: 'Effra Medium', sans-serif;
 font-family: 'Effra', sans-serif;
 }
 
+
 .sub
 {
   font-family: 'Poppins', sans-serif;
@@ -159,7 +160,7 @@ color: white;
 align-items: center;
 }
 
-#imageDiv 
+.okay2
 {
   display: none;
 }

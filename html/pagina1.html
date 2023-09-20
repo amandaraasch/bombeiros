@@ -46,7 +46,9 @@
 
             <div class="teste" id="teste" onclick="animar('d1');">
 
-              <div id="imageDiv"> <img id="okay" src="../img/okay.png" alt="okay" width="20px"></div>
+              <div id="imageDiv">
+                 <img class="okay2"  id="okay" src="../img/okay.png">
+              </div>
 
               </div>
 
@@ -81,17 +83,17 @@
 
                 <br><br>
                 <legend> <b>ACOMPANHANTE:</b></legend> 
-                <input class="caixa2" type="text" name="NOMEPAC" PLACEHOLDER="nome">
+                <input class="caixa2" type="text" name="NOMEACOM" PLACEHOLDER="nome">
 
-                <input class="caixa" type="number" name="IDADEPAC" PLACEHOLDER="idade">
+                <input class="caixa" type="number" name="IDADEACOM" PLACEHOLDER="idade">
 
                 <br><br>
                 <legend> <b>LOCAL DA OCORRÊNCIA</b></legend>
-                <input class="caixa2" type="text" name="Local_ocorrencia" PLACEHOLDER="endereço"> 
+                <input class="caixa2" type="text" name="Localidade" PLACEHOLDER="endereço"> 
 
                 <br><br>
 
-                <button class="Enviar" type="submit" name="enviar1" id="showButton">Enviar</button>
+                 <input type="button" name="enviar" value="Enviar" onclick="ajax();" meu deus do céu/>
                 
                     <p id="message" style="display: none;">Foi preenchido e enviado</p>
 
@@ -127,15 +129,7 @@
     <div class="menu2"></div>
 </body>
 <script>
-   // function animar(ID)
-   // {
-     //   $("#d1").animate({height:"100px"});
-      //  $("#d2").animate({height:"100px"});
-      //  $("#d3").animate({height:"100px"});
-
-     //   id = "#" + ID
-     //   $(id).animate({height:"200px"});
-   // }
+   
 
 
     function animar(ID) {
@@ -185,24 +179,37 @@ menuButton.addEventListener('click', () => {
 menu.classList.toggle('open');
 });
 
-
-document.addEventListener
-("DOMContentLoaded", 
-
-function() 
-
-    {const showButton = document.getElementById("showButton");
-      const imageDiv = document.getElementById("imageDiv");
-      const message = document.getElementById("message");
-      showButton.addEventListener
-      ("click", function() 
-        {
-          imageDiv.style.display = "block";
-          message.style.display = "block"; 
-        }
-      );
-    }
-);
     
+    var dados = $('#form1').serialize();
+
+            $.ajax({
+                type: "POST",
+                url: "arquivopac.php",
+                data: dados,
+                dataType: 'json',
+                                
+                success: function(meu_json)
+                {
+                    okay.style.display="block"
+                    var valores = meu_json;          // Vem do arquivo.php
+                    var lista = valores.empregados;  // Pega os dados dos "empregados"
+                  
+                },
+                error: function(xhr, status, error) {
+                    // Aqui poderíamos preencher uma <div> com o innerHTML por exemplo
+                    console.error('Ocorreu um erro ao enviar os dados: ' + error);
+                },
+                beforeSend: function(xhr) {
+                    // Faz algo antes do envio, como exibir uma animação por exemplo.
+                },
+                complete: function(xhr, status) {
+                    // Faz algo após a conclusão, como ocultar uma animação por exemplo. 
+                    // Vai ser executado mesmo se ocorrer um erro.
+                },
+                timeout: 5000    // Define um tempo limite de 5 segundos (5000 milissegundos)
+            });
+            
+          
+
 
 </script>
