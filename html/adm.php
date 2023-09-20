@@ -18,8 +18,10 @@
                 <img title="Tela inicial" class="casinha" src="../img/casinha.png">
             </div>
            <div title="Ocorrências" class="add">
-                <img title="Ocorrências" class="add2"src="../img/ficha.png">
-            </div>
+           <a href="ocorrencias.html" onclick="return showAlertt();">
+            <img title="Ocorrências" class="add2"src="../img/ficha.png">
+            </a>
+        </div>
             <div title="Sair" class="sair">
                 <a href="login.html" onclick="return showAlert();">
                 <img title="Sair" class="saindo"src="../img/sair.png">
@@ -151,6 +153,10 @@
 <script>
  function showAlert() {
         alert('Você irá sair dessa página!');
+        return true; // permite que a navegação continue após mostrar o alerta
+    }
+    function showAlertt() {
+        alert('Você irá para página de ocorrências!');
         return true; // permite que a navegação continue após mostrar o alerta
     }
 

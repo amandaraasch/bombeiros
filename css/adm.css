@@ -45,11 +45,13 @@ body
 {
     width:90px;
     height: 90px;
+    margin-top:-50px
 }
 .casinha
 {
-    width:120px;
-    height: 60px;
+    width:130px;
+    height: 70px;
+    margin-top: -30px;
 }
 .saindo
 {

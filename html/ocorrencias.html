@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/ocorrencias.css">
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+   
+    <link href="https://fonts.cdnfonts.com/css/effra-heavy" rel="stylesheet">
+    <link rel="Website Icon" type="png"
+    href="../img/noar.png">
+    <title>Ocorrências</title>
+</head>
+<body>
+    <div class="menu">
+        <div title="Tela inicial" class="voltar">
+            <a href="adm.php" onclick="return showAlertt();">
+            <img title="Tela inicial" class="seta" src="../img/voltar.png">
+            </a>
+        </div>
+        <div class="pesquisar">
+            <input type="search" id="searchBox" placeholder="Digite sua pesquisa...">
+        </div>
+    </div>
+    <div class="ocorrencias">
+        <div class="um">
+            <div id="datepicker"></div>
+        </div>
+        <div class="dois"></div>
+    </div>
+    
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/i18n/datepicker-pt-BR.min.js"></script>
+
+<script>
+     function showAlertt() {
+        alert('Você irá para tela inicial!');
+        return true; // permite que a navegação continue após mostrar o alerta
+    }
+    
+    $(document).ready(function() {
+    $.datepicker.setDefaults($.datepicker.regional['pt-BR']);
+    $("#datepicker").datepicker();
+    $("#datepicker").datepicker('show');
+});
+</script>
+</body>
+</html>
