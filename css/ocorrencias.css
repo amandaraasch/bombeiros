@@ -94,10 +94,18 @@ body
 }
 .um
 {
- /*background-color:white ;*/
- width:800px ;
+ background-color:rgba(192, 192, 192, 0.434) ;
+ width:1550px ;
+ border-radius: 20px;
  height:700px ;
+ justify-content: center;
+ justify-items: center;
+ align-items: center;
+ align-content: center;
  margin-top: 20px;
+ margin-left: 20px;
+ flex-direction: row;
+ display: flex;
 }
 /* Altera o fundo do header do Datepicker */
 .ui-datepicker .ui-datepicker-header {
@@ -168,8 +176,81 @@ body
 }
 .dois
 {
- background-color: aqua;
- width: 800px;
+ /*background-color: aqua;*/
+ width: 900px;
  height: 700px;
- margin-top: 20px;
+ flex-direction: column;
+ display: flex;
+ 
+
+}
+.tres
+{
+ /*background-color: red;*/
+ width: 900px;
+ height: 700px;
+
+ margin
+}
+.calendario {
+    font-family: Arial, sans-serif;
+    max-width: 350px;
+    margin: 50px auto;
+    
+    padding: 120px;
+    margin-top: 100px;
+    box-shadow: 0 0 20px white);
+}
+
+.cabecalho {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.semana, .dias {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 5px;
+}
+.dias span:hover {
+    background-color:#343186 ;
+    cursor: pointer;
+}
+
+.dias span {
+    display: inline-block;
+    width: 100%;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    border-radius: 5px;
+    background-color: rgba(255, 255, 255, 0.894);
+}
+.dadospessoais{
+    width: 350px;
+    background-color: #343186;
+    height: 30px;
+    margin-top: 250px;
+    color: white;
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
+    align-content: center;
+    font-size:15px ;
+    font-family: 'Poppins', sans-serif;
+    margin-left: 20px;
+
+}
+.dadospessoais p {
+ margin-top: 4px;
+ margin-left: 10px;
+}
+.dados{
+
+}
+.logo{
+    width: 20px;
+    height: 20px;
 }
