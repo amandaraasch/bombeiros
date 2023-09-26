@@ -47,7 +47,7 @@
             <div class="teste" id="teste" onclick="animar('d1');">
 
               <div id="imageDiv">
-                 <img class="okay2"  id="okay" src="../img/okay.png">
+                 <img class="okay2"  id="okay" src="../img/okay.png" width="20px">
               </div>
 
               </div>
@@ -77,7 +77,7 @@
 
                 <input class="caixa" type="number" name="IDADEPAC" PLACEHOLDER="idade"><legend>
                 </div> 
-                <input class="caixa2" type="number" name="NOMEPAC" PLACEHOLDER="rg/cpf">
+                <input class="caixa2" type="number" name="CPFpac" PLACEHOLDER="rg/cpf">
 
                 <input max="14" class="caixa3" type="text" id="telefone" name="telefone" PLACEHOLDER="fone">
 
@@ -93,7 +93,7 @@
 
                 <br><br>
 
-                 <input type="button" name="enviar" value="Enviar" onclick="ajax();" meu deus do céu/>
+                 <input type="button" name="enviar" value="Enviar" onclick="ajax()" meu deus do céu/>
                 
                     <p id="message" style="display: none;">Foi preenchido e enviado</p>
 
@@ -179,7 +179,7 @@ menuButton.addEventListener('click', () => {
 menu.classList.toggle('open');
 });
 
-    
+    function ajax() {
     var dados = $('#form1').serialize();
 
             $.ajax({
@@ -208,6 +208,7 @@ menu.classList.toggle('open');
                 },
                 timeout: 5000    // Define um tempo limite de 5 segundos (5000 milissegundos)
             });
+          }
             
           
 

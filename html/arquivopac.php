@@ -1,6 +1,7 @@
 <?php
+include('../conecta.php');
 
-$data = $_POST["data"];
+$data = $_POST["aniversario"];
 $sexo = $_POST["sexo"];
 $nome_hospital = $_POST["nome_hospital"];
 $nomepac = $_POST["NOMEPAC"];
@@ -11,7 +12,31 @@ $nomeacom = $_POST["NOMEACOM"];
 $idadeacom = $_POST["IDADEACOM"];
 $local = $_POST["Localidade"]; // Added a semicolon here
 
-include('conecta.php');
+$array = [
+    $data,
+    $sexo,
+    $nome_hospital,
+    $nomepac,
+    $idadepac,
+    $cpfpac,
+    $telefone,
+    $nomeacom,
+    $idadeacom,
+    $local
+];
+
+$result = false;
+
+foreach ($array as $valor) {
+    if (empty($valor)) {
+        $result = true;
+    }
+}
+
+if($result === true) {
+    header("Location: pagina1.html");
+    exit();
+}
 
 // Use prepared statements to avoid SQL injection
 $comando = $pdo->prepare("INSERT INTO paciente(Data, Sexo, Nome_hospital, Nomepac, Idadepac, CPFpac, Telefone, NOMEACOM, IDADEACOM, Localidade ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)");
