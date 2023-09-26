@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Tempo de geração: 20/09/2023 às 02:47
+-- Tempo de geração: 27/09/2023 às 01:51
 -- Versão do servidor: 10.4.28-MariaDB
 -- Versão do PHP: 8.0.28
 
@@ -65,6 +65,24 @@ CREATE TABLE `paciente` (
   `NOMEACOM` varchar(45) NOT NULL,
   `IDADEACOM` int(11) NOT NULL,
   `Localidade` varchar(45) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Despejando dados para a tabela `paciente`
+--
+
+INSERT INTO `paciente` (`Data`, `Sexo`, `Nome_hospital`, `Nomepac`, `Idadepac`, `CPFpac`, `Telefone`, `NOMEACOM`, `IDADEACOM`, `Localidade`) VALUES
+('2021-06-16', 'Masculi', 'Dona Helena', 'andré ', 17, 2147483647, 2147483647, 'evelin', 20, 'Rua Albano schimit');
+
+-- --------------------------------------------------------
+
+--
+-- Estrutura para tabela `tipo_ocorrencia`
+--
+
+CREATE TABLE `tipo_ocorrencia` (
+  `opcao1` tinyint(1) NOT NULL,
+  `opcao2` tinyint(1) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 -- --------------------------------------------------------
