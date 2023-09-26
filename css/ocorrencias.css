@@ -189,6 +189,9 @@ body
  /*background-color: red;*/
  width: 900px;
  height: 700px;
+ justify-content: space-around;
+ flex-direction: column;
+ display: flex;
 
  margin
 }
@@ -196,10 +199,10 @@ body
     font-family: Arial, sans-serif;
     max-width: 350px;
     margin: 50px auto;
-    
-    padding: 120px;
-    margin-top: 100px;
-    box-shadow: 0 0 20px white);
+  padding: 20px;
+
+    margin-top: 90px;
+    box-shadow: 0 0 10px white);
 }
 
 .cabecalho {
@@ -247,10 +250,89 @@ body
  margin-top: 4px;
  margin-left: 10px;
 }
-.dados{
+.dadospessoais3{
+    width: 350px;
+    background-color: #343186;
+    height: 30px;
+    margin-top: 250px;
+    color: white;
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
+    align-content: center;
+    font-size:15px ;
+    font-family: 'Poppins', sans-serif;
+    margin-left: 20px;
 
+}
+.dadospessoais p {
+ margin-top: 4px;
+ margin-left: 10px;
+}
+.dados
+{
+/* background-color: #e2353b;*/
+ width: 500px;
+ margin-top: 20px;
+ flex-direction: row;
+ height: 350px;
+}
+.dados p 
+{
+    margin-left: 20px;
+    font-family: 'Poppins', sans-serif;
+    color:#343186
 }
 .logo{
     width: 20px;
     height: 20px;
+}
+.doisemeio
+{
+
+ width: 800px;
+ border-style: solid;
+ border-width:2px;
+ border-color: rgba(0, 0, 0, 0.196);
+ height: 650px;
+ flex-direction: column;
+ border-radius: 20px; 
+ display: flex;
+}
+.oco
+{
+    width: 450px;
+    border-style: solid;
+    border-width:2px;
+    border-color: rgba(0, 0, 0, 0.196);
+    height:250px;
+    margin-left: -50px;
+    flex-direction: column;
+    border-radius: 20px; 
+    display: flex;
+    margin-top: 80px;
+}
+.dadospessoais2{
+    width: 350px;
+    background-color: #343186;
+    height: 30px;
+    margin-top: 20px;
+    color: white;
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
+    align-content: center;
+    font-size:15px ;
+    font-family: 'Poppins', sans-serif;
+    margin-left: 20px;
+
+}
+.dadospessoais2 p {
+ margin-top: 4px;
+ margin-left: 10px;
+}
+.foto
+{
+    width: 150px;
+    margin-left: 20px;
 }
