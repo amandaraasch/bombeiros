@@ -184,13 +184,18 @@ align-items: center;
   border-radius:  10px 10px 0px 0px;
   /*226, 30, 30*/
 }
+.emoji
+{
+  width: 40px;
+  margin-left: 10px;
+}
 
 .esconder
 {
 margin-top: 5px;
 margin-left: 10px;
 width: 90%;
-height: 1635px;
+height: 335px;
 background-color: rgb(180, 179, 179);
 border-radius: 10px;
 display: none;
