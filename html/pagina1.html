@@ -47,7 +47,7 @@
             <div class="teste" id="teste" onclick="animar('d1');">
 
               <div id="imageDiv">
-                 <img class="okay2"  id="okay" src="../img/okay.png" width="20px">
+                 <img class="okay1" id="okay1" src="../img/okay.png" width="20px">
               </div>
 
               </div>
@@ -102,17 +102,46 @@
             </div>
         </div>   <br>
 
+
+
+
         <div id="d2" class="d2">
           <div class="empurrar"></div>
           <div class="inicial">
-            <div class="teste" id="teste" onclick="animar('d2');"></div>
+            <div class="teste" id="teste" onclick="animar('d2');">
+            
+              <div id="imageDiv">
+
+                <img class="okay2"  id="okay2" src="../img/okay.png" width="20px">
+              </div>
+
+            </div>
 
             <br><p>TIPO DE OCORRÊNCIA</p></br>
           </div>
           <br>
             <div class="esconder" id="esconder2">
 
-              <form method="post" action="" id="form2"></form>
+              <form method="post" action="" id="form2">
+
+                <input type="checkbox" name="opcao1" value="Opcao1"> Causado por animais 
+                <br>
+                <input type="checkbox" name="opcao2" value="Opcao2"> Com meio de transporte 
+                <br>
+                <input type="checkbox" name="opcao3" value="Opcao3"> Desmoranamento
+                <br>
+                <input type="checkbox" name="opcao4" value="Opcao4"> Emergência médica
+                <br>
+                <input type="checkbox" name="opcao5" value="Opcao5"> Queda de altura 2M
+                <br>
+                <input type="checkbox" name="opcao6" value="Opcao6"> Tentativa de suicídio 
+                <br>
+                <input type="checkbox" name="opcao7" value="Opcao7"> Queda própria altura 
+                <br>
+                
+                <input type="button" value="Enviar" onclick="enviarFormulario()">
+
+              </form>
             </div>
         </div>   <br>
 
@@ -124,7 +153,11 @@
           
           <br><p>SINAIS VITAIS</p></br>
           </div>
-            <div class="esconder" id="esconder3"></div>
+            <div class="esconder" id="esconder3">
+
+
+
+            </div>
         
         </div>   <br>
 
@@ -183,6 +216,8 @@ menuButton.addEventListener('click', () => {
 menu.classList.toggle('open');
 });
 
+
+// div 1 ajax
     function ajax() {
     var dados = $('#form1').serialize();
 
@@ -194,9 +229,7 @@ menu.classList.toggle('open');
                                 
                 success: function(meu_json)
                 {
-                    okay.style.display="block"
-                    var valores = meu_json;          // Vem do arquivo.php
-                    var lista = valores.empregados;  // Pega os dados dos "empregados"
+                    okay1.style.display="block"
                   
                 },
                 error: function(xhr, status, error) {
@@ -212,9 +245,34 @@ menu.classList.toggle('open');
                 },
                 timeout: 5000    // Define um tempo limite de 5 segundos (5000 milissegundos)
             });
-          }
-            
-          
+      }
+
+
+          // div 2 ajax
+        function enviarFormulario() {
+
+          // Serialize o formulário para obter os dados em formato de string
+          var formData = $('#form2').serialize();
+
+          $.ajax({
+              type: "POST", // Método HTTP (ou "GET" se preferir)
+              url: "tp_ocorrencias.php", // URL para onde enviar os dados
+              data: formData,
+              dataType: 'json',
+
+              success: function(meu_json) {
+
+                okay2.style.display="block"
+                  
+              },
+              error: function(error) {
+                  // Ações a serem executadas em caso de erro
+                  console.log("Ocorreu um erro ao enviar os dados");
+                  console.log(error);
+              }
+           });
+        }
+
 
 
 </script>
