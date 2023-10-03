@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Tempo de geração: 27/09/2023 às 01:51
+-- Tempo de geração: 03-Out-2023 às 17:19
 -- Versão do servidor: 10.4.28-MariaDB
--- Versão do PHP: 8.0.28
+-- versão do PHP: 8.2.4
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -24,7 +24,7 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Estrutura para tabela `cadastro`
+-- Estrutura da tabela `cadastro`
 --
 
 CREATE TABLE `cadastro` (
@@ -37,7 +37,7 @@ CREATE TABLE `cadastro` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
--- Despejando dados para a tabela `cadastro`
+-- Extraindo dados da tabela `cadastro`
 --
 
 INSERT INTO `cadastro` (`id`, `login`, `senha`, `cep`, `descricao`, `adm`) VALUES
@@ -51,7 +51,7 @@ INSERT INTO `cadastro` (`id`, `login`, `senha`, `cep`, `descricao`, `adm`) VALUE
 -- --------------------------------------------------------
 
 --
--- Estrutura para tabela `paciente`
+-- Estrutura da tabela `paciente`
 --
 
 CREATE TABLE `paciente` (
@@ -68,27 +68,45 @@ CREATE TABLE `paciente` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
--- Despejando dados para a tabela `paciente`
+-- Extraindo dados da tabela `paciente`
 --
 
 INSERT INTO `paciente` (`Data`, `Sexo`, `Nome_hospital`, `Nomepac`, `Idadepac`, `CPFpac`, `Telefone`, `NOMEACOM`, `IDADEACOM`, `Localidade`) VALUES
-('2021-06-16', 'Masculi', 'Dona Helena', 'andré ', 17, 2147483647, 2147483647, 'evelin', 20, 'Rua Albano schimit');
+('2023-10-10', 'Feminin', 'dona helena', 'evelin', 2, 2, 2, 'André', 2, 'sadasde'),
+('2023-10-17', 'Feminin', 'são josé', 'tissia', 5, 6, 2147483647, 'aqwewqe', 2, 'P Gomes');
 
 -- --------------------------------------------------------
 
 --
--- Estrutura para tabela `tipo_ocorrencia`
+-- Estrutura da tabela `tipo_ocorrencia`
 --
 
 CREATE TABLE `tipo_ocorrencia` (
-  `opcao1` tinyint(1) NOT NULL,
-  `opcao2` tinyint(1) NOT NULL
+  `opcao1` varchar(15) NOT NULL,
+  `opcao2` varchar(15) NOT NULL,
+  `opcao3` varchar(15) NOT NULL,
+  `opcao4` varchar(15) NOT NULL,
+  `opcao5` varchar(15) NOT NULL,
+  `opcao6` varchar(15) NOT NULL,
+  `opcao7` varchar(15) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Extraindo dados da tabela `tipo_ocorrencia`
+--
+
+INSERT INTO `tipo_ocorrencia` (`opcao1`, `opcao2`, `opcao3`, `opcao4`, `opcao5`, `opcao6`, `opcao7`) VALUES
+('Causado por ani', '?', 'Desmoranamento/', '?', '?', 'Tentativa de su', '?'),
+('Causado por ani', '?', 'Desmoranamento/', '?', '?', 'Tentativa de su', '?'),
+('Causado por ani', '?', '?', 'Emergência médi', '?', 'Tentativa de su', '?'),
+('Causado por ani', '?', '?', 'Emergência médi', '?', 'Tentativa de su', '?'),
+('?', '?', '?', '?', '?', '?', '?'),
+('Causado por ani', 'Com meio de tra', 'Desmoranamento/', 'Emergência médi', 'Queda de altura', 'Tentativa de su', 'Queda própria a');
 
 -- --------------------------------------------------------
 
 --
--- Estrutura para tabela `usuarios`
+-- Estrutura da tabela `usuarios`
 --
 
 CREATE TABLE `usuarios` (
@@ -98,7 +116,7 @@ CREATE TABLE `usuarios` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
--- Despejando dados para a tabela `usuarios`
+-- Extraindo dados da tabela `usuarios`
 --
 
 INSERT INTO `usuarios` (`login`, `senha`, `adm`) VALUES
@@ -117,13 +135,13 @@ INSERT INTO `usuarios` (`login`, `senha`, `adm`) VALUES
 --
 
 --
--- Índices de tabela `cadastro`
+-- Índices para tabela `cadastro`
 --
 ALTER TABLE `cadastro`
   ADD PRIMARY KEY (`id`);
 
 --
--- AUTO_INCREMENT para tabelas despejadas
+-- AUTO_INCREMENT de tabelas despejadas
 --
 
 --
