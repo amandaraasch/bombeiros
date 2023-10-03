@@ -55,23 +55,5 @@ $comando->bindParam(10, $local);
 
 $resultado = $comando->execute();
 
-if ($resultado) {
-    $empregados = [
-        [
-            "aniversario" => $data,
-            "sexo" => $sexo,
-            "nome_hospital" => $nome_hospital,
-            "NOMEPAC" => $nomepac,
-            "IDADEPAC" => $idadepac,
-            "CPFpac" => $cpfpac,
-            "Telefone" => $telefone,
-            "NOMEACOM" => $nomeacom,
-            "IDADEACOM" => $idadeacom,
-            "Localidade" => $local
-        ]
-    ];
-} else {
-    // Error handling, if needed
-}
-
+echo(1);
 ?>

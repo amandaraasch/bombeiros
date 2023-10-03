@@ -89,7 +89,7 @@ font-family: 'Effra', sans-serif;
   background-color: silver;
   margin-top: 25px;
   margin-left: 40px;
-  position:relative
+  position:relative;
   
 }
 
@@ -131,12 +131,6 @@ font-size: 15px;
 border-style: solid;
 border-color: transparent;
 }
-#okay
-{
-  margin-top:6px;
-  margin-left:220px ;
-  
-}
 
 .caixa3
 {
@@ -160,10 +154,31 @@ color: white;
 align-items: center;
 }
 
+#okay1
+{
+  margin-top:6px;
+  margin-left:220px ;
+  
+}
+
+#okay2
+{
+  margin-top:6px;
+  margin-left:220px ;
+  
+}
+
+
+.okay1
+{
+  display: none;
+}
+
 .okay2
 {
   display: none;
 }
+
 
 .teste
 {
@@ -190,6 +205,8 @@ border-radius: 10px;
 display: none;
 
 }
+
+
 .empurrar
 {
 width: 90%;
