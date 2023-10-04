@@ -119,8 +119,9 @@
             <input class="caixinha" type="checkbox" id="tontura" name="tontura" value="tontura"> &nbsp; Tontura <br>
             <input class="caixinha" type="checkbox" id="outros" name="outros" value="outros"> &nbsp; Outros <br>
 
-
-              </form>
+            <input type="button" name="enviar" value="Enviar" onclick="ajax()" meu deus do céu/>
+              
+          </form>
 
             </div>
         </div>   <br>
@@ -158,8 +159,10 @@
                 <input class="caixa2" type="radio" id="semremocao" name="semremocao" value="semremocao"> &nbsp; Sem remoção <br> 
 
 
-                <input class="caixinha" type="checkbox" id="outros" name="outros" value="outros"> &nbsp; Outros <br>
-              </form>
+                
+              <input class="caixinha" type="checkbox" id="outros" name="outros" value="outros"> &nbsp; Outros <br>
+              <input type="button" name="enviar" value="Enviar" onclick="ajax()" meu deus do céu/>
+            </form>
             </div>
         </div>   <br>
 
@@ -187,6 +190,7 @@
                 <input class="caixinha" type="checkbox" id="tras" name="tras" value="tras">  Pass.BCO trás <br> 
                 <input class="caixinha" type="checkbox" id="pedestre" name="pedestre" value="pedestre">  Pedestre <br> 
 
+                <input class="botao" type="button" name="enviar" value="Enviar" onclick="ajax()" meu deus do céu/>
               </form>
             </div>
         
@@ -218,7 +222,7 @@
     if (divHeight > 130) {
         $("#" + ID).animate({ height: "130px" });
     } else { // Caso contrário, abrir a div para 850px
-        $("#" + ID).animate({ height: "1750px" });
+        $("#" + ID).animate({ height: "1850px" });
         if(ID=="d1")
         {
           esconder1.style.display="block"// esconder as div com os dados
