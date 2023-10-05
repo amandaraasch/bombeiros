@@ -23,9 +23,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   $comando->bindParam(":op7", $opcao7);
 
   if ($comando->execute()) {
-    echo "Dados inseridos com sucesso na tabela.";
+    echo ('{"Resp":1}');
   } else {
-    echo "Erro ao inserir dados na tabela: " . $comando->error;
+    echo ('{"Resp":0}'); 
   }
 
 }
