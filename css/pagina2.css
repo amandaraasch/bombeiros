@@ -133,6 +133,13 @@ border-style: solid;
 border-color: transparent;
 }
 
+.caixa3
+{
+  
+  margin-left: 10px;
+  border-style: solid;
+  border-color: transparent;
+}
 
 .setaa
 {
@@ -161,6 +168,19 @@ color: white;
 align-items: center;
 }
 
+#okay6
+{
+  margin-top:6px;
+  margin-left:220px ;
+}
+
+#okay5
+{
+  margin-top:6px;
+  margin-left:220px ;
+}
+
+
 #okay4
 {
   margin-top:6px;
@@ -171,6 +191,17 @@ align-items: center;
 {
   display: none;
 }
+
+.okay6
+{
+  display: none;
+}
+
+.okay5
+{
+  display: none;
+}
+
 
 .teste
 {

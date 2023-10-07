@@ -190,41 +190,50 @@
         <div id="d2" class="d2">
           <div class="empurrar"></div>
           <div class="inicial">
-            <div class="teste" id="teste" onclick="animar('d2');"></div>
+            <div class="teste" id="teste" onclick="animar('d2');">
+            
+              <div id="imageDiv">
+
+                <img class="okay5"  id="okay5" src="../img/okay.png" width="20px">
+
+              </div>
+            </div>
 
             <br><p>PROBLEMAS ENCONTRADOS</p></br>
           </div>
           <br>
             <div class="esconder" id="esconder2">
 
-              <form method="post" action="" id="form2">
+              <form method="post" action="" id="form5">
               <br>
-                <input class="caixinha" type="checkbox" id="psciq" name="psiq" value="psiq"> &nbsp; Psiquiátrico <br>
-                <input class="caixinha" type="checkbox" id="respiratorio" name="respiratorio" value="respiratorio"> &nbsp; Respiratório  <br>
-                <input class="caixa2" type="radio" id="DPOC" name="DPOC" value="DPOC"> DPOC <br>
-                <input class="caixa2" type="radio" id="inalacao" name="inalacao" value="inalacao"> Inalação Fumaça  <br>
-                <input class="caixinha" type="checkbox" id="dibetes" name="diabetes" value="diabetes"> &nbsp; Diabetes <br>
-                <input class="caixa2" type="radio" id="Hiperglicemia" name="Hiperglicemia" value="Hiperglicemia">  Hiperglicemia <br>
-                <input class="caixa2" type="radio" id="Hipoglicemia" name="Hipoglicemia" value="Hipoglicemia">  Hipoglicemia <br> 
-                <input class="caixinha" type="checkbox" id="obstetrico" name="obstetrico" value="obstetrico"> &nbsp; Obstétrico <br>
-                <input class="caixa2" type="radio" id="Parto" name="Parto" value="Parto"> Parto Emergencial <br>
-                <input class="caixa2" type="radio" id="Gestante" name="Gestante" value="Gestante">  Gestante<br>
-                <input class="caixa2" type="radio" id="Hemor" name="Hemor" value="Hemor"> Hemor.Excessiva <br> 
-                <input class="caixinha" type="checkbox" id="transporte" name="transporte" value="transporte"> &nbsp; Transporte <br>
-                <input class="caixa2" type="radio" id="aereo" name="aereo" value="aereo"> &nbsp; Aéreo <br> 
-                <input class="caixa2" type="radio" id="clinico" name="clinico" value="clinico"> &nbsp; Clínico <br> 
-                <input class="caixa2" type="radio" id="Emergencial" name="Emergencial" value="Emergencial"> &nbsp; Emergencial <br> 
-                <input class="caixa2" type="radio" id="postrauma" name="postrauma" value="postrauma"> &nbsp; Pós-trauma <br> 
-                <input class="caixa2" type="radio" id="Samu" name="Samu" value="Samu"> &nbsp; Samu <br> 
-                <input class="caixa2" type="radio" id="outros" name="outros" value="outros"> &nbsp; Outros <br>                 <input class="caixa2" type="radio" id="" name="" value=""> &nbsp; Outros <br> 
-                <input class="caixa2" type="radio" id="semremocao" name="semremocao" value="semremocao"> &nbsp; Sem remoção <br> 
-
+                <input class="caixinha" type="checkbox"  name="opcao1"     value="opcao1"> &nbsp; Psiquiátrico <br>
+                <input class="caixinha" type="checkbox"  name="opcao2"     value="opcao2"> &nbsp; Respiratório  <br>
+                <input class="caixa2" type="radio"       name="opcao3"     value="opcao3"> DPOC <br>
+                <input class="caixa2" type="radio"       name="opcao4"     value="opcao4"> Inalação Fumaça  <br>
+                <input class="caixinha" type="checkbox"  name="opcao5"     value="opcao5"> &nbsp; Diabetes <br>
+                <input class="caixa2" type="radio"       name="opcao6"     value="opcao6">  Hiperglicemia <br>
+                <input class="caixa2" type="radio"       name="opcao7"     value="opcao7">  Hipoglicemia <br> 
+                <input class="caixinha" type="checkbox"  name="opcao8"     value="opcao8"> &nbsp; Obstétrico <br>
+                <input class="caixa2" type="radio"       name="opcao9"     value="opcao9"> Parto Emergencial <br>
+                <input class="caixa2" type="radio"       name="opcao10"    value="opcao10">  Gestante<br>
+                <input class="caixa2" type="radio"       name="opcao11"    value="opcao11"> Hemor.Excessiva <br> 
+                <input class="caixinha" type="checkbox"  name="opcao12"    value="opcao12"> &nbsp; Transporte <br>
+                <input class="caixa2" type="radio"       name="opcao13"    value="opcao13"> &nbsp; Aéreo <br> 
+                <input class="caixa2" type="radio"       name="opcao14"    value="opcao14"> &nbsp; Clínico <br> 
+                <input class="caixa2" type="radio"       name="opcao15"    value="opcao15"> &nbsp; Emergencial <br> 
+                <input class="caixa2" type="radio"       name="opcao16"    value="opcao16"> &nbsp; Pós-trauma <br> 
+                <input class="caixa2" type="radio"       name="opcao17"    value="opcao17"> &nbsp; Samu <br> 
+                <input class="caixa2" type="radio"       name="opcao18"    value="opcao18"> &nbsp; Outros <br>                
+                <input class="caixa2" type="radio"       name="opcao19"    value="opcao19"> &nbsp; Sem remoção
+                 <br> <br>
+                <input class="caixa3" type="text"        name="Outros"     value="">
+                <br> <br>
 
                 
-              <input class="caixinha" type="checkbox" id="outros" name="outros" value="outros"> &nbsp; Outros <br>
+              <input class="caixinha" type="checkbox"    name="opcao21" value="opcao21"> &nbsp; Outros <br>
 
-
-              <input type="button" name="enviar" value="Enviar"  meu deus do céu/>
+                <br>
+                <input type="button" name="enviar" value="Enviar" onclick="pes_form()" >
             </form>
             </div>
         </div>   <br>
@@ -233,27 +242,47 @@
         <div id="d3" class="d3">
           <div class="empurrar"></div>
           <div class="inicial">
-          <div class="teste" id="teste" onclick="animar('d3');"></div>
+          <div class="teste" id="teste" onclick="animar('d3');">
+          
+            <div id="imageDiv">
+
+              <img class="okay6"  id="okay6" src="../img/okay.png" width="20px">
+
+            </div>
+          
+          </div>
           
           <br><p>VÍTIMA ERA</p></br> <br>
           </div>
+          <br>
 
             <div class="esconder" id="esconder3">
              
-              <form  method="post" action="" id="form3">
+              <form  method="post" action="" id="form6">
                
-                <input class="caixinha" type="checkbox" id="cilista" name="cilista" value="ciclista">  Ciclista  <br> 
-                <input class="caixinha" type="checkbox" id="condutormoto" name="condutormoto" value="condutormoto">  Condutor Moto <br> 
-                <input class="caixinha" type="checkbox" id="Gestante" name="Gestante" value="Gestante">  Gestante <br> 
-                <input class="caixinha" type="checkbox" id="frente" name="frente" value="frente">  Pass.Ban Frente <br> 
-                <input class="caixinha" type="checkbox" id="pasMoto" name="pasMoto" value="pasMoto">  Pas.Moto <br> 
-                <input class="caixinha" type="checkbox" id="condutorcarro" name="condutorcarro" value="condutorcarro">  Condutor Carro <br> 
-                <input class="caixinha" type="checkbox" id="clinico" name="clinico" value="clinico">  Clínico <br> 
-                <input class="caixinha" type="checkbox" id="trauma" name="trauma" value="trauma">  Trauma <br> 
-                <input class="caixinha" type="checkbox" id="tras" name="tras" value="tras">  Pass.BCO trás <br> 
-                <input class="caixinha" type="checkbox" id="pedestre" name="pedestre" value="pedestre">  Pedestre <br> 
+                <input class="caixinha" type="checkbox"  name="opcao1" value="opcao1">  Ciclista 
+                 <br> 
+                <input class="caixinha" type="checkbox"  name="opcao2" value="opcao2">  Condutor Moto 
+                <br> 
+                <input class="caixinha" type="checkbox"  name="opcao3" value="opcao3">  Gestante 
+                <br> 
+                <input class="caixinha" type="checkbox"  name="opcao4" value="opcao4">  Pass.Ban Frente
+                 <br> 
+                <input class="caixinha" type="checkbox"  name="opcao5" value="opcao5">  Pas.Moto
+                 <br> 
+                <input class="caixinha" type="checkbox"  name="opcao6" value="opcao6">  Condutor Carro
+                 <br> 
+                <input class="caixinha" type="checkbox"  name="opcao7" value="opcao7">  Clínico 
+                <br> 
+                <input class="caixinha" type="checkbox"  name="opcao8" value="opcao8">  Trauma 
+                <br> 
+                <input class="caixinha" type="checkbox"  name="opcao9" value="opcao9">  Pass.BCO trás
+                 <br> 
+                <input class="caixinha" type="checkbox"  name="opcao10" value="opcao10">  Pedestre 
+                <br> 
 
-                <input class="botao" type="button" name="enviar" value="Enviar"  meu deus do céu/>
+                <br>
+                <input type="button" name="enviar" value="Enviar" onclick="ve_form()">
               </form>
             </div>
         
@@ -321,7 +350,8 @@ menuButton.addEventListener('click', () => {
 menu.classList.toggle('open');
 });
 
-   
+   //para primeiro forms
+
 function ss_form() {
     var dados = $('#form4').serialize();
 
@@ -352,5 +382,66 @@ function ss_form() {
       }        
           
 
+      //segundo forms
+
+      function pes_form() {
+    var dados = $('#form5').serialize();
+
+            $.ajax({
+                type: "POST",
+                url: "pes_form.php",
+                data: dados,
+                dataType: 'json',
+                                
+                success: function(meu_json)
+                {
+                  okay5.style.display="block"
+                  
+                },
+                error: function(xhr, status, error) {
+                    // Aqui poderíamos preencher uma <div> com o innerHTML por exemplo
+                    console.error('Ocorreu um erro ao enviar os dados: ' + error);
+                },
+                beforeSend: function(xhr) {
+                    // Faz algo antes do envio, como exibir uma animação por exemplo.
+                },
+                complete: function(xhr, status) {
+                    // Faz algo após a conclusão, como ocultar uma animação por exemplo. 
+                    // Vai ser executado mesmo se ocorrer um erro.
+                },
+                timeout: 5000    // Define um tempo limite de 5 segundos (5000 milissegundos)
+            });
+      }       
+      
+      //pro terceiro form
+
+      function ve_form() {
+    var dados = $('#form6').serialize();
+
+            $.ajax({
+                type: "POST",
+                url: "ve_form.php",
+                data: dados,
+                dataType: 'json',
+                                
+                success: function(meu_json)
+                {
+                  okay6.style.display="block"
+                  
+                },
+                error: function(xhr, status, error) {
+                    // Aqui poderíamos preencher uma <div> com o innerHTML por exemplo
+                    console.error('Ocorreu um erro ao enviar os dados: ' + error);
+                },
+                beforeSend: function(xhr) {
+                    // Faz algo antes do envio, como exibir uma animação por exemplo.
+                },
+                complete: function(xhr, status) {
+                    // Faz algo após a conclusão, como ocultar uma animação por exemplo. 
+                    // Vai ser executado mesmo se ocorrer um erro.
+                },
+                timeout: 5000    // Define um tempo limite de 5 segundos (5000 milissegundos)
+            });
+      }        
 
 </script>

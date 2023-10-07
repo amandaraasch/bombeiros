@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Tempo de geração: 07/10/2023 às 06:34
+-- Tempo de geração: 07/10/2023 às 16:52
 -- Versão do servidor: 10.4.28-MariaDB
 -- Versão do PHP: 8.0.28
 
@@ -77,6 +77,43 @@ INSERT INTO `paciente` (`Data`, `Sexo`, `Nome_hospital`, `Nomepac`, `Idadepac`, 
 -- --------------------------------------------------------
 
 --
+-- Estrutura para tabela `pes_form`
+--
+
+CREATE TABLE `pes_form` (
+  `opcao1` varchar(25) NOT NULL,
+  `opcao2` varchar(25) NOT NULL,
+  `opcao3` varchar(25) NOT NULL,
+  `opcao4` varchar(25) NOT NULL,
+  `opcao5` varchar(25) NOT NULL,
+  `opcao6` varchar(25) NOT NULL,
+  `opcao7` varchar(25) NOT NULL,
+  `opcao8` varchar(25) NOT NULL,
+  `opcao9` varchar(25) NOT NULL,
+  `opcao10` varchar(25) NOT NULL,
+  `opcao11` varchar(25) NOT NULL,
+  `opcao12` varchar(25) NOT NULL,
+  `opcao13` varchar(25) NOT NULL,
+  `opcao14` varchar(25) NOT NULL,
+  `opcao15` varchar(25) NOT NULL,
+  `opcao16` varchar(25) NOT NULL,
+  `opcao17` varchar(25) NOT NULL,
+  `opcao18` varchar(25) NOT NULL,
+  `opcao19` varchar(25) NOT NULL,
+  `Outros` varchar(45) NOT NULL,
+  `opcao21` varchar(25) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Despejando dados para a tabela `pes_form`
+--
+
+INSERT INTO `pes_form` (`opcao1`, `opcao2`, `opcao3`, `opcao4`, `opcao5`, `opcao6`, `opcao7`, `opcao8`, `opcao9`, `opcao10`, `opcao11`, `opcao12`, `opcao13`, `opcao14`, `opcao15`, `opcao16`, `opcao17`, `opcao18`, `opcao19`, `Outros`, `opcao21`) VALUES
+('', 'Respiratório', '', '', '', '', '', 'Obstétrico', '', '', '', '', '', '', 'Emergencial ', '', '', '', '', 'ablacarro', 'Outros');
+
+-- --------------------------------------------------------
+
+--
 -- Estrutura para tabela `ss_form`
 --
 
@@ -141,14 +178,6 @@ CREATE TABLE `ss_form` (
   `Outros` varchar(45) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
---
--- Despejando dados para a tabela `ss_form`
---
-
-INSERT INTO `ss_form` (`opcao1`, `opcao2`, `opcao3`, `opcao4`, `opcao5`, `opcao6`, `opcao7`, `opcao8`, `opcao9`, `opcao10`, `opcao11`, `opcao12`, `opcao13`, `opcao14`, `opcao15`, `opcao16`, `opcao17`, `opcao18`, `opcao19`, `opcao20`, `opcao21`, `opcao22`, `opcao23`, `opcao24`, `opcao25`, `opcao26`, `opcao27`, `opcao28`, `opcao29`, `opcao30`, `opcao31`, `opcao32`, `opcao33`, `opcao34`, `opcao35`, `opcao36`, `opcao37`, `opcao38`, `opcao39`, `opcao40`, `opcao41`, `opcao42`, `opcao43`, `opcao44`, `opcao45`, `opcao46`, `opcao47`, `opcao48`, `opcao49`, `opcao50`, `opcao51`, `opcao52`, `opcao53`, `opcao54`, `opcao55`, `opcao56`, `opcao57`, `Outros`) VALUES
-('Abdomen Sensível/Rígido', '', '', 'Amnésia', '', '', '', '', '', '', '', 'Lábios', '', '', '', '', '', '', 'Desvio de traquéia', '', 'Dor local ', '', '', '', '', '', '', 'Hemorragia ', '', '', '', '', '', '', '', 'Otorréia', '', '', '', '', '', '', '', 'Pupílas', '', '', 'Midriase', 'Miose', '', '', '', '', '', '', '', '', '', 'morreu'),
-('Abdomen Sensível/Rígido', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', 'Hipertensão', '', '', '', '', '', '', '', '', '', '', '', '', '', 'Ansiocoria', '', 'Midriase', '', '', '', '', '', '', '', '', ' Taquicardia ', '', 'morreu');
-
 -- --------------------------------------------------------
 
 --
@@ -212,6 +241,25 @@ INSERT INTO `usuarios` (`login`, `senha`, `adm`) VALUES
 ('João filipe Tissi', 187, 'n'),
 ('prof', 187, 'n'),
 ('emily', 145, 'n');
+
+-- --------------------------------------------------------
+
+--
+-- Estrutura para tabela `ve_form`
+--
+
+CREATE TABLE `ve_form` (
+  `opcao1` varchar(25) NOT NULL,
+  `opcao2` varchar(25) NOT NULL,
+  `opcao3` varchar(25) NOT NULL,
+  `opcao4` varchar(25) NOT NULL,
+  `opcao5` varchar(25) NOT NULL,
+  `opcao6` varchar(25) NOT NULL,
+  `opcao7` varchar(25) NOT NULL,
+  `opcao8` varchar(25) NOT NULL,
+  `opcao9` varchar(25) NOT NULL,
+  `opcao10` varchar(25) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Índices para tabelas despejadas
