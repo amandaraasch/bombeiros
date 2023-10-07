@@ -105,6 +105,38 @@ font-family: 'Effra', sans-serif;
   
 }
 
+
+.formsv
+{
+  font-size: 20px;
+}
+
+.put
+{
+  margin-left: 3px;
+  margin-top: 5px;
+  width: 50px;
+  height: 20px;
+  border-radius: 10px;
+  border-color: transparent;
+  
+}
+
+.put1
+{
+  margin-left: 3px;
+  margin-top: 8px;
+  width: 50px;
+  height: 15px;
+  border-radius: 10px;
+  border-color: transparent;
+  
+}
+
+.put2
+{
+  margin-top: 5px;
+}
 .formtp
 {
   margin-top: 10px;
