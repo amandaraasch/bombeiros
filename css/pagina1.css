@@ -32,6 +32,7 @@ body
   z-index: 0;
   overflow: hidden;
 }
+
 .um
 {
   display: flex;
@@ -104,12 +105,30 @@ font-family: 'Effra', sans-serif;
   
 }
 
+.formtp
+{
+  margin-top: 10px;
+  font-size: 20px;
+
+}
+
+.tp_ocorrencias2
+{
+  width: 200px;
+  height: 30px;
+  border-style: solid;
+  border-color: transparent;
+  border-radius: 10px;
+  font-size: 15px;
+}
+
 .caixinha
 {
   margin-top: 5px;
   min-width: 20px;
   min-height: 20px;
 }
+
 .caixa
 {
 width: 200px;
@@ -143,11 +162,12 @@ border-style: solid;
 border-color: transparent;
 }
 
-.Enviar
+.enviar
 {
+margin-top: 10px;
 margin-left: 65px;
 width: 80px;
-height: 40px;
+height: 30px;
 border-radius: 5px;
 background-color: #e2353b;
 color: white;
@@ -179,6 +199,10 @@ align-items: center;
   display: none;
 }
 
+.okay3
+{
+  display: none;
+}
 
 .teste
 {
