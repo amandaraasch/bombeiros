@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Tempo de geração: 07/10/2023 às 16:52
+-- Tempo de geração: 09/10/2023 às 03:43
 -- Versão do servidor: 10.4.28-MariaDB
 -- Versão do PHP: 8.0.28
 
@@ -177,6 +177,34 @@ CREATE TABLE `ss_form` (
   `opcao57` varchar(25) NOT NULL,
   `Outros` varchar(45) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+-- --------------------------------------------------------
+
+--
+-- Estrutura para tabela `sv_form`
+--
+
+CREATE TABLE `sv_form` (
+  `pressao_arterial` int(10) NOT NULL,
+  `pressao2` int(10) NOT NULL,
+  `pulso` int(10) NOT NULL,
+  `respiracao` int(10) NOT NULL,
+  `saturacao` int(10) NOT NULL,
+  `hgt` int(10) NOT NULL,
+  `temperatura` int(10) NOT NULL,
+  `opcao1` varchar(25) NOT NULL,
+  `opcao2` varchar(25) NOT NULL,
+  `perfusao_menor` varchar(25) NOT NULL,
+  `perfusao_maior` varchar(25) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Despejando dados para a tabela `sv_form`
+--
+
+INSERT INTO `sv_form` (`pressao_arterial`, `pressao2`, `pulso`, `respiracao`, `saturacao`, `hgt`, `temperatura`, `opcao1`, `opcao2`, `perfusao_menor`, `perfusao_maior`) VALUES
+(5, 5, 0, 5, 0, 0, 0, '', 'Normal', '&gt;2SEG', ''),
+(0, 0, 0, 0, 0, 0, 0, '', '', '', '');
 
 -- --------------------------------------------------------
 
