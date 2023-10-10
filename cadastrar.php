@@ -5,7 +5,15 @@ $login = $_POST["login"];
 $senha     = $_POST["senha"];
 $cep   = $_POST["cep"];
 $descricao   = $_POST["descricao"];
+//SE CLICOU NO BOTÃO INSERIR
 
+$comando = $pdo->prepare("INSERT INTO cadastro VALUES('$id','$login','$senha','$cep','$descricao','n')");
+$resultado = $comando->execute();
+$comando = $pdo->prepare("INSERT INTO usuarios VALUES('$login','$senha','n')");
+$resultado = $comando->execute();
+header("Location: html/adm.php");
+
+//transformando cep em cidade/estado
 $url = "https://viacep.com.br/ws/{$cep}/json/";
 
 $ch = curl_init();
@@ -30,14 +38,7 @@ if (isset($data['erro'])) {
     $estado = $data['uf'];
 }
 
-
-
-//SE CLICOU NO BOTÃO INSERIR
-
-    $comando = $pdo->prepare("INSERT INTO cadastro VALUES('$id','$login','$senha','$cep','$descricao','n')");
-    $resultado = $comando->execute();
-    $comando = $pdo->prepare("INSERT INTO usuarios VALUES('$login','$senha','n')");
-    $resultado = $comando->execute();
-    header("Location: html/adm.php");
 ?>
+
+
 

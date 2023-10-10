@@ -13,6 +13,17 @@ body
     margin: 0px;
     
 }
+.espaco
+{
+  margin-left: 10px;
+  
+}
+.espaco1
+{
+  margin-left: 10px;
+  border-radius: 10px;
+  border-color: transparent;
+}
 
 .verm
 {
@@ -124,13 +135,13 @@ border-color: transparent;
 .caixa2
 {
 
-height: 15px;
-border-radius: 10px;
-margin-top: 5px;
-font-size: 15px;
-margin-left: 30px;
-border-style: solid;
-border-color: transparent;
+  height: 15px;
+  border-radius: 10px;
+  margin-top: 5px;
+  font-size: 15px;
+  margin-left: 30px;
+  border-style: solid;
+  border-color: transparent;
 }
 #okay
 {
@@ -190,9 +201,11 @@ align-items: center;
 margin-top: 5px;
 margin-left: 10px;
 width: 90%;
-height: 1635px;
+height: 1565px;
+font-size: 15px;
 background-color: rgb(180, 179, 179);
 border-radius: 10px;
+font-family: 'Poppins', sans-serif;
 display: none;
 
 }
