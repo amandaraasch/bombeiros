@@ -3,26 +3,26 @@ include("../conecta.php");
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Obtenha os valores das caixas de seleção do POST
-    $opcao1 = isset($_POST["opcao1"]) ? "Causado por animais " : "?";
-    $opcao2 = isset($_POST["opcao2"]) ? "Com meio de transporte" : "?";
-    $opcao3 = isset($_POST["opcao3"]) ? "Desmoronamento/Deslizamento" : "?";
-    $opcao4 = isset($_POST["opcao4"]) ? "Emergência médica" : "?";
-    $opcao5 = isset($_POST["opcao5"]) ? "Queda de altura 2M" : "?";
-    $opcao6 = isset($_POST["opcao6"]) ? "Tentativa de suicídio" : "?";
-    $opcao7 = isset($_POST["opcao7"]) ? "Queda própria altura " : "?";
-    $opcao8 = isset($_POST["opcao8"]) ? "Afogamento " : "?";
-    $opcao9 = isset($_POST["opcao9"]) ?  "Agressão " : "?";
-    $opcao10 = isset($_POST["opcao10"]) ? "Atropelamento " : "?";
-    $opcao11 = isset($_POST["opcao11"]) ? "Choque elétrico" : "?";
-    $opcao12 = isset($_POST["opcao12"]) ? "Desabamento " : "?";
-    $opcao13 = isset($_POST["opcao13"]) ? "Doméstico " : "?";
-    $opcao14 = isset($_POST["opcao14"]) ? "Esportivo " : "?";
-    $opcao15 = isset($_POST["opcao15"]) ? "Intoxicação " : "?";
-    $opcao16 = isset($_POST["opcao16"]) ? "Queda de bicicleta" : "?";
-    $opcao17 = isset($_POST["opcao17"]) ? "Queda de moto " : "?";
-    $opcao18 = isset($_POST["opcao18"]) ? "Queda nível <2m" : "?"; // Corrigido de '&lt;' para '<'
-    $opcao19 = isset($_POST["opcao19"]) ? "Trabalho " : "?";
-    $opcao20 = isset($_POST["opcao20"]) ? "Transferência " : "?";
+    $opcao1 = isset($_POST["opcao1"]) ? "Causado por animais " : "";
+    $opcao2 = isset($_POST["opcao2"]) ? "Com meio de transporte" : "";
+    $opcao3 = isset($_POST["opcao3"]) ? "Desmoronamento/Deslizamento" : "";
+    $opcao4 = isset($_POST["opcao4"]) ? "Emergência médica" : "";
+    $opcao5 = isset($_POST["opcao5"]) ? "Queda de altura 2M" : "";
+    $opcao6 = isset($_POST["opcao6"]) ? "Tentativa de suicídio" : "";
+    $opcao7 = isset($_POST["opcao7"]) ? "Queda própria altura " : "";
+    $opcao8 = isset($_POST["opcao8"]) ? "Afogamento " : "";
+    $opcao9 = isset($_POST["opcao9"]) ?  "Agressão " : "";
+    $opcao10 = isset($_POST["opcao10"]) ? "Atropelamento " : "";
+    $opcao11 = isset($_POST["opcao11"]) ? "Choque elétrico" : "";
+    $opcao12 = isset($_POST["opcao12"]) ? "Desabamento " : "";
+    $opcao13 = isset($_POST["opcao13"]) ? "Doméstico " : "";
+    $opcao14 = isset($_POST["opcao14"]) ? "Esportivo " : "";
+    $opcao15 = isset($_POST["opcao15"]) ? "Intoxicação " : "";
+    $opcao16 = isset($_POST["opcao16"]) ? "Queda de bicicleta" : "";
+    $opcao17 = isset($_POST["opcao17"]) ? "Queda de moto " : "";
+    $opcao18 = isset($_POST["opcao18"]) ? "Queda nível <2m" : ""; // Corrigido de '&lt;' para '<'
+    $opcao19 = isset($_POST["opcao19"]) ? "Trabalho " : "";
+    $opcao20 = isset($_POST["opcao20"]) ? "Transferência " : "";
     $opcao21 = $_POST["Outros"]; // Opção 21 (campo de texto)
 
     // Crie uma consulta SQL para inserir os valores na tabela (substitua "sua_tabela" pelo nome da sua tabela)
