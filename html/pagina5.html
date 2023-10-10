@@ -329,9 +329,9 @@
           <div class="inicial">
           <div class="teste" id="teste" onclick="animar('d3');"></div>
           
-          <br><p>AVALIAÇÃO DA CINEMÁTICA</p></br> <br>
+          <br><p>AVALIAÇÃO DA CINEMÁTICA</p></br> 
           </div>
-
+            <br>
             <div class="esconder" id="esconder3">
              
               <form  method="post" action="" id="form3">
@@ -421,16 +421,19 @@
         $("#" + ID).animate({ height: "1700px" });
         if(ID=="d1")
         {
+          $("#" + ID).animate({ height: "1750px" });
           esconder1.style.display="block"// esconder as div com os dados
         }
 
         if(ID=="d2")
         {
+          $("#" + ID).animate({ height: "1150px" });
           esconder2.style.display="block"
         }
 
         if(ID=="d3")
         {
+          $("#" + ID).animate({ height: "750px" });
           esconder3.style.display="block"
         }
 

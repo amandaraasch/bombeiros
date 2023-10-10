@@ -201,13 +201,18 @@ align-items: center;
 margin-top: 5px;
 margin-left: 10px;
 width: 90%;
-
 font-size: 15px;
 background-color: rgb(180, 179, 179);
 border-radius: 10px;
 font-family: 'Poppins', sans-serif;
 display: none;
 
+}
+.espaco01
+{
+  width: 100px;
+  border-radius: 10px;
+  border-color: transparent;
 }
 .empurrar
 {
