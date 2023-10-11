@@ -13,6 +13,17 @@ body
     margin: 0px;
     
 }
+.enviar
+{
+ background-color: #343186;
+ color:white;
+ width: 100px;
+ height: 30px;
+ border-radius: 20px;
+ border-color: transparent;
+ margin-left: 60px;
+ font-family: 'Poppins', sans-serif; ;
+}
 .espaco
 {
   margin-left: 10px;

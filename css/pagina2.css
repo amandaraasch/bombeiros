@@ -32,6 +32,10 @@ body
   z-index: 0;
   overflow: hidden;
 }
+.espaco
+{
+  margin-left: 10px;
+}
 .um
 {
   display: flex;
@@ -103,11 +107,23 @@ body
   position:relative
   
 }
+.enviar
+{
+ background-color: #343186;
+ color:white;
+ width: 100px;
+ height: 30px;
+ border-radius: 20px;
+ border-color: transparent;
+ margin-left: 60px;
+ font-family: 'Poppins', sans-serif; ;
+}
 
 .caixinha
 {
   margin-top: 5px;
   min-width: 20px;
+  margin-left: 5px;
   min-height: 20px;
 }
 .caixa
