@@ -137,12 +137,13 @@
           <br>
             <div class="esconder" id="esconder2">
 
-              <form method="post" action="" id="form2">
-                <input class="caixa2" type="checkbox" id="deitada" name="deitada" value="deitada"> Deitada  <br> <br>
-                <input class="caixa2" type="checkbox" id="semisentada" name="semisentada" value="semisentada"> Semi-sentada<br> <br>
-                <input class="caixa2" type="checkbox" id="sentada" name="sentada" value="sentada">  Sentada <br> <br>
+              <form method="post" action="form_cond.php" id="form2">
+                
+                <input class="caixa2" type="checkbox"  name="opcao1"     value="deitada"> Deitada  <br> <br>
+                <input class="caixa2" type="checkbox"  name="opcao2" value="semisentada"> Semi-sentada<br> <br>
+                <input class="caixa2" type="checkbox"  name="opcao3"     value="sentada">  Sentada <br> <br>
               
-                <input type="button" name="enviar" value="Enviar" onclick="ajax()" meu deus do céu/>
+                <input type="submit" name="enviar" value="Enviar" >
               </form>
             </div>
         </div>   <br>
@@ -192,7 +193,6 @@
     </a>
     </div>
 </body>
-<script src="script.js"></script>
 <script>
    
  
