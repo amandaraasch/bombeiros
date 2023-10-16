@@ -252,19 +252,22 @@
     if (divHeight > 130) {
         $("#" + ID).animate({ height: "130px" });
     } else { // Caso contrário, abrir a div para 850px
-        $("#" + ID).animate({ height: "900px" });
+       
         if(ID=="d1")
         {
+          $("#" + ID).animate({ height: "800px" });
           esconder1.style.display="block"// esconder as div com os dados
         }
 
         if(ID=="d2")
         {
+          $("#" + ID).animate({ height: "700px" });
           esconder2.style.display="block"
         }
 
         if(ID=="d3")
         {
+          $("#" + ID).animate({ height: "500px" });
           esconder3.style.display="block"
         }
 

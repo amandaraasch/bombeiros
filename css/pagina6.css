@@ -15,14 +15,15 @@ body
 }
 .enviar
 {
- background-color: #343186;
- color:white;
- width: 100px;
- height: 30px;
- border-radius: 20px;
- border-color: transparent;
- margin-left: 60px;
- font-family: 'Poppins', sans-serif; ;
+  margin-top: 10px;
+  margin-left: 65px;
+  width: 80px;
+  height: 30px;
+  border-radius: 5px;
+  background-color: #e2353b;
+  color: white;
+  border-color: transparent;
+  align-items: center;
 }
 .espaco
 {

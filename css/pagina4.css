@@ -173,13 +173,15 @@ border-color: transparent;
 
 .Enviar
 {
-margin-left: 65px;
-width: 80px;
-height: 40px;
-border-radius: 5px;
-background-color: #e2353b;
-color: white;
-align-items: center;
+  margin-top: 10px;
+  margin-left: 65px;
+  width: 80px;
+  height: 30px;
+  border-color: transparent;
+  border-radius: 5px;
+  background-color: #e2353b;
+  color: white;
+  align-items: center;
 }
 
 .okay2
