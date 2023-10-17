@@ -347,3 +347,159 @@ border-radius: 10px;
   height: 25PX;
   top: 0px;
 }
+.corpo {
+  width: 350; /* Ajuste para a largura da sua imagem */
+  height: 250px; /* Ajuste para a altura da sua imagem */
+  position: relative;
+  margin-left: -10px;
+  background-size: cover; /* Para garantir que a imagem cubra toda a área */
+}
+
+.parte {
+  position: absolute;
+  background-color: transparent; /* Sem cor de fundo */
+  transition: background-color 0.3s;
+}
+
+.parte:hover {
+  background-color: rgba(255, 0, 0, 0.334) /* Um leve destaque ao passar o mouse */
+}
+#cabeca {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  top: 0px;
+  left: 45px;
+}
+
+#tronco {
+  width: 50px;
+  height: 80px;
+  top: 40px;
+  left: 41px;
+  border-radius: 20px;
+}
+
+#membrossuperiores {
+  width: 15px;
+  height: 80px;
+  top: 40px;
+  margin-left: 27px;
+  border-radius: 20px;
+}
+#membrossuperiores2 {
+  width: 15px;
+  height: 80px;
+  top: 40px;
+  margin-left: 87px;
+  border-radius: 20px;
+}
+#membrosinferiores {
+  width: 15px;
+  height: 120px;
+  top: 120px;
+  margin-left: 67px;
+  border-radius: 20px;
+}
+#membrosinferiores2 {
+  width: 15px;
+  height: 120px;
+  top: 120px;
+  margin-left: 47px;
+  border-radius: 20px;
+}
+
+
+#resultado {
+  margin-top: 20px;
+  margin-left: 10px;
+  font-family: 'Poppins', sans-serif;
+
+}
+#resultado1 {
+ 
+  margin-left: 2px;
+  font-family: 'Poppins', sans-serif;
+  color:rgba(255, 0, 0, 0.658)
+
+}
+.tabela
+{
+  width: 100%;
+  height: 250px;
+  background-color: #ffffff99;
+  margin-top: 50px;
+  border-radius: 20px;
+  flex-direction: column;
+  justify-content: center;
+  justify-items: center;
+  align-items: center;
+  align-content: center;
+  
+}
+.local
+{
+  width: 90%;
+ height: 50px;
+ margin-left: 12px;
+  margin-top:8px;
+  border-radius: 10px;
+  border-color: rgba(0, 0, 0, 0.478);
+  border-width:2px ;
+  border-style: solid;
+  display: flex;
+  justify-content: center;
+  justify-items: center;
+  align-items: center;
+  align-content: center;
+}
+.face
+{
+ width: 90%;
+ height: 50px;
+ margin-left: 12px;
+  margin-top:8px;
+  border-radius: 10px;
+  border-color: rgba(0, 0, 0, 0.478);
+  border-width:2px ;
+  border-style: solid;
+  display: flex;
+  justify-content: center;
+  justify-items: center;
+  align-items: center;
+  align-content: center;
+ 
+}
+.lado
+{
+  width: 90%;
+  height: 50px;
+  margin-left: 12px;
+   margin-top:8px;
+   border-radius: 10px;
+   border-color: rgba(0, 0, 0, 0.478);
+   border-width:2px ;
+   border-style: solid;
+   display: flex;
+  justify-content: center;
+  justify-items: center;
+  align-items: center;
+  align-content: center;
+}
+.tipo
+{
+  width: 90%;
+  height: 50px;
+  margin-left: 12px;
+   margin-top:8px;
+   border-radius: 10px;
+   border-color: rgba(0, 0, 0, 0.478);
+   border-width:2px ;
+   border-style: solid;
+   display: flex;
+  justify-content: center;
+  justify-items: center;
+  align-items: center;
+  align-content: center;
+}
+

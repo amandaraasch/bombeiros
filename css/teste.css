@@ -32,3 +32,38 @@
     border-radius: 5px;
     background-color: #f1f1f1;
 }
+.corpo {
+    width: 500px; /* Ajuste para a largura da sua imagem */
+    height: 500px; /* Ajuste para a altura da sua imagem */
+    position: relative;
+    border: 1px solid black;
+    background-size: cover; /* Para garantir que a imagem cubra toda a área */
+}
+
+.parte {
+    position: absolute;
+    background-color: transparent; /* Sem cor de fundo */
+    transition: background-color 0.3s;
+}
+
+.parte:hover {
+    background-color: rgba(255, 0, 0, 0.334) /* Um leve destaque ao passar o mouse */
+}
+#cabeca {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    top: 10px;
+    left: 90px;
+}
+
+#tronco {
+    width: 90px;
+    height: 100px;
+    top: 90px;
+    left: 5px;
+}
+
+#resultado {
+    margin-top: 20px;
+}

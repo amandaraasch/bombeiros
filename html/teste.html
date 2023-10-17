@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/teste.css">
+    <title>mapeamento
+    </title>
+</head>
+<body>
+    <div class="corpo" style="background-image: url('../img/corpo..png');">
+        <div class="parte" id="cabeca" data-nome="Cabeça"></div>
+        <div class="parte" id="tronco" data-nome="Tronco"></div>
+    </div>
+    
+    <div id="resultado">Clique em uma parte do corpo.</div>
+</body>
+<script>
+document.querySelectorAll('.parte').forEach(function(parte) {
+    parte.addEventListener('click', function() {
+        let nome = this.getAttribute('data-nome');
+        document.getElementById('resultado').innerText = "Você clicou em: " + nome;
+    });
+});
+</script>
+</html>

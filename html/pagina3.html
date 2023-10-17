@@ -61,6 +61,24 @@
             <div class="esconder" id="esconder1">
 
           <form method="post" action="" id="form4">
+
+            <div class="corpo" style="background-image: url('../img/corpo..png');">
+              <div class="parte" id="cabeca" data-nome="Cabeça"></div>
+              <div class="parte" id="tronco" data-nome="Tronco"></div>
+              <div class="parte" id="membrosinferiores" data-nome="Membro Inferior" ></div>
+              <div class="parte" id="membrosinferiores2" data-nome="Membro Inferior"></div>
+              <div class="parte" id="membrossuperiores" data-nome="Membro Superior"></div>
+              <div class="parte" id="membrossuperiores2" data-nome="Membro Superior"></div>
+             
+          </div>
+          
+          <div id="resultado">Clique em uma parte do corpo.</div>
+          <div class="tabela">
+            <div class="local">LOCAL: <div id="resultado1"></div></div>
+            <div class="lado">LADO:<div id="resultado1"></div></div>
+            <div class="face">FACE: <div id="resultado1"></div></div>
+            <div class="tipo">TIPO: <div id="resultado1"></div></div>
+          </div>
             
             <input class="enviar" type="button" name="enviar" value="Enviar" onclick="ss_form()" >
               
@@ -88,20 +106,20 @@
             <br>
               <form method="post" action="" id="form5">
               <div class="espaco">Local da queimadura:</div> <br>
-              <input class="caixinha" type="checkbox" name="opcao" value="opcao1"> Cabeça <br>
-              <input class="caixinha" type="checkbox" name="opcao2" value="opcao2"> Pescoço <br>
-              <input class="caixinha" type="checkbox" name="opcao3" value="opcao3"> T.ANT <br>
-              <input class="caixinha" type="checkbox" name="opcao4" value="opcao4"> T.POS <br>
-              <input class="caixinha" type="checkbox" name="opcao5" value="opcao5"> Genit. <br>
-              <input class="caixinha" type="checkbox" name="opcao6" value="opcao6"> M.I.D <br>
-              <input class="caixinha" type="checkbox" name="opcao7" value="opcao7"> M.I.E <br>
-              <input class="caixinha" type="checkbox" name="opcao8" value="opcao8"> M.S.D <br>
-              <input class="caixinha" type="checkbox" name="opcao9" value="opcao9"> M.S.E <br> <br>
+              <input class="caixinha" type="checkbox" name="opcao" value="local1"> Cabeça <br>
+              <input class="caixinha" type="checkbox" name="opcao2" value="local2"> Pescoço <br>
+              <input class="caixinha" type="checkbox" name="opcao3" value="local3"> T.ANT <br>
+              <input class="caixinha" type="checkbox" name="opcao4" value="local4"> T.POS <br>
+              <input class="caixinha" type="checkbox" name="opcao5" value="local5"> Genit. <br>
+              <input class="caixinha" type="checkbox" name="opcao6" value="local6"> M.I.D <br>
+              <input class="caixinha" type="checkbox" name="opcao7" value="local7"> M.I.E <br>
+              <input class="caixinha" type="checkbox" name="opcao8" value="local8"> M.S.D <br>
+              <input class="caixinha" type="checkbox" name="opcao9" value="local9"> M.S.E <br> <br>
 
               <div class="espaco">Grau da queimadura:</div> <br>
-              <input class="caixa2" type="radio" name="opcao1" value="opcao1">1° Grau<br>
-              <input class="caixa2" type="radio" name="opcao2" value="opcao2">2° Grau<br>
-              <input class="caixa2" type="radio" name="opcao3" value="opcao3">3° Grau<br>
+              <input class="caixa2" type="radio" name="opcao1" value="queimadura1">1° Grau<br>
+              <input class="caixa2" type="radio" name="opcao2" value="queimadura2">2° Grau<br>
+              <input class="caixa2" type="radio" name="opcao3" value="queimadura3">3° Grau<br>
                 <br>
                 <br>
                 <br>
@@ -300,5 +318,33 @@ function ss_form() {
                 timeout: 5000    // Define um tempo limite de 5 segundos (5000 milissegundos)
             });
       }        
+      document.querySelectorAll('.parte').forEach(function(parte) {
+    parte.addEventListener('click', function() {
+        let nome = this.getAttribute('data-nome');
+        let lado = "";
+        let face = "Anterior"; // Por padrão, assumindo que todos são da face anterior.
+
+        switch (this.id) {
+            case "cabeca":
+            case "tronco":
+                lado = "Central";
+                break;
+            case "membrosinferiores":
+            case "membrossuperiores":
+                lado = "Direito";
+                break;
+            case "membrosinferiores2":
+            case "membrossuperiores2":
+                lado = "Esquerdo";
+                break;
+        }
+
+        // Exibindo os resultados
+        
+        document.getElementById('resultado1').innerText = nome;
+        document.querySelector('.lado div').innerText = lado;
+        document.querySelector('.face div').innerText = face;
+    });
+});
 
 </script>
