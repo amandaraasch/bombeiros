@@ -39,7 +39,7 @@ if($result === true) {
 }
 
 // Use prepared statements to avoid SQL injection
-$comando = $pdo->prepare("INSERT INTO paciente(Data, Sexo, Nome_hospital, Nomepac, Idadepac, CPFpac, Telefone, NOMEACOM, IDADEACOM, Localidade ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)");
+$comando = $pdo->prepare("INSERT INTO paciente(Data, Sexo, Nome_hospital, Nomepac, Idadepac, CPFpac, Telefone, NOMEACOM, IDADEACOM, Localidade) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)");
 
 // Associate the values with the parameters in the query
 $comando->bindParam(1, $data);
@@ -53,7 +53,9 @@ $comando->bindParam(8, $nomeacom);
 $comando->bindParam(9, $idadeacom);
 $comando->bindParam(10, $local);
 
-$resultado = $comando->execute();
-
-echo(1);
+if ($comando->execute()) {
+    echo '{"Resp":1}';
+} else {
+    echo '{"Resp":0}';
+}
 ?>

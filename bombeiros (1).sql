@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Tempo de geração: 09/10/2023 às 03:43
+-- Tempo de geração: 11-Out-2023 às 16:53
 -- Versão do servidor: 10.4.28-MariaDB
--- Versão do PHP: 8.0.28
+-- versão do PHP: 8.2.4
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -24,7 +24,7 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Estrutura para tabela `cadastro`
+-- Estrutura da tabela `cadastro`
 --
 
 CREATE TABLE `cadastro` (
@@ -37,7 +37,7 @@ CREATE TABLE `cadastro` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
--- Despejando dados para a tabela `cadastro`
+-- Extraindo dados da tabela `cadastro`
 --
 
 INSERT INTO `cadastro` (`id`, `login`, `senha`, `cep`, `descricao`, `adm`) VALUES
@@ -51,7 +51,26 @@ INSERT INTO `cadastro` (`id`, `login`, `senha`, `cep`, `descricao`, `adm`) VALUE
 -- --------------------------------------------------------
 
 --
--- Estrutura para tabela `paciente`
+-- Estrutura da tabela `form_cond`
+--
+
+CREATE TABLE `form_cond` (
+  `opcao1` varchar(30) NOT NULL,
+  `opcao2` varchar(30) NOT NULL,
+  `opcao3` varchar(30) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Extraindo dados da tabela `form_cond`
+--
+
+INSERT INTO `form_cond` (`opcao1`, `opcao2`, `opcao3`) VALUES
+('Deitada', '', 'Sentada');
+
+-- --------------------------------------------------------
+
+--
+-- Estrutura da tabela `paciente`
 --
 
 CREATE TABLE `paciente` (
@@ -68,7 +87,7 @@ CREATE TABLE `paciente` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
--- Despejando dados para a tabela `paciente`
+-- Extraindo dados da tabela `paciente`
 --
 
 INSERT INTO `paciente` (`Data`, `Sexo`, `Nome_hospital`, `Nomepac`, `Idadepac`, `CPFpac`, `Telefone`, `NOMEACOM`, `IDADEACOM`, `Localidade`) VALUES
@@ -77,7 +96,7 @@ INSERT INTO `paciente` (`Data`, `Sexo`, `Nome_hospital`, `Nomepac`, `Idadepac`, 
 -- --------------------------------------------------------
 
 --
--- Estrutura para tabela `pes_form`
+-- Estrutura da tabela `pes_form`
 --
 
 CREATE TABLE `pes_form` (
@@ -105,7 +124,7 @@ CREATE TABLE `pes_form` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
--- Despejando dados para a tabela `pes_form`
+-- Extraindo dados da tabela `pes_form`
 --
 
 INSERT INTO `pes_form` (`opcao1`, `opcao2`, `opcao3`, `opcao4`, `opcao5`, `opcao6`, `opcao7`, `opcao8`, `opcao9`, `opcao10`, `opcao11`, `opcao12`, `opcao13`, `opcao14`, `opcao15`, `opcao16`, `opcao17`, `opcao18`, `opcao19`, `Outros`, `opcao21`) VALUES
@@ -114,7 +133,7 @@ INSERT INTO `pes_form` (`opcao1`, `opcao2`, `opcao3`, `opcao4`, `opcao5`, `opcao
 -- --------------------------------------------------------
 
 --
--- Estrutura para tabela `ss_form`
+-- Estrutura da tabela `ss_form`
 --
 
 CREATE TABLE `ss_form` (
@@ -181,7 +200,7 @@ CREATE TABLE `ss_form` (
 -- --------------------------------------------------------
 
 --
--- Estrutura para tabela `sv_form`
+-- Estrutura da tabela `sv_form`
 --
 
 CREATE TABLE `sv_form` (
@@ -199,7 +218,7 @@ CREATE TABLE `sv_form` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
--- Despejando dados para a tabela `sv_form`
+-- Extraindo dados da tabela `sv_form`
 --
 
 INSERT INTO `sv_form` (`pressao_arterial`, `pressao2`, `pulso`, `respiracao`, `saturacao`, `hgt`, `temperatura`, `opcao1`, `opcao2`, `perfusao_menor`, `perfusao_maior`) VALUES
@@ -209,7 +228,7 @@ INSERT INTO `sv_form` (`pressao_arterial`, `pressao2`, `pulso`, `respiracao`, `s
 -- --------------------------------------------------------
 
 --
--- Estrutura para tabela `tipo_ocorrencia`
+-- Estrutura da tabela `tipo_ocorrencia`
 --
 
 CREATE TABLE `tipo_ocorrencia` (
@@ -237,7 +256,7 @@ CREATE TABLE `tipo_ocorrencia` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
--- Despejando dados para a tabela `tipo_ocorrencia`
+-- Extraindo dados da tabela `tipo_ocorrencia`
 --
 
 INSERT INTO `tipo_ocorrencia` (`opcao1`, `opcao2`, `opcao3`, `opcao4`, `opcao5`, `opcao6`, `opcao7`, `opcao8`, `opcao9`, `opcao10`, `opcao11`, `opcao12`, `opcao13`, `opcao14`, `opcao15`, `opcao16`, `opcao17`, `opcao18`, `opcao19`, `opcao20`, `Outros`) VALUES
@@ -246,7 +265,7 @@ INSERT INTO `tipo_ocorrencia` (`opcao1`, `opcao2`, `opcao3`, `opcao4`, `opcao5`,
 -- --------------------------------------------------------
 
 --
--- Estrutura para tabela `usuarios`
+-- Estrutura da tabela `usuarios`
 --
 
 CREATE TABLE `usuarios` (
@@ -256,7 +275,7 @@ CREATE TABLE `usuarios` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
--- Despejando dados para a tabela `usuarios`
+-- Extraindo dados da tabela `usuarios`
 --
 
 INSERT INTO `usuarios` (`login`, `senha`, `adm`) VALUES
@@ -273,7 +292,7 @@ INSERT INTO `usuarios` (`login`, `senha`, `adm`) VALUES
 -- --------------------------------------------------------
 
 --
--- Estrutura para tabela `ve_form`
+-- Estrutura da tabela `ve_form`
 --
 
 CREATE TABLE `ve_form` (
@@ -294,13 +313,13 @@ CREATE TABLE `ve_form` (
 --
 
 --
--- Índices de tabela `cadastro`
+-- Índices para tabela `cadastro`
 --
 ALTER TABLE `cadastro`
   ADD PRIMARY KEY (`id`);
 
 --
--- AUTO_INCREMENT para tabelas despejadas
+-- AUTO_INCREMENT de tabelas despejadas
 --
 
 --
