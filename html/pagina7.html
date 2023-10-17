@@ -255,7 +255,7 @@
     
     // Se a div estiver aberta (com altura maior que 130px), fechar a div
     if (divHeight > 130) {
-        $("#" + ID).animate({ height: "130px" });
+       
     } else { // Caso contrário, abrir a div para 850px
         $("#" + ID).animate({ height: "1700px" });
         if(ID=="d1")
@@ -272,6 +272,7 @@
 
         if(ID=="d3")
         {
+          $("#" + ID).animate({ height: "580px" });
           esconder3.style.display="block"
         }
 

@@ -162,6 +162,7 @@ body
     width: 150px;
     margin-top: 20px;
     border-radius: 20px;
+    border-color: transparent;
     background-color: #E2353C;
     color: #D9D9D9;
     font-family: 'Effra Heavy', sans-serif;
