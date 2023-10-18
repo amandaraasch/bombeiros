@@ -59,21 +59,72 @@
           <br>
 
             <div class="esconder" id="esconder1">
-
-          <form method="post" action="" id="form4">
-
+<br>
+              <div id="resultado">Clique em uma parte do corpo.</div>
+              <br>
+              <form method="post" action="" id="form4">
+            
+           
             <div class="corpo" style="background-image: url('../img/corpo..png');">
+              <div id="div_traumas_localizados" onclick="inserirImagem(event)">
               <div class="parte" id="cabeca" data-nome="Cabeça"></div>
+
+              
               <div class="parte" id="tronco" data-nome="Tronco"></div>
+
+              
               <div class="parte" id="membrosinferiores" data-nome="Membro Inferior" ></div>
+
+              
               <div class="parte" id="membrosinferiores2" data-nome="Membro Inferior"></div>
+
+              
               <div class="parte" id="membrossuperiores" data-nome="Membro Superior"></div>
+             
+
+           
               <div class="parte" id="membrossuperiores2" data-nome="Membro Superior"></div>
+              
+
+              <div class="parte2" id="cabeca2" data-nome="Cabeça"></div>
+              
+
+              
+              <div class="parte2" id="tronco2" data-nome="Tronco"></div>
+              
+
+              
+              <div class="parte2" id="membrosinferiores1" data-nome="Membro Inferior" ></div>
+              
+
+             
+              <div class="parte2" id="membrosinferiores02" data-nome="Membro Inferior"></div>
+             
+
+              
+              <div class="parte2" id="membrossuperiores1" data-nome="Membro Superior"></div>
+              
+              
+              <div class="parte2" id="membrossuperiores02" data-nome="Membro Superior"></div></div>
              
           </div>
+        
+          <div id="resultados">Selecione o trauma:
+           <br>
+          <button class="trauma" type="button" onclick="MudarImagemFratura()">Fraturas/Luxações/Entorses</button>
+          <button class="trauma" type="button" onclick="MudarImagemFerimento()">Ferimentos Diversos</button>
+          <button class="trauma" type="button" onclick="MudarImagemHemorragia()">Hemorragias</button>
+          <button class="trauma" type="button" onclick="MudarImagemEviceração()">Eviceração</button>
+          <button class="trauma" type="button" onclick="MudarImagemFABFAF()">F.A.B/F.A.F </button>
+          <button class="trauma" type="button" onclick="MudarImagemAmputação()">Amputação </button>
+          <div></div>
           
-          <div id="resultado">Clique em uma parte do corpo.</div>
-          <div class="tabela">
+          </div>
+          
+          <BR>
+            <br>
+          <div class="rela"><B>RELATÓRIO</B></div>
+          <div class="tabela"> 
             <div class="local">LOCAL: <div id="resultado1"></div></div>
             <div class="lado">LADO:<div id="resultado1"></div></div>
             <div class="face">FACE: <div id="resultado1"></div></div>
@@ -322,18 +373,18 @@ function ss_form() {
     parte.addEventListener('click', function() {
         let nome = this.getAttribute('data-nome');
         let lado = "";
-        let face = "Anterior"; // Por padrão, assumindo que todos são da face anterior.
+        let face = "Frontal"; // Por padrão, assumindo que todos são da face anterior.
 
         switch (this.id) {
             case "cabeca":
             case "tronco":
                 lado = "Central";
                 break;
-            case "membrosinferiores":
+            case "membrosinferiores2":
             case "membrossuperiores":
                 lado = "Direito";
                 break;
-            case "membrosinferiores2":
+            case "membrosinferiores":
             case "membrossuperiores2":
                 lado = "Esquerdo";
                 break;
@@ -346,5 +397,86 @@ function ss_form() {
         document.querySelector('.face div').innerText = face;
     });
 });
+document.querySelectorAll('.parte2').forEach(function(parte2) {
+    parte2.addEventListener('click', function() {
+        let nome = this.getAttribute('data-nome');
+        let lado = "";
+        let face = "Posterior"; // Por padrão, assumindo que todos são da face anterior.
+
+        switch (this.id) {
+            case "cabeca2":
+            case "tronco2":
+                lado = "Central";
+                break;
+            case "membrosinferiores1":
+            case "membrossuperiores1":
+                lado = "Direito";
+                break;
+            case "membrosinferiores02":
+            case "membrossuperiores02":
+                lado = "Esquerdo";
+                break;
+        }
+
+        // Exibindo os resultados
+        
+        document.getElementById('resultado1').innerText = nome;
+        document.querySelector('.lado div').innerText = lado;
+        document.querySelector('.face div').innerText = face;
+    });
+});
+var ImagemAtual = "seta.png";
+
+function inserirImagem(event) {
+    var DivDasImagens = document.getElementById("div_traumas_localizados");
+    if (DivDasImagens.contains(event.target)) {
+        var x = event.clientX - DivDasImagens.getBoundingClientRect().left;
+        var y = event.clientY - DivDasImagens.getBoundingClientRect().top;
+
+   
+        var novaImagem = document.createElement("img");
+        novaImagem.src = ImagemAtual;
+
+       
+        novaImagem.style.width = "40px"; 
+
+        novaImagem.style.position = "absolute"; 
+        novaImagem.style.left = x-11 + "px";
+        novaImagem.style.top = y-11 + "px";
+        novaImagem.style.zIndex = "1"; 
+
+        DivDasImagens.appendChild(novaImagem);
+
+
+        novaImagem.addEventListener('click', function () {
+            DivDasImagens.removeChild(novaImagem);
+        });
+    }
+}
+function MudarImagemFratura(){
+    ImagemAtual = "../img/FRATURAS.png";
+    document.querySelector('.tipo div').innerText = "Fraturas/Luxações/Entorses";
+}
+function MudarImagemFerimento(){
+    ImagemAtual = "../img/FERIMENTOS.png";
+    document.querySelector('.tipo div').innerText = "Ferimentos Diversos";
+
+}
+function MudarImagemHemorragia(){
+    ImagemAtual = "../img/HEMORRAGIA.png";
+    document.querySelector('.tipo div').innerText = "Hemorragia";
+}
+function MudarImagemEviceração(){
+    ImagemAtual = "../img/EVISCERAÇÃO.png";
+    document.querySelector('.tipo div').innerText = "Evisceração";
+}
+function MudarImagemFABFAF(){
+    ImagemAtual = "../img/FAB.png";
+    document.querySelector('.tipo div').innerText = "F.A.B/F.A.F";
+}
+function MudarImagemAmputação(){
+    ImagemAtual = "../img/AMPUTACAO.png";
+    document.querySelector('.tipo div').innerText = "Amputação";
+}
 
 </script>

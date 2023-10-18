@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Tempo de geração: 11-Out-2023 às 16:53
+-- Tempo de geração: 18-Out-2023 às 17:27
 -- Versão do servidor: 10.4.28-MariaDB
 -- versão do PHP: 8.2.4
 
@@ -46,7 +46,8 @@ INSERT INTO `cadastro` (`id`, `login`, `senha`, `cep`, `descricao`, `adm`) VALUE
 (5, 'Henrique Osmar', '123', '89209466', 'Estudante', 'n'),
 (6, 'João filipe Tissi', '187', '89209466', 'aluno', 'n'),
 (7, 'prof', '187', '89209466', 'prof', 'n'),
-(8, 'emily', '145', '89209466', 'aluna', 'n');
+(8, 'emily', '145', '89209466', 'aluna', 'n'),
+(10, 'raasch', '123', '', '', 's');
 
 -- --------------------------------------------------------
 
@@ -55,6 +56,8 @@ INSERT INTO `cadastro` (`id`, `login`, `senha`, `cep`, `descricao`, `adm`) VALUE
 --
 
 CREATE TABLE `form_cond` (
+  `nOcorrencia` int(11) NOT NULL,
+  `id` int(11) NOT NULL,
   `opcao1` varchar(30) NOT NULL,
   `opcao2` varchar(30) NOT NULL,
   `opcao3` varchar(30) NOT NULL
@@ -64,8 +67,8 @@ CREATE TABLE `form_cond` (
 -- Extraindo dados da tabela `form_cond`
 --
 
-INSERT INTO `form_cond` (`opcao1`, `opcao2`, `opcao3`) VALUES
-('Deitada', '', 'Sentada');
+INSERT INTO `form_cond` (`nOcorrencia`, `id`, `opcao1`, `opcao2`, `opcao3`) VALUES
+(0, 1, 'Deitada', '', 'Sentada');
 
 -- --------------------------------------------------------
 
@@ -74,6 +77,7 @@ INSERT INTO `form_cond` (`opcao1`, `opcao2`, `opcao3`) VALUES
 --
 
 CREATE TABLE `paciente` (
+  `nOcorrencia` int(11) NOT NULL,
   `Data` date NOT NULL,
   `Sexo` varchar(7) NOT NULL,
   `Nome_hospital` varchar(45) NOT NULL,
@@ -86,13 +90,6 @@ CREATE TABLE `paciente` (
   `Localidade` varchar(45) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
---
--- Extraindo dados da tabela `paciente`
---
-
-INSERT INTO `paciente` (`Data`, `Sexo`, `Nome_hospital`, `Nomepac`, `Idadepac`, `CPFpac`, `Telefone`, `NOMEACOM`, `IDADEACOM`, `Localidade`) VALUES
-('2023-10-24', 'Masculi', 'são josé', 'andre', 3, 3, 3, 'André', 3, '3');
-
 -- --------------------------------------------------------
 
 --
@@ -100,6 +97,8 @@ INSERT INTO `paciente` (`Data`, `Sexo`, `Nome_hospital`, `Nomepac`, `Idadepac`, 
 --
 
 CREATE TABLE `pes_form` (
+  `nOcorrencia` int(11) NOT NULL,
+  `id` int(11) NOT NULL,
   `opcao1` varchar(25) NOT NULL,
   `opcao2` varchar(25) NOT NULL,
   `opcao3` varchar(25) NOT NULL,
@@ -127,8 +126,8 @@ CREATE TABLE `pes_form` (
 -- Extraindo dados da tabela `pes_form`
 --
 
-INSERT INTO `pes_form` (`opcao1`, `opcao2`, `opcao3`, `opcao4`, `opcao5`, `opcao6`, `opcao7`, `opcao8`, `opcao9`, `opcao10`, `opcao11`, `opcao12`, `opcao13`, `opcao14`, `opcao15`, `opcao16`, `opcao17`, `opcao18`, `opcao19`, `Outros`, `opcao21`) VALUES
-('', 'Respiratório', '', '', '', '', '', 'Obstétrico', '', '', '', '', '', '', 'Emergencial ', '', '', '', '', 'ablacarro', 'Outros');
+INSERT INTO `pes_form` (`nOcorrencia`, `id`, `opcao1`, `opcao2`, `opcao3`, `opcao4`, `opcao5`, `opcao6`, `opcao7`, `opcao8`, `opcao9`, `opcao10`, `opcao11`, `opcao12`, `opcao13`, `opcao14`, `opcao15`, `opcao16`, `opcao17`, `opcao18`, `opcao19`, `Outros`, `opcao21`) VALUES
+(0, 1, '', 'Respiratório', '', '', '', '', '', 'Obstétrico', '', '', '', '', '', '', 'Emergencial ', '', '', '', '', 'ablacarro', 'Outros');
 
 -- --------------------------------------------------------
 
@@ -137,6 +136,8 @@ INSERT INTO `pes_form` (`opcao1`, `opcao2`, `opcao3`, `opcao4`, `opcao5`, `opcao
 --
 
 CREATE TABLE `ss_form` (
+  `nOcorrencia` int(11) NOT NULL,
+  `id` int(11) NOT NULL,
   `opcao1` varchar(25) NOT NULL,
   `opcao2` varchar(25) NOT NULL,
   `opcao3` varchar(25) NOT NULL,
@@ -204,6 +205,8 @@ CREATE TABLE `ss_form` (
 --
 
 CREATE TABLE `sv_form` (
+  `nOcorrencia` int(11) NOT NULL,
+  `id` int(11) NOT NULL,
   `pressao_arterial` int(10) NOT NULL,
   `pressao2` int(10) NOT NULL,
   `pulso` int(10) NOT NULL,
@@ -221,9 +224,9 @@ CREATE TABLE `sv_form` (
 -- Extraindo dados da tabela `sv_form`
 --
 
-INSERT INTO `sv_form` (`pressao_arterial`, `pressao2`, `pulso`, `respiracao`, `saturacao`, `hgt`, `temperatura`, `opcao1`, `opcao2`, `perfusao_menor`, `perfusao_maior`) VALUES
-(5, 5, 0, 5, 0, 0, 0, '', 'Normal', '&gt;2SEG', ''),
-(0, 0, 0, 0, 0, 0, 0, '', '', '', '');
+INSERT INTO `sv_form` (`nOcorrencia`, `id`, `pressao_arterial`, `pressao2`, `pulso`, `respiracao`, `saturacao`, `hgt`, `temperatura`, `opcao1`, `opcao2`, `perfusao_menor`, `perfusao_maior`) VALUES
+(0, 1, 5, 5, 0, 5, 0, 0, 0, '', 'Normal', '&gt;2SEG', ''),
+(0, 2, 0, 0, 0, 0, 0, 0, 0, '', '', '', '');
 
 -- --------------------------------------------------------
 
@@ -232,6 +235,8 @@ INSERT INTO `sv_form` (`pressao_arterial`, `pressao2`, `pulso`, `respiracao`, `s
 --
 
 CREATE TABLE `tipo_ocorrencia` (
+  `nOcorrencia` int(11) NOT NULL,
+  `id` int(11) NOT NULL,
   `opcao1` varchar(15) NOT NULL,
   `opcao2` varchar(15) NOT NULL,
   `opcao3` varchar(15) NOT NULL,
@@ -259,35 +264,8 @@ CREATE TABLE `tipo_ocorrencia` (
 -- Extraindo dados da tabela `tipo_ocorrencia`
 --
 
-INSERT INTO `tipo_ocorrencia` (`opcao1`, `opcao2`, `opcao3`, `opcao4`, `opcao5`, `opcao6`, `opcao7`, `opcao8`, `opcao9`, `opcao10`, `opcao11`, `opcao12`, `opcao13`, `opcao14`, `opcao15`, `opcao16`, `opcao17`, `opcao18`, `opcao19`, `opcao20`, `Outros`) VALUES
-('?', '?', '?', '?', 'Queda de altura', '?', '?', '?', '?', '?', '?', '?', '?', '?', '?', '?', '?', '?', '?', '?', 'andre');
-
--- --------------------------------------------------------
-
---
--- Estrutura da tabela `usuarios`
---
-
-CREATE TABLE `usuarios` (
-  `login` varchar(45) DEFAULT NULL,
-  `senha` int(3) NOT NULL,
-  `adm` varchar(1) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
-
---
--- Extraindo dados da tabela `usuarios`
---
-
-INSERT INTO `usuarios` (`login`, `senha`, `adm`) VALUES
-('Amanda Caroline Raasch', 187, 's'),
-('Amanda Caroline Raasch', 187, 's'),
-('João Victor Ferreira', 131, 'n'),
-('maicol', 123, 'n'),
-('josi', 154, 'n'),
-('Henrique Osmar', 123, 'n'),
-('João filipe Tissi', 187, 'n'),
-('prof', 187, 'n'),
-('emily', 145, 'n');
+INSERT INTO `tipo_ocorrencia` (`nOcorrencia`, `id`, `opcao1`, `opcao2`, `opcao3`, `opcao4`, `opcao5`, `opcao6`, `opcao7`, `opcao8`, `opcao9`, `opcao10`, `opcao11`, `opcao12`, `opcao13`, `opcao14`, `opcao15`, `opcao16`, `opcao17`, `opcao18`, `opcao19`, `opcao20`, `Outros`) VALUES
+(0, 1, '?', '?', '?', '?', 'Queda de altura', '?', '?', '?', '?', '?', '?', '?', '?', '?', '?', '?', '?', '?', '?', '?', 'andre');
 
 -- --------------------------------------------------------
 
@@ -296,6 +274,8 @@ INSERT INTO `usuarios` (`login`, `senha`, `adm`) VALUES
 --
 
 CREATE TABLE `ve_form` (
+  `nOcorrencia` int(11) NOT NULL,
+  `id` int(11) NOT NULL,
   `opcao1` varchar(25) NOT NULL,
   `opcao2` varchar(25) NOT NULL,
   `opcao3` varchar(25) NOT NULL,
@@ -319,6 +299,54 @@ ALTER TABLE `cadastro`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Índices para tabela `form_cond`
+--
+ALTER TABLE `form_cond`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `nOcorrencia` (`nOcorrencia`);
+
+--
+-- Índices para tabela `paciente`
+--
+ALTER TABLE `paciente`
+  ADD PRIMARY KEY (`nOcorrencia`);
+
+--
+-- Índices para tabela `pes_form`
+--
+ALTER TABLE `pes_form`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `nOcorrencia` (`nOcorrencia`);
+
+--
+-- Índices para tabela `ss_form`
+--
+ALTER TABLE `ss_form`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `nOcorrencia` (`nOcorrencia`);
+
+--
+-- Índices para tabela `sv_form`
+--
+ALTER TABLE `sv_form`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `nOcorrencia` (`nOcorrencia`);
+
+--
+-- Índices para tabela `tipo_ocorrencia`
+--
+ALTER TABLE `tipo_ocorrencia`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `nOcorrencia` (`nOcorrencia`);
+
+--
+-- Índices para tabela `ve_form`
+--
+ALTER TABLE `ve_form`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `nOcorrencia` (`nOcorrencia`);
+
+--
 -- AUTO_INCREMENT de tabelas despejadas
 --
 
@@ -326,7 +354,49 @@ ALTER TABLE `cadastro`
 -- AUTO_INCREMENT de tabela `cadastro`
 --
 ALTER TABLE `cadastro`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+
+--
+-- AUTO_INCREMENT de tabela `form_cond`
+--
+ALTER TABLE `form_cond`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
+--
+-- AUTO_INCREMENT de tabela `paciente`
+--
+ALTER TABLE `paciente`
+  MODIFY `nOcorrencia` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
+--
+-- AUTO_INCREMENT de tabela `pes_form`
+--
+ALTER TABLE `pes_form`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
+--
+-- AUTO_INCREMENT de tabela `ss_form`
+--
+ALTER TABLE `ss_form`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT de tabela `sv_form`
+--
+ALTER TABLE `sv_form`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+
+--
+-- AUTO_INCREMENT de tabela `tipo_ocorrencia`
+--
+ALTER TABLE `tipo_ocorrencia`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
+--
+-- AUTO_INCREMENT de tabela `ve_form`
+--
+ALTER TABLE `ve_form`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

@@ -1,4 +1,5 @@
 <?php
+session_start();
 include("../conecta.php");
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
@@ -15,11 +16,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $opcao9 = isset($_POST["opcao9"]) ?  "Pass.BCO trás" : "";
     $opcao10 = isset($_POST["opcao10"]) ? "Pedestre " : "";
 
-    $comando = $pdo->prepare("INSERT INTO ve_form (opcao1, opcao2, opcao3, opcao4, opcao5, opcao6, opcao7, opcao8, opcao9, opcao10)
+    $comando = $pdo->prepare("INSERT INTO ve_form (nOcorrencia,opcao1, opcao2, opcao3, opcao4, opcao5, opcao6, opcao7, opcao8, opcao9, opcao10)
 
-    VALUES (:op1, :op2, :op3, :op4, :op5, :op6, :op7, :op8, :op9, :op10)");
+    VALUES (:nOco,:op1, :op2, :op3, :op4, :op5, :op6, :op7, :op8, :op9, :op10)");
 
-
+    $ocorrencia=$_SESSION{"id"};
+    $comando->bindParam(":nOco", $ocorrencia);
     $comando->bindParam(":op1", $opcao1);
     $comando->bindParam(":op2", $opcao2);
     $comando->bindParam(":op3", $opcao3);

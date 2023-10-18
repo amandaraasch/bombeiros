@@ -1,4 +1,5 @@
 <?php
+session_start();
 include('../conecta.php');
 
 $data = $_POST["aniversario"];
@@ -54,6 +55,7 @@ $comando->bindParam(9, $idadeacom);
 $comando->bindParam(10, $local);
 
 if ($comando->execute()) {
+    $_SESSION{"id"}= $pdo->lastInsertId();
     echo '{"Resp":1}';
 } else {
     echo '{"Resp":0}';

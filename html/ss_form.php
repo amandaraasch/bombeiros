@@ -1,4 +1,5 @@
 <?php
+session_start();
 include("../conecta.php");
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
@@ -66,15 +67,19 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
 
     $comando = $pdo->prepare("INSERT INTO ss_form 
-    (opcao1, opcao2, opcao3, opcao4, opcao5, opcao6, opcao7, opcao8, opcao9, opcao10, opcao11, opcao12, opcao13, opcao14, opcao15, opcao16, opcao17, opcao18, opcao19, opcao20,
+    (nOcorrencia,opcao1, opcao2, opcao3, opcao4, opcao5, opcao6, opcao7, opcao8, opcao9, opcao10, opcao11, opcao12, opcao13, opcao14, opcao15, opcao16, opcao17, opcao18, opcao19, opcao20,
     opcao21, opcao22, opcao23, opcao24, opcao25, opcao26, opcao27, opcao28, opcao29 ,opcao30, opcao31, opcao32, opcao33, opcao34, opcao35, opcao36, opcao37, opcao38, opcao39, opcao40, opcao41, opcao42, opcao43, opcao44, opcao45, opcao46, opcao47,
     opcao48, opcao49, opcao50, opcao51, opcao52, opcao53, opcao54, opcao55, opcao56, opcao57, Outros)
 
-    VALUES (:op1, :op2, :op3, :op4, :op5, :op6, :op7, :op8, :op9, :op10, :op11, :op12, :op13,
+    VALUES (:nOco,:op1, :op2, :op3, :op4, :op5, :op6, :op7, :op8, :op9, :op10, :op11, :op12, :op13,
      :op14, :op15, :op16, :op17, :op18, :op19, :op20, :op21, :op22, :op23, :op24, :op25, :op26, :op27, :op28 ,:op29, :op30,
       :op31, :op32, :op33, :op34, :op35, :op36, :op37, :op38, :op39, :op40 ,:op41, :op42,
       :op43, :op44, :op45, :op46, :op47, :op48, :op49, :op50, :op51, :op52, :op53, :op54, :op55, :op56, :op57, :op58)");
 
+    //maicol explicou
+    $ocorrencia=$_SESSION{"id"};
+    $comando->bindParam(":nOco", $ocorrencia);
+    //continua normal
     $comando->bindParam(":op1", $opcao1);
     $comando->bindParam(":op2", $opcao2);
     $comando->bindParam(":op3", $opcao3);
