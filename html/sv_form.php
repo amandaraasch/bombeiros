@@ -17,11 +17,9 @@ $perfusao_maior = isset($_POST["perfusao_maior"]) ? "&lt;2SEG" : "";
 $comando = $pdo->prepare("INSERT INTO sv_form (nOcorrencia,
     pressao_arterial, pressao2, pulso, respiracao, saturacao, hgt, temperatura,
     opcao1, opcao2, perfusao_menor, perfusao_maior
-) VALUES (:nOco,
-    ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?
-)");
+) VALUES (:nOco,?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)");
 
-$ocorrencia=$_SESSION{"id"};
+$ocorrencia = $_SESSION["id"];
 $comando->bindParam(":nOco", $ocorrencia);
 $comando->bindParam(1, $pressao);
 $comando->bindParam(2, $pressao2);

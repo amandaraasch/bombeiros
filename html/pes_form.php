@@ -36,7 +36,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
      :op14, :op15, :op16, :op17, :op18, :op19, :op20, :op21)");
 
     
-    $ocorrencia=$_SESSION{"id"};
+    $ocorrencia = $_SESSION["id"];
     $comando->bindParam(":nOco", $ocorrencia);
     $comando->bindParam(":op1", $opcao1);
     $comando->bindParam(":op2", $opcao2);
