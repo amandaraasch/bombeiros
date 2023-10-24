@@ -31,7 +31,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     VALUES (:nOco,:op1, :op2, :op3, :op4, :op5, :op6, :op7, :op8, :op9, :op10, :op11, :op12, :op13, :op14, :op15, :op16, :op17, :op18, :op19, :op20, :op21 )");
 
    
-    $ocorrencia=$_SESSION{"id"};
+    $ocorrencia = $_SESSION["id"];
     $comando->bindParam(":nOco", $ocorrencia);
     $comando->bindParam(":op1", $opcao1);
     $comando->bindParam(":op2", $opcao2);
@@ -56,9 +56,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $comando->bindParam(":op21", $opcao21);
     
     if ($comando->execute()) {
-        echo ('{"Resp":1}');
+        $_SESSION["id"]= $pdo->lastInsertId();
+        echo ("{\"Resp\":1}");
     } else {
-        echo ('{"Resp":0}');
+        echo ("{\"Resp\":0}");
     }
 }
 ?>

@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Tempo de geração: 18-Out-2023 às 17:27
+-- Tempo de geração: 24-Out-2023 às 17:05
 -- Versão do servidor: 10.4.28-MariaDB
 -- versão do PHP: 8.2.4
 
@@ -63,13 +63,6 @@ CREATE TABLE `form_cond` (
   `opcao3` varchar(30) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
---
--- Extraindo dados da tabela `form_cond`
---
-
-INSERT INTO `form_cond` (`nOcorrencia`, `id`, `opcao1`, `opcao2`, `opcao3`) VALUES
-(0, 1, 'Deitada', '', 'Sentada');
-
 -- --------------------------------------------------------
 
 --
@@ -121,13 +114,6 @@ CREATE TABLE `pes_form` (
   `Outros` varchar(45) NOT NULL,
   `opcao21` varchar(25) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
-
---
--- Extraindo dados da tabela `pes_form`
---
-
-INSERT INTO `pes_form` (`nOcorrencia`, `id`, `opcao1`, `opcao2`, `opcao3`, `opcao4`, `opcao5`, `opcao6`, `opcao7`, `opcao8`, `opcao9`, `opcao10`, `opcao11`, `opcao12`, `opcao13`, `opcao14`, `opcao15`, `opcao16`, `opcao17`, `opcao18`, `opcao19`, `Outros`, `opcao21`) VALUES
-(0, 1, '', 'Respiratório', '', '', '', '', '', 'Obstétrico', '', '', '', '', '', '', 'Emergencial ', '', '', '', '', 'ablacarro', 'Outros');
 
 -- --------------------------------------------------------
 
@@ -220,14 +206,6 @@ CREATE TABLE `sv_form` (
   `perfusao_maior` varchar(25) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
---
--- Extraindo dados da tabela `sv_form`
---
-
-INSERT INTO `sv_form` (`nOcorrencia`, `id`, `pressao_arterial`, `pressao2`, `pulso`, `respiracao`, `saturacao`, `hgt`, `temperatura`, `opcao1`, `opcao2`, `perfusao_menor`, `perfusao_maior`) VALUES
-(0, 1, 5, 5, 0, 5, 0, 0, 0, '', 'Normal', '&gt;2SEG', ''),
-(0, 2, 0, 0, 0, 0, 0, 0, 0, '', '', '', '');
-
 -- --------------------------------------------------------
 
 --
@@ -259,13 +237,6 @@ CREATE TABLE `tipo_ocorrencia` (
   `opcao20` varchar(20) NOT NULL,
   `Outros` varchar(45) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
-
---
--- Extraindo dados da tabela `tipo_ocorrencia`
---
-
-INSERT INTO `tipo_ocorrencia` (`nOcorrencia`, `id`, `opcao1`, `opcao2`, `opcao3`, `opcao4`, `opcao5`, `opcao6`, `opcao7`, `opcao8`, `opcao9`, `opcao10`, `opcao11`, `opcao12`, `opcao13`, `opcao14`, `opcao15`, `opcao16`, `opcao17`, `opcao18`, `opcao19`, `opcao20`, `Outros`) VALUES
-(0, 1, '?', '?', '?', '?', 'Queda de altura', '?', '?', '?', '?', '?', '?', '?', '?', '?', '?', '?', '?', '?', '?', '?', 'andre');
 
 -- --------------------------------------------------------
 
@@ -366,7 +337,7 @@ ALTER TABLE `form_cond`
 -- AUTO_INCREMENT de tabela `paciente`
 --
 ALTER TABLE `paciente`
-  MODIFY `nOcorrencia` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `nOcorrencia` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
 -- AUTO_INCREMENT de tabela `pes_form`
@@ -390,13 +361,53 @@ ALTER TABLE `sv_form`
 -- AUTO_INCREMENT de tabela `tipo_ocorrencia`
 --
 ALTER TABLE `tipo_ocorrencia`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT de tabela `ve_form`
 --
 ALTER TABLE `ve_form`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+
+--
+-- Restrições para despejos de tabelas
+--
+
+--
+-- Limitadores para a tabela `form_cond`
+--
+ALTER TABLE `form_cond`
+  ADD CONSTRAINT `form_cond_ibfk_1` FOREIGN KEY (`nOcorrencia`) REFERENCES `paciente` (`nOcorrencia`);
+
+--
+-- Limitadores para a tabela `pes_form`
+--
+ALTER TABLE `pes_form`
+  ADD CONSTRAINT `pes_form_ibfk_1` FOREIGN KEY (`nOcorrencia`) REFERENCES `paciente` (`nOcorrencia`);
+
+--
+-- Limitadores para a tabela `ss_form`
+--
+ALTER TABLE `ss_form`
+  ADD CONSTRAINT `ss_form_ibfk_1` FOREIGN KEY (`nOcorrencia`) REFERENCES `paciente` (`nOcorrencia`);
+
+--
+-- Limitadores para a tabela `sv_form`
+--
+ALTER TABLE `sv_form`
+  ADD CONSTRAINT `sv_form_ibfk_1` FOREIGN KEY (`nOcorrencia`) REFERENCES `paciente` (`nOcorrencia`);
+
+--
+-- Limitadores para a tabela `tipo_ocorrencia`
+--
+ALTER TABLE `tipo_ocorrencia`
+  ADD CONSTRAINT `tipo_ocorrencia_ibfk_1` FOREIGN KEY (`nOcorrencia`) REFERENCES `paciente` (`nOcorrencia`);
+
+--
+-- Limitadores para a tabela `ve_form`
+--
+ALTER TABLE `ve_form`
+  ADD CONSTRAINT `ve_form_ibfk_1` FOREIGN KEY (`nOcorrencia`) REFERENCES `paciente` (`nOcorrencia`);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

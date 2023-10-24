@@ -36,8 +36,9 @@ $comando->bindParam(10, $perfusao_menor);
 $comando->bindParam(11, $perfusao_maior);
 
 if ($comando->execute()) {
-    echo ('{"Resp":1}');
+    $_SESSION["id"]= $pdo->lastInsertId();
+    echo ("{\"Resp\":1}");
 } else {
-    echo ('{"Resp":0}');
+    echo ("{\"Resp\":0}");
 }
 ?>

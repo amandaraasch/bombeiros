@@ -77,7 +77,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
       :op43, :op44, :op45, :op46, :op47, :op48, :op49, :op50, :op51, :op52, :op53, :op54, :op55, :op56, :op57, :op58)");
 
     //maicol explicou
-    $ocorrencia=$_SESSION{"id"};
+    $ocorrencia = $_SESSION["id"];
     $comando->bindParam(":nOco", $ocorrencia);
     //continua normal
     $comando->bindParam(":op1", $opcao1);
@@ -140,13 +140,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $comando->bindParam(":op58", $opcao58);
 
     if ($comando->execute()) {
-        echo ('{"Resp":1}');
+        $_SESSION["id"]= $pdo->lastInsertId();
+        echo ("{\"Resp\":1}");
     } else {
-        echo ('{"Resp":0}');
+        echo ("{\"Resp\":0}");
     }
-
-
-
 
 }
 ?>
