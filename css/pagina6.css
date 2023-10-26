@@ -13,6 +13,16 @@ body
     margin: 0px;
     
 }
+.confirmar
+{
+  background-color: #343186;
+  color:#fff;
+  width: 100px;
+  height: 50px;
+   margin-top: -20px;
+   margin-left: 140px;
+
+}
 .enviar
 {
   margin-top: 10px;

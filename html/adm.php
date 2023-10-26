@@ -39,7 +39,7 @@
                     $logado = $_SESSION["logado"];
                    
 
-                    $comando = $pdo->prepare("SELECT * FROM usuarios where login='$logado'");
+                    $comando = $pdo->prepare("SELECT * FROM cadastro where login='$logado'");
                     $resultado = $comando->execute();
             
                     while( $linhas = $comando->fetch()){
@@ -109,7 +109,7 @@
         $resultadoNaoAdm = $consultaNaoAdm->fetch();
         $numeroNaoAdm = $resultadoNaoAdm['count'];
 
-        $consultaAdm = $pdo->prepare("SELECT COUNT(*) as count FROM usuarios WHERE adm = 's'");
+        $consultaAdm = $pdo->prepare("SELECT COUNT(*) as count FROM cadastro WHERE adm = 's'");
         $consultaAdm->execute();
         $resultadoAdm = $consultaAdm->fetch();
         $numeroAdm = $resultadoAdm['count'];
