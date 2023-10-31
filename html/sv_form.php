@@ -13,28 +13,28 @@ $opcao1 = isset($_POST["opcao1"]) ? "Anormal" : "";
 $opcao2 = isset($_POST["opcao2"]) ? "Normal" : "";
 $perfusao_menor = isset($_POST["perfusao_menor"]) ? "&gt;2SEG" : "";
 $perfusao_maior = isset($_POST["perfusao_maior"]) ? "&lt;2SEG" : "";
+$ocorrencia = $_SESSION["id"];
 
 $comando = $pdo->prepare("INSERT INTO sv_form (nOcorrencia,
     pressao_arterial, pressao2, pulso, respiracao, saturacao, hgt, temperatura,
-    opcao1, opcao2, perfusao_menor, perfusao_maior
-) VALUES (:nOco,?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)");
+    opcao1, opcao2, perfusao_menor, perfusao_maior) 
+    VALUES (:nOco,:op1, :op2, :op3, :op4, :op5, :op6, :op7, :op8, :op9, :op10, :op11)");
 
-$ocorrencia = $_SESSION["id"];
 $comando->bindParam(":nOco", $ocorrencia);
-$comando->bindParam(1, $pressao);
-$comando->bindParam(2, $pressao2);
-$comando->bindParam(3, $pulso);
-$comando->bindParam(4, $respiracao);
-$comando->bindParam(5, $saturacao);
-$comando->bindParam(6, $hgt);
-$comando->bindParam(7, $temperatura);
-$comando->bindParam(8, $opcao1);
-$comando->bindParam(9, $opcao2);
-$comando->bindParam(10, $perfusao_menor);
-$comando->bindParam(11, $perfusao_maior);
+$comando->bindParam(":op1", $pressao);
+$comando->bindParam(":op2", $pressao2);
+$comando->bindParam(":op3", $pulso);
+$comando->bindParam(":op4", $respiracao);
+$comando->bindParam(":op5", $saturacao);
+$comando->bindParam(":op6", $hgt);
+$comando->bindParam(":op7", $temperatura);
+$comando->bindParam(":op8", $opcao1);
+$comando->bindParam(":op9", $opcao2);
+$comando->bindParam(":op10", $perfusao_menor);
+$comando->bindParam(":op11", $perfusao_maior);
 
 if ($comando->execute()) {
-    $_SESSION["id"]= $pdo->lastInsertId();
+    
     echo ("{\"Resp\":1}");
 } else {
     echo ("{\"Resp\":0}");

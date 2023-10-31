@@ -62,7 +62,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   
 
     if ($comando->execute()) {
-        $_SESSION["id"]= $pdo->lastInsertId();
         echo ("{\"Resp\":1}");
     } else {
         echo ("{\"Resp\":0}");

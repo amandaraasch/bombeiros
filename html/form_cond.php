@@ -21,7 +21,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $comando->bindParam(":op3", $opcao3);
 
     if ($comando->execute()) {
-        $_SESSION["id"]= $pdo->lastInsertId();
         echo ("{\"Resp\":1}");
     } else {
         echo ("{\"Resp\":0}");
