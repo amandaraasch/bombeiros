@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Tempo de geração: 31-Out-2023 às 14:38
+-- Tempo de geração: 31-Out-2023 às 16:21
 -- Versão do servidor: 10.4.28-MariaDB
 -- versão do PHP: 8.2.4
 
@@ -370,6 +370,13 @@ CREATE TABLE `paciente` (
   `IDADEACOM` int(11) NOT NULL,
   `Localidade` varchar(45) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Extraindo dados da tabela `paciente`
+--
+
+INSERT INTO `paciente` (`nOcorrencia`, `Data`, `Sexo`, `Nome_hospital`, `Nomepac`, `Idadepac`, `CPFpac`, `Telefone`, `NOMEACOM`, `IDADEACOM`, `Localidade`) VALUES
+(13, '2023-10-05', 'Masculi', 'a', 'a', 2, 2, 2, 'a', 2, 'a');
 
 -- --------------------------------------------------------
 
@@ -803,7 +810,7 @@ ALTER TABLE `cadastro`
 -- AUTO_INCREMENT de tabela `paciente`
 --
 ALTER TABLE `paciente`
-  MODIFY `nOcorrencia` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `nOcorrencia` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
 
 --
 -- AUTO_INCREMENT de tabela `pes_form`
@@ -840,16 +847,88 @@ ALTER TABLE `ve_form`
 --
 
 --
+-- Limitadores para a tabela `amn_emer`
+--
+ALTER TABLE `amn_emer`
+  ADD CONSTRAINT `amn_emer_ibfk_1` FOREIGN KEY (`nOcorrencia`) REFERENCES `paciente` (`nOcorrencia`);
+
+--
+-- Limitadores para a tabela `amn_ges`
+--
+ALTER TABLE `amn_ges`
+  ADD CONSTRAINT `amn_ges_ibfk_1` FOREIGN KEY (`nOcorrencia`) REFERENCES `paciente` (`nOcorrencia`);
+
+--
+-- Limitadores para a tabela `ava_cine`
+--
+ALTER TABLE `ava_cine`
+  ADD CONSTRAINT `ava_cine_ibfk_1` FOREIGN KEY (`nOcorrencia`) REFERENCES `paciente` (`nOcorrencia`);
+
+--
+-- Limitadores para a tabela `dados_finais`
+--
+ALTER TABLE `dados_finais`
+  ADD CONSTRAINT `dados_finais_ibfk_1` FOREIGN KEY (`nOcorrencia`) REFERENCES `paciente` (`nOcorrencia`);
+
+--
+-- Limitadores para a tabela `deci_trans`
+--
+ALTER TABLE `deci_trans`
+  ADD CONSTRAINT `deci_trans_ibfk_1` FOREIGN KEY (`nOcorrencia`) REFERENCES `paciente` (`nOcorrencia`);
+
+--
 -- Limitadores para a tabela `form_cond`
 --
 ALTER TABLE `form_cond`
   ADD CONSTRAINT `form_cond_ibfk_1` FOREIGN KEY (`nOcorrencia`) REFERENCES `paciente` (`nOcorrencia`);
 
 --
+-- Limitadores para a tabela `impre`
+--
+ALTER TABLE `impre`
+  ADD CONSTRAINT `impre_ibfk_1` FOREIGN KEY (`nOcorrencia`) REFERENCES `paciente` (`nOcorrencia`);
+
+--
+-- Limitadores para a tabela `lo_tra`
+--
+ALTER TABLE `lo_tra`
+  ADD CONSTRAINT `lo_tra_ibfk_1` FOREIGN KEY (`nOcorrencia`) REFERENCES `paciente` (`nOcorrencia`);
+
+--
+-- Limitadores para a tabela `mate_desc`
+--
+ALTER TABLE `mate_desc`
+  ADD CONSTRAINT `mate_desc_ibfk_1` FOREIGN KEY (`nOcorrencia`) REFERENCES `paciente` (`nOcorrencia`);
+
+--
+-- Limitadores para a tabela `mate_hosp`
+--
+ALTER TABLE `mate_hosp`
+  ADD CONSTRAINT `mate_hosp_ibfk_1` FOREIGN KEY (`nOcorrencia`) REFERENCES `paciente` (`nOcorrencia`);
+
+--
+-- Limitadores para a tabela `obs_import`
+--
+ALTER TABLE `obs_import`
+  ADD CONSTRAINT `obs_import_ibfk_1` FOREIGN KEY (`nOcorrencia`) REFERENCES `paciente` (`nOcorrencia`);
+
+--
 -- Limitadores para a tabela `pes_form`
 --
 ALTER TABLE `pes_form`
   ADD CONSTRAINT `pes_form_ibfk_1` FOREIGN KEY (`nOcorrencia`) REFERENCES `paciente` (`nOcorrencia`);
+
+--
+-- Limitadores para a tabela `proc_efe`
+--
+ALTER TABLE `proc_efe`
+  ADD CONSTRAINT `proc_efe_ibfk_1` FOREIGN KEY (`nOcorrencia`) REFERENCES `paciente` (`nOcorrencia`);
+
+--
+-- Limitadores para a tabela `quei`
+--
+ALTER TABLE `quei`
+  ADD CONSTRAINT `quei_ibfk_1` FOREIGN KEY (`nOcorrencia`) REFERENCES `paciente` (`nOcorrencia`);
 
 --
 -- Limitadores para a tabela `ss_form`
@@ -862,6 +941,12 @@ ALTER TABLE `ss_form`
 --
 ALTER TABLE `sv_form`
   ADD CONSTRAINT `sv_form_ibfk_1` FOREIGN KEY (`nOcorrencia`) REFERENCES `paciente` (`nOcorrencia`);
+
+--
+-- Limitadores para a tabela `term_rec`
+--
+ALTER TABLE `term_rec`
+  ADD CONSTRAINT `term_rec_ibfk_1` FOREIGN KEY (`nOcorrencia`) REFERENCES `paciente` (`nOcorrencia`);
 
 --
 -- Limitadores para a tabela `tipo_ocorrencia`

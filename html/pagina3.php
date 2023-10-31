@@ -1,3 +1,7 @@
+<?php
+session_start();
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -62,7 +66,6 @@
 <br>
               <div id="resultado">Clique em uma parte do corpo.</div>
               <br>
-              <form method="post" action="" id="form4">
             
            
             <div class="corpo" style="background-image: url('../img/corpo..png');">
@@ -123,15 +126,17 @@
           
           <BR>
             <br>
+
+            <form method="post" action="" id="form4">  
           <div class="rela"><B>RELATÓRIO</B></div>
           <div class="tabela"> 
-            <div class="local">LOCAL: <div id="resultado1"></div></div>
-            <div class="lado">LADO:<div id="resultado1"></div></div>
-            <div class="face">FACE: <div id="resultado1"></div></div>
-            <div class="tipo">TIPO: <div id="resultado1"></div></div>
+            <div class="local">LOCAL: <div id="resultado1" name="" ></div></div>
+            <div class="lado">LADO:<div id="resultado1" name=""></div></div>
+            <div class="face">FACE: <div id="resultado1" name=""></div></div>
+            <div class="tipo">TIPO: <div id="resultado1" name="" ></div></div>
           </div>
             
-            <input class="enviar" type="button" name="enviar" value="Enviar" onclick="ss_form()" >
+            <input class="enviar" type="button" name="enviar" value="Enviar" onclick="lo_tra()">
               
           </form>
 
@@ -157,7 +162,7 @@
             <br>
               <form method="post" action="" id="form5">
               <div class="espaco">Local da queimadura:</div> <br>
-              <input class="caixinha" type="checkbox" name="opcao" value="local1"> Cabeça <br>
+              <input class="caixinha" type="checkbox" name="opcao1" value="local1"> Cabeça <br>
               <input class="caixinha" type="checkbox" name="opcao2" value="local2"> Pescoço <br>
               <input class="caixinha" type="checkbox" name="opcao3" value="local3"> T.ANT <br>
               <input class="caixinha" type="checkbox" name="opcao4" value="local4"> T.POS <br>
@@ -278,12 +283,12 @@ menu.classList.toggle('open');
 
    //para primeiro forms
 
-function ss_form() {
+function lo_tra() {
     var dados = $('#form4').serialize();
 
             $.ajax({
                 type: "POST",
-                url: "ss_form.php",
+                url: "lo_tra.php",
                 data: dados,
                 dataType: 'json',
                                 
