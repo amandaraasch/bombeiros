@@ -62,16 +62,16 @@ font-family: 'Effra', sans-serif;
 .verm
 {
   background-color: #e2353b;
-  margin-top: -40px;
+  margin-top: -30px;
   width: 360px;
-  height: 60px;
+  height: 80px;
 }
 
 
 .menu2
 {
   background-color: #e2353b;
-  margin-top: -20px;
+ margin-top: 20px;
   width: 360px;
   height: 60px;
   z-index: 0;
@@ -367,4 +367,27 @@ border-radius: 10px;
   width: 25PX;
   height: 25PX;
   top: 0px;
+}
+.terminar
+{
+  width: 109px;
+  height: 30px;
+  margin-left: 120px;
+  margin-top: 10px;
+  color:#343186;
+background-color: #ffffffc4;
+  justify-content: center;
+  justify-items: center;
+  align-items: center;
+  align-content: center;
+  display: flex;
+  border-radius: 10px;
+  font-size: 12PX;
+  font-family: 'Effra Heavy', sans-serif;
+  font-family: 'Effra Light', sans-serif;
+  font-family: 'Effra Medium', sans-serif;
+  font-family: 'Effra', sans-serif;
+  
+
+  border-color: transparent;
 }
