@@ -344,7 +344,9 @@ border-radius: 10px;
     border-radius: 20px;
     background-color: silver;
     overflow-y: scroll;
-    color:#FFFFFF;
+    color:black;
+    flex-direction: column;
+    display: flex;
     margin-left: 10px;
     padding-left: 10px;
    
