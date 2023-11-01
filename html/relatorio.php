@@ -188,6 +188,76 @@ while( $linhas = $comando->fetch()){
 
 
 }
+$comando = $pdo->prepare("SELECT * FROM ava_pac where nOcorrencia='$id'");
+$resultado = $comando->execute();
+
+while( $linhas = $comando->fetch()){
+
+    $idade=$linhas["+5"];
+    $idade2=$linhas["-5"];
+    $aber_ocu=$linhas["aber_ocu"];
+    $espontanea=$linhas["opcao1"];
+    $coman_verb=$linhas["opcao2"];
+    $estim_dolo=$linhas["opcao3"];
+    $nenhuma=$linhas["opcao4"];
+    $resp_verb=$linhas["resp_verb"];
+    $orientado=$linhas["opcao5"];
+    $confuso=$linhas["opcao6"];
+    $pala_ina=$linhas["opcao7"];
+    $pala_inco=$linhas["opcao8"];
+    $nada=$linhas["opcao9"];
+    $resp_moto=$linhas["resp_moto"];
+    $obedece=$linhas["opcao10"];
+    $localizado=$linhas["opcao11"];
+    $movimento=$linhas["opcao12"];
+    $flexao=$linhas["opcao13"];
+    $extensao=$linhas["opcao14"];
+    $nd=$linhas["opcao15"];
+    $aber_ocular16=$linhas["aber_ocular16"];
+    $espontanea2=$linhas["opcao17"];
+    $coman_verb2=$linhas["opcao18"];
+    $estim_dolo2=$linhas["opcao19"];
+    $nenhuma2=$linhas["opcao20"];
+    $resp_verb21=$linhas["resp_verb21"];
+    $pala_apro=$linhas["opcao22"];
+    $pala_ina2=$linhas["opcao23"];
+    $choro=$linhas["opcao24"];
+    $sons=$linhas["opcao25"];
+    $never=$linhas["opcao26"];
+    $resp_moto27=$linhas["resp_moto27"];
+    $obedece2=$linhas["opcao28"];
+    $localiza=$linhas["opcao29"];
+    $retira=$linhas["opcao30"];
+    $flexao2=$linhas["opcao31"];
+    $extensao2=$linhas["opcao32"];
+    $ausencia=$linhas["opcao33"];
+
+}
+$comando = $pdo->prepare("SELECT * FROM quei where nOcorrencia='$id'");
+$resultado = $comando->execute();
+
+while( $linhas = $comando->fetch()){
+
+    $cab=$linhas["opcao1"];
+    $pes=$linhas["opcao2"];
+    $tan=$linhas["opcao3"];
+    $tpos=$linhas["opcao4"];
+    $genit=$linhas["opcao5"];
+    $mid=$linhas["opcao6"];
+    $mie=$linhas["opcao7"];
+    $msd=$linhas["opcao8"];
+    $mse=$linhas["opcao9"];
+    $pgrau=$linhas["1grau"];
+    $sgrau=$linhas["2grau"];
+    $tgrau=$linhas["3grau"];
+
+
+
+
+
+}
+
+
 
 
 
@@ -333,6 +403,15 @@ while( $linhas = $comando->fetch()){
 
     <P>AVALIAÇÃO DO PACIENTE:</P>
     <br>
+    Idade: <?php echo($idade);?> <?php echo($idade2);?><br>
+    <br>
+    Abertura Ocular:<?php echo($espontanea);?> <?php echo($espontanea2);?><?php echo($nenhuma);?> <?php echo($nenhuma2);?> <?php echo($coman_verb);?> <?php echo($coman_verb2);?><?php echo($estim_dolo);?> <?php echo($estim_dolo2);?><br>
+    <br>
+    Resposta Verbal:<?php echo($orientado);?> <?php echo($confuso);?><?php echo($pala_ina);?> <?php echo($pala_ina2);?><?php echo($pala_apro);?> <?php echo($never);?><?php echo($choro);?> <?php echo($sons);?><br>
+    <br>
+    Resposta motora:<?php echo($obedece);?><?php echo($obedece2);?><?php echo($localiza);?> <?php echo($retira);?><?php echo($localizado);?><?php echo($espontanea);?> <?php echo($movimento);?><?php echo($flexao);?> <?php echo($extensao);?><?php echo($nd);?><?php echo($flexao2);?><?php echo($extensao2);?><?php echo($ausencia);?><br>
+    <br>
+
     <P>LOCALIZAÇÃO DOS TRAUMAS:</P>
     Local:<br>
     <br>
@@ -344,6 +423,10 @@ while( $linhas = $comando->fetch()){
     
     <br>
     <P>QUEIMADURAS:</P>
+    <br>
+    Local:<?php echo($cab);?><?php echo($pes);?><?php echo($mie);?> <?php echo($mid);?> <?php echo($msd);?> <?php echo($mse);?> <?php echo($genit);?> <?php echo($tan);?> <?php echo($tpos);?><br>
+    <br>
+    Grau:<?php echo($pgrau);?> <?php echo($sgrau);?> <?php echo($tgrau);?><br>
     <br>
     <P>OBJETOS RECOLHIDOS:</P>
     <br>
