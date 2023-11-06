@@ -162,24 +162,24 @@ session_start();
             <br>
               <form method="post" action="" id="form5">
               <div class="espaco">Local da queimadura:</div> <br>
-              <input class="caixinha" type="checkbox" name="opcao1" value="local1"> Cabeça <br>
-              <input class="caixinha" type="checkbox" name="opcao2" value="local2"> Pescoço <br>
-              <input class="caixinha" type="checkbox" name="opcao3" value="local3"> T.ANT <br>
-              <input class="caixinha" type="checkbox" name="opcao4" value="local4"> T.POS <br>
-              <input class="caixinha" type="checkbox" name="opcao5" value="local5"> Genit. <br>
-              <input class="caixinha" type="checkbox" name="opcao6" value="local6"> M.I.D <br>
-              <input class="caixinha" type="checkbox" name="opcao7" value="local7"> M.I.E <br>
-              <input class="caixinha" type="checkbox" name="opcao8" value="local8"> M.S.D <br>
-              <input class="caixinha" type="checkbox" name="opcao9" value="local9"> M.S.E <br> <br>
+              <input class="caixinha" type="checkbox" name="opcao1" value=""> Cabeça <br>
+              <input class="caixinha" type="checkbox" name="opcao2" value=""> Pescoço <br>
+              <input class="caixinha" type="checkbox" name="opcao3" value=""> T.ANT  <br>
+              <input class="caixinha" type="checkbox" name="opcao4" value=""> T.POS  <br>
+              <input class="caixinha" type="checkbox" name="opcao5" value=""> Genit. <br>
+              <input class="caixinha" type="checkbox" name="opcao6" value=""> M.I.D  <br>
+              <input class="caixinha" type="checkbox" name="opcao7" value=""> M.I.E  <br>
+              <input class="caixinha" type="checkbox" name="opcao8" value=""> M.S.D  <br>
+              <input class="caixinha" type="checkbox" name="opcao9" value=""> M.S.E  <br> <br>
 
               <div class="espaco">Grau da queimadura:</div> <br>
-              <input class="caixa2" type="radio" name="opcao1" value="queimadura1">1° Grau<br>
-              <input class="caixa2" type="radio" name="opcao2" value="queimadura2">2° Grau<br>
-              <input class="caixa2" type="radio" name="opcao3" value="queimadura3">3° Grau<br>
+              <input class="caixa2" type="radio" name="opcao1" value="">1° Grau<br>
+              <input class="caixa2" type="radio" name="opcao2" value="">2° Grau<br>
+              <input class="caixa2" type="radio" name="opcao3" value="">3° Grau<br>
                 <br>
                 <br>
                 <br>
-                <input class="enviar" type="button" name="enviar" value="Enviar" onclick="pes_form()" >
+                <input class="enviar" type="button" name="enviar" value="Enviar" onclick="quei()" >
             </form>
             </div>
         </div>   <br>
@@ -315,12 +315,12 @@ function lo_tra() {
 
       //segundo forms
 
-      function pes_form() {
+      function quei() {
     var dados = $('#form5').serialize();
 
             $.ajax({
                 type: "POST",
-                url: "pes_form.php",
+                url: "quei.php",
                 data: dados,
                 dataType: 'json',
                                 
@@ -346,12 +346,12 @@ function lo_tra() {
       
       //pro terceiro form
 
-      function ve_form() {
+      function infeliz() {
     var dados = $('#form6').serialize();
 
             $.ajax({
                 type: "POST",
-                url: "ve_form.php",
+                url: "",
                 data: dados,
                 dataType: 'json',
                                 
