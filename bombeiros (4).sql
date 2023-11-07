@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Tempo de geração: 31-Out-2023 às 16:21
+-- Tempo de geração: 07-Nov-2023 às 16:10
 -- Versão do servidor: 10.4.28-MariaDB
 -- versão do PHP: 8.2.4
 
@@ -230,6 +230,14 @@ CREATE TABLE `form_cond` (
   `opcao3` varchar(30) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
+--
+-- Extraindo dados da tabela `form_cond`
+--
+
+INSERT INTO `form_cond` (`nOcorrencia`, `opcao1`, `opcao2`, `opcao3`) VALUES
+(17, '', 'Semi-sentada', ''),
+(17, '', 'Semi-sentada', '');
+
 -- --------------------------------------------------------
 
 --
@@ -238,9 +246,18 @@ CREATE TABLE `form_cond` (
 
 CREATE TABLE `impre` (
   `nOcorrencia` int(11) NOT NULL,
-  `sim` varchar(45) NOT NULL,
-  `nao` varchar(45) NOT NULL
+  `opcao1` varchar(45) NOT NULL,
+  `opcao2` varchar(45) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Extraindo dados da tabela `impre`
+--
+
+INSERT INTO `impre` (`nOcorrencia`, `opcao1`, `opcao2`) VALUES
+(15, 'Sim', ''),
+(16, 'Sim', ''),
+(17, 'Sim', '');
 
 -- --------------------------------------------------------
 
@@ -255,6 +272,17 @@ CREATE TABLE `lo_tra` (
   `face` varchar(45) NOT NULL,
   `tipo` varchar(45) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Extraindo dados da tabela `lo_tra`
+--
+
+INSERT INTO `lo_tra` (`nOcorrencia`, `local`, `lado`, `face`, `tipo`) VALUES
+(18, 'Cabeça', 'Central', 'Frontal', 'Fraturas/Luxações/Entorses'),
+(18, 'Cabeça', 'Central', 'Frontal', 'Fraturas/Luxações/Entorses'),
+(18, 'Tronco', 'Central', 'Frontal', 'Ferimentos Diversos'),
+(18, 'Tronco', 'Central', 'Frontal', 'Hemorragia'),
+(18, 'Membro Inferior', 'Esquerdo', 'Posterior', 'Evisceração');
 
 -- --------------------------------------------------------
 
@@ -376,7 +404,10 @@ CREATE TABLE `paciente` (
 --
 
 INSERT INTO `paciente` (`nOcorrencia`, `Data`, `Sexo`, `Nome_hospital`, `Nomepac`, `Idadepac`, `CPFpac`, `Telefone`, `NOMEACOM`, `IDADEACOM`, `Localidade`) VALUES
-(13, '2023-10-05', 'Masculi', 'a', 'a', 2, 2, 2, 'a', 2, 'a');
+(15, '2023-11-16', 'Masculi', '1', '1', 1, 1, 1, '1', 1, '1'),
+(16, '2023-11-01', 'Feminin', 'dona helena', '1', 1, 1, 1, '1', 1, '1'),
+(17, '2023-11-08', 'Masculi', 'la', 'tissia', 1, 1, 1, '1', 1, '1'),
+(18, '2023-11-08', 'Feminin', '1', '1', 1, 1, 1, '1', 1, '1');
 
 -- --------------------------------------------------------
 
@@ -409,6 +440,16 @@ CREATE TABLE `pes_form` (
   `Outros` varchar(45) NOT NULL,
   `opcao21` varchar(25) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Extraindo dados da tabela `pes_form`
+--
+
+INSERT INTO `pes_form` (`nOcorrencia`, `id`, `opcao1`, `opcao2`, `opcao3`, `opcao4`, `opcao5`, `opcao6`, `opcao7`, `opcao8`, `opcao9`, `opcao10`, `opcao11`, `opcao12`, `opcao13`, `opcao14`, `opcao15`, `opcao16`, `opcao17`, `opcao18`, `opcao19`, `Outros`, `opcao21`) VALUES
+(15, 3, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', ''),
+(16, 4, 'Psiquiátrico', '', '', '', 'Diabetes', '', '', '', '', '', '', 'Transporte', '', '', '', '', 'Samu', '', '', 'tentativa de homicidio', ''),
+(17, 5, '', '', '', '', 'Diabetes', '', 'Hipoglicemia', '', '', '', '', '', '', '', '', '', '', '', '', 'tentativa de homicidio', ''),
+(18, 6, 'Psiquiátrico', '', '', 'Inalação Fumaça', '', '', '', '', '', '', 'Hemor.Excessiva', '', '', '', '', 'Pós-trauma ', '', '', '', 'batemos o carro', '');
 
 -- --------------------------------------------------------
 
@@ -497,6 +538,14 @@ CREATE TABLE `quei` (
   `3grau` varchar(45) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
+--
+-- Extraindo dados da tabela `quei`
+--
+
+INSERT INTO `quei` (`nOcorrencia`, `opcao1`, `opcao2`, `opcao3`, `opcao4`, `opcao5`, `opcao6`, `opcao7`, `opcao8`, `opcao9`, `1grau`, `2grau`, `3grau`) VALUES
+(16, 'Cabeça', 'Pescoço', '', '', '', 0, 'M.I.E', '', '', '', '', ''),
+(17, 'Cabeça', 'Pescoço', '', '', 'Genit.', 0, '', '', '', '', '', '');
+
 -- --------------------------------------------------------
 
 --
@@ -566,6 +615,16 @@ CREATE TABLE `ss_form` (
   `Outros` varchar(45) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
+--
+-- Extraindo dados da tabela `ss_form`
+--
+
+INSERT INTO `ss_form` (`nOcorrencia`, `id`, `opcao1`, `opcao2`, `opcao3`, `opcao4`, `opcao5`, `opcao6`, `opcao7`, `opcao8`, `opcao9`, `opcao10`, `opcao11`, `opcao12`, `opcao13`, `opcao14`, `opcao15`, `opcao16`, `opcao17`, `opcao18`, `opcao19`, `opcao20`, `opcao21`, `opcao22`, `opcao23`, `opcao24`, `opcao25`, `opcao26`, `opcao27`, `opcao28`, `opcao29`, `opcao30`, `opcao31`, `opcao32`, `opcao33`, `opcao34`, `opcao35`, `opcao36`, `opcao37`, `opcao38`, `opcao39`, `opcao40`, `opcao41`, `opcao42`, `opcao43`, `opcao44`, `opcao45`, `opcao46`, `opcao47`, `opcao48`, `opcao49`, `opcao50`, `opcao51`, `opcao52`, `opcao53`, `opcao54`, `opcao55`, `opcao56`, `opcao57`, `Outros`) VALUES
+(15, 2, 'Abdomen Sensível/Rígido', '', '', '', 'Angina de peito ', '', '', '', '', '', '', '', 'Extremidades', '', '', '', '', '', '', 'Dispnéia ', 'Dor local ', '', '', '', '', '', '', 'Hemorragia ', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', ''),
+(16, 3, 'Abdomen Sensível/Rígido', '', '', '', '', '', 'Bradicardia  ', '', '', '', '', '', '', '', '', '', 'Descerebração', '', '', 'Dispnéia ', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', 'Otorragia ', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', 'morreu'),
+(17, 4, 'Abdomen Sensível/Rígido', '', '', '', 'Angina de peito ', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', 'Hipotensão', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', 'tentativa de homicidio'),
+(18, 5, '', 'Afundamendo de crânio', '', '', 'Angina de peito ', '', '', 'Bradpnéia', '', '', '', '', 'Extremidades', '', '', 'Deformidade ', '', '', '', 'Dispnéia ', '', '', '', 'Localizado ', '', '', '', '', '', '', '', 'Hipotensão', '', '', 'Óbito', '', 'Otorragia ', '', '', '', '', '', 'Prurido na pele', '', '', 'Isocoria', '', '', '', '', '', 'Sinal de Batile ', '', '', '', ' Taquicardia ', '', 'tentativa de homicidio');
+
 -- --------------------------------------------------------
 
 --
@@ -587,6 +646,16 @@ CREATE TABLE `sv_form` (
   `perfusao_menor` varchar(25) NOT NULL,
   `perfusao_maior` varchar(25) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Extraindo dados da tabela `sv_form`
+--
+
+INSERT INTO `sv_form` (`nOcorrencia`, `id`, `pressao_arterial`, `pressao2`, `pulso`, `respiracao`, `saturacao`, `hgt`, `temperatura`, `opcao1`, `opcao2`, `perfusao_menor`, `perfusao_maior`) VALUES
+(15, 4, 5, 0, 5, 0, 6, 5, 0, '', 'Normal', '', '&lt;2SEG'),
+(16, 5, 11, 1, 1, 0, 1, 0, 0, 'Anormal', '', '', ''),
+(17, 6, 1, 0, 1, 10, 0, 1, 0, 'Anormal', '', '', ''),
+(18, 7, 1, 0, 1, 0, 1, 1, 0, '', 'Normal', '&gt;2SEG', '');
 
 -- --------------------------------------------------------
 
@@ -634,6 +703,17 @@ CREATE TABLE `tipo_ocorrencia` (
   `Outros` varchar(45) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
+--
+-- Extraindo dados da tabela `tipo_ocorrencia`
+--
+
+INSERT INTO `tipo_ocorrencia` (`nOcorrencia`, `id`, `opcao1`, `opcao2`, `opcao3`, `opcao4`, `opcao5`, `opcao6`, `opcao7`, `opcao8`, `opcao9`, `opcao10`, `opcao11`, `opcao12`, `opcao13`, `opcao14`, `opcao15`, `opcao16`, `opcao17`, `opcao18`, `opcao19`, `opcao20`, `Outros`) VALUES
+(15, 5, '', 'Com meio de tra', '', '', '', '', 'Queda própria a', '', '', '', 'Choque elétrico', '', '', '', 'Intoxicação ', '', '', '', '', '', 'tentativa de homicidio'),
+(15, 6, '', 'Com meio de tra', '', '', '', '', 'Queda própria a', '', '', '', 'Choque elétrico', '', '', '', 'Intoxicação ', '', '', '', '', '', 'tentativa de homicidio'),
+(16, 7, '', '', '', '', '', '', '', '', '', '', '', '', '', 'Esportivo ', '', '', 'Queda de moto ', '', '', '', 'tentativa de homicidio'),
+(17, 8, '', '', '', '', 'Queda de altura', '', '', '', 'Agressão ', '', '', '', '', '', '', 'Queda de bicicleta', '', '', '', '', 'ablacarro'),
+(18, 9, 'Causado por ani', '', '', '', '', '', 'Queda própria a', '', '', '', '', '', '', '', '', 'Queda de bicicleta', '', 'Queda nível <2m', '', '', 'morreu');
+
 -- --------------------------------------------------------
 
 --
@@ -654,6 +734,16 @@ CREATE TABLE `ve_form` (
   `opcao9` varchar(25) NOT NULL,
   `opcao10` varchar(25) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Extraindo dados da tabela `ve_form`
+--
+
+INSERT INTO `ve_form` (`nOcorrencia`, `id`, `opcao1`, `opcao2`, `opcao3`, `opcao4`, `opcao5`, `opcao6`, `opcao7`, `opcao8`, `opcao9`, `opcao10`) VALUES
+(15, 2, '', '', '', '', '', '', '', '', '', ''),
+(16, 3, 'Ciclista', '', '', '', '', '', 'Clínico', '', '', ''),
+(17, 4, '', '', '', '', 'Pas.Moto ', '', 'Clínico', '', 'Pass.BCO trás', ''),
+(18, 5, '', 'Condutor Moto', '', '', '', '', '', 'Trauma', '', 'Pedestre ');
 
 --
 -- Índices para tabelas despejadas
@@ -810,37 +900,37 @@ ALTER TABLE `cadastro`
 -- AUTO_INCREMENT de tabela `paciente`
 --
 ALTER TABLE `paciente`
-  MODIFY `nOcorrencia` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
+  MODIFY `nOcorrencia` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
 
 --
 -- AUTO_INCREMENT de tabela `pes_form`
 --
 ALTER TABLE `pes_form`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT de tabela `ss_form`
 --
 ALTER TABLE `ss_form`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT de tabela `sv_form`
 --
 ALTER TABLE `sv_form`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
 -- AUTO_INCREMENT de tabela `tipo_ocorrencia`
 --
 ALTER TABLE `tipo_ocorrencia`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
 -- AUTO_INCREMENT de tabela `ve_form`
 --
 ALTER TABLE `ve_form`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- Restrições para despejos de tabelas
