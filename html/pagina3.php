@@ -127,7 +127,7 @@ session_start();
           <BR>
             <br>
 
-            <form method="post" action="lo_tra.php" id="form4">  
+            <form method="post" action="" id="form4">  
           <div class="rela"><B>RELATÓRIO</B></div>
           <div class="tabela"> 
             <div class="local">LOCAL: <input class="R1" type="text" id="resultado1" name="resultado1" value="" > </div>
@@ -136,7 +136,7 @@ session_start();
             <div class="tipo">TIPO:   <input class="R4" type="text" id="resultado4" name="resultado4" value="" > </div>
           </div>
             
-            <input class="enviar" type="button" name="enviar" value="Enviar" onclick="lo_tra()">
+            <input class="enviar" type="button" name="enviar" value="Enviar" onclick="lo_tra()" >
               
           </form>
 
@@ -312,39 +312,6 @@ function lo_tra() {
             });
       }        
           
-      function lo_tra() {
-    var dados = $('#form4').serialize();
-
-            $.ajax({
-                type: "POST",
-                url: "",
-                data: dados,
-                dataType: 'json',
-                                
-                success: function(meu_json)
-                {
-                  okay5.style.display="block"
-                  
-                },
-                error: function(xhr, status, error) {
-                    // Aqui poderíamos preencher uma <div> com o innerHTML por exemplo
-                    console.error('Ocorreu um erro ao enviar os dados: ' + error);
-                },
-                beforeSend: function(xhr) {
-                    // Faz algo antes do envio, como exibir uma animação por exemplo.
-                },
-                complete: function(xhr, status) {
-                    // Faz algo após a conclusão, como ocultar uma animação por exemplo. 
-                    // Vai ser executado mesmo se ocorrer um erro.
-                },
-                timeout: 5000    // Define um tempo limite de 5 segundos (5000 milissegundos)
-            });
-      }       
-
-
-
-
-
 
       //segundo forms
 

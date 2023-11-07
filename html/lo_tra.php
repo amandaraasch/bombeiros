@@ -17,7 +17,10 @@ $comando = $pdo->prepare("INSERT INTO lo_tra (nOcorrencia, `local`, lado, face, 
     $comando->bindParam(":face", $face);
     $comando->bindParam(":tipo", $tipo);
 
-
-
+    if ($comando->execute()) {
+        echo ("{\"Resp\":1}");
+    } else {
+        echo ("{\"Resp\":0}");
+    }
 
 ?>
