@@ -127,13 +127,13 @@ session_start();
           <BR>
             <br>
 
-            <form method="post" action="" id="form4">  
+            <form method="post" action="lo_tra.php" id="form4">  
           <div class="rela"><B>RELATÓRIO</B></div>
           <div class="tabela"> 
-            <div class="local">LOCAL: <div id="resultado1" name="" ></div></div>
-            <div class="lado">LADO:<div id="resultado1" name=""></div></div>
-            <div class="face">FACE: <div id="resultado1" name=""></div></div>
-            <div class="tipo">TIPO: <div id="resultado1" name="" ></div></div>
+            <div class="local">LOCAL: <input type="text" id="resultado1" name="resultado1" value="" > </div>
+            <div class="lado">LADO:   <input type="text" id="resultado2" name="resultado2" value="" > </div>
+            <div class="face">FACE:   <input type="text" id="resultado3" name="resultado3" value="" > </div>
+            <div class="tipo">TIPO:   <input type="text" id="resultado4" name="resultado4" value="" > </div>
           </div>
             
             <input class="enviar" type="button" name="enviar" value="Enviar" onclick="lo_tra()">
@@ -312,6 +312,39 @@ function lo_tra() {
             });
       }        
           
+      function lo_tra() {
+    var dados = $('#form4').serialize();
+
+            $.ajax({
+                type: "POST",
+                url: "",
+                data: dados,
+                dataType: 'json',
+                                
+                success: function(meu_json)
+                {
+                  okay5.style.display="block"
+                  
+                },
+                error: function(xhr, status, error) {
+                    // Aqui poderíamos preencher uma <div> com o innerHTML por exemplo
+                    console.error('Ocorreu um erro ao enviar os dados: ' + error);
+                },
+                beforeSend: function(xhr) {
+                    // Faz algo antes do envio, como exibir uma animação por exemplo.
+                },
+                complete: function(xhr, status) {
+                    // Faz algo após a conclusão, como ocultar uma animação por exemplo. 
+                    // Vai ser executado mesmo se ocorrer um erro.
+                },
+                timeout: 5000    // Define um tempo limite de 5 segundos (5000 milissegundos)
+            });
+      }       
+
+
+
+
+
 
       //segundo forms
 
@@ -397,9 +430,9 @@ function lo_tra() {
 
         // Exibindo os resultados
         
-        document.getElementById('resultado1').innerText = nome;
-        document.querySelector('.lado div').innerText = lado;
-        document.querySelector('.face div').innerText = face;
+        document.getElementById('resultado1').value = nome;
+        document.getElementById('resultado2').value = lado;
+        document.getElementById('resultado3').value = face;
     });
 });
 document.querySelectorAll('.parte2').forEach(function(parte2) {
@@ -425,9 +458,9 @@ document.querySelectorAll('.parte2').forEach(function(parte2) {
 
         // Exibindo os resultados
         
-        document.getElementById('resultado1').innerText = nome;
-        document.querySelector('.lado div').innerText = lado;
-        document.querySelector('.face div').innerText = face;
+        document.getElementById('resultado1').value = nome;
+        document.getElementById('resultado2').value = lado;
+        document.getElementById('resultado3').value = face;
     });
 });
 var ImagemAtual = "seta.png";
@@ -460,28 +493,28 @@ function inserirImagem(event) {
 }
 function MudarImagemFratura(){
     ImagemAtual = "../img/FRATURAS.png";
-    document.querySelector('.tipo div').innerText = "Fraturas/Luxações/Entorses";
+    document.getElementById('resultado4').value = "Fraturas/Luxações/Entorses";
 }
 function MudarImagemFerimento(){
     ImagemAtual = "../img/FERIMENTOS.png";
-    document.querySelector('.tipo div').innerText = "Ferimentos Diversos";
+    document.getElementById('resultado4').value = "Ferimentos Diversos";
 
 }
 function MudarImagemHemorragia(){
     ImagemAtual = "../img/HEMORRAGIA.png";
-    document.querySelector('.tipo div').innerText = "Hemorragia";
+    document.getElementById('resultado4').value = "Hemorragia";
 }
 function MudarImagemEviceração(){
     ImagemAtual = "../img/EVISCERAÇÃO.png";
-    document.querySelector('.tipo div').innerText = "Evisceração";
+    document.getElementById('resultado4').value = "Evisceração";
 }
 function MudarImagemFABFAF(){
     ImagemAtual = "../img/FAB.png";
-    document.querySelector('.tipo div').innerText = "F.A.B/F.A.F";
+    document.getElementById('resultado4').value = "F.A.B/F.A.F";
 }
 function MudarImagemAmputação(){
     ImagemAtual = "../img/AMPUTACAO.png";
-    document.querySelector('.tipo div').innerText = "Amputação";
+    document.getElementById('resultado4').value = "Amputação";
 }
 
 </script>
