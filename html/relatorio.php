@@ -273,7 +273,7 @@ while( $linhas = $comando->fetch()){
     <link rel="Website Icon" type="png"
     href="../img/logo_grande.png">
     <script src="../jquery-1.8.2.min.js"></script>
-    <title>INICIAL</title>
+    <title>RELATÓRIO</title>
 
 
 </head>
@@ -581,9 +581,12 @@ while( $linhas = $comando->fetch()){
    </div>
   <br>
   <div class="oi"></div>
-    
+  <div id="gerarRelatorioContainer">
+          <a id="gerarRelatorio" href="../html/relatorio.php">ENVIAR RELATÓRIO </a>
+         
+        </div>
     <div class="menu2">
-        <input class="terminar" input="button" name="terminar" value="ENVIAR RELATÓRIO"></input>
+        
     </div>
    
 </body>
