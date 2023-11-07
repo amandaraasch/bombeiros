@@ -13,6 +13,40 @@ body
     margin: 0px;
     
 }
+.R1
+{
+ background-color: transparent;
+ border-color: transparent;
+ color:#e2353b;
+ font-size:15px;
+ margin-left: 190px;
+ width: 130px;
+}
+.R2
+{
+ background-color: transparent;
+ border-color: transparent;
+ color:#e2353b;
+ font-size:15px;
+ width: 140px;
+}
+.R3
+{
+ background-color: transparent;
+ border-color: transparent;
+ color:#e2353b;
+ font-size:15px;
+ width: 140px;
+}
+.R4
+{
+ background-color: transparent;
+ border-color: transparent;
+ color:#e2353b;
+ font-size:15px;
+ width: 150px;
+}
+
 
 .verm
 {
@@ -467,6 +501,8 @@ border-radius: 10px;
   align-items: center;
   align-content: center;
 }
+
+
 .face
 {
  width: 90%;

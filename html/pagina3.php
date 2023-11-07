@@ -130,10 +130,10 @@ session_start();
             <form method="post" action="lo_tra.php" id="form4">  
           <div class="rela"><B>RELATÓRIO</B></div>
           <div class="tabela"> 
-            <div class="local">LOCAL: <input type="text" id="resultado1" name="resultado1" value="" > </div>
-            <div class="lado">LADO:   <input type="text" id="resultado2" name="resultado2" value="" > </div>
-            <div class="face">FACE:   <input type="text" id="resultado3" name="resultado3" value="" > </div>
-            <div class="tipo">TIPO:   <input type="text" id="resultado4" name="resultado4" value="" > </div>
+            <div class="local">LOCAL: <input class="R1" type="text" id="resultado1" name="resultado1" value="" > </div>
+            <div class="lado">LADO:   <input class="R2" type="text" id="resultado2" name="resultado2" value="" > </div>
+            <div class="face">FACE:   <input class="R3" type="text" id="resultado3" name="resultado3" value="" > </div>
+            <div class="tipo">TIPO:   <input class="R4" type="text" id="resultado4" name="resultado4" value="" > </div>
           </div>
             
             <input class="enviar" type="button" name="enviar" value="Enviar" onclick="lo_tra()">
