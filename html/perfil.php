@@ -26,6 +26,7 @@
                             $login = $linhas["login"];
                             $cep = $linhas["cep"];
                             $descricao = $linhas["descricao"];
+                            $senha = $linhas["senha"];
 
                             $url = "https://viacep.com.br/ws/{$cep}/json/";
 
@@ -72,10 +73,10 @@
         </div>
         <div class="dois">
             <div class="txt1">
-                <b>1326</b>
+                <b><?php echo("$senha "); ?> </b>
 
                 </div>
-            <div class="txt2">Pacientes atendidos</div>
+            <div class="txt2">Código de Acesso</div>
         </div>
     </div>
     <div class="descricao">
