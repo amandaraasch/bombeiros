@@ -207,10 +207,10 @@ session_start();
                 
             <form  method="post" action="" id="form6">
                 <div class="espaco">Divulgar na imprensa?</div>
-                <input class="caixa2" type="radio" name="opcao1" value="opcao1"> Sim <br>
-                <input class="caixa2" type="radio" name="opcao2" value="opcao2"> Não<br><br>
+                <input class="caixa2" type="radio" name="opcao1" value=""> Sim <br>
+                <input class="caixa2" type="radio" name="opcao2" value=""> Não<br>
                <br>
-                <input class="enviar" type="button" name="enviar" value="Enviar" onclick="ve_form()">
+                <input class="enviar" type="button" name="enviar" value="Enviar" onclick="formdificil()">
               </form>
             </div>
         
@@ -346,12 +346,12 @@ function lo_tra() {
       
       //pro terceiro form
 
-      function infeliz() {
+      function formdificil() {
     var dados = $('#form6').serialize();
 
             $.ajax({
                 type: "POST",
-                url: "",
+                url: "impressa.php",
                 data: dados,
                 dataType: 'json',
                                 
