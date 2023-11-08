@@ -184,10 +184,40 @@ border-color: transparent;
   align-items: center;
 }
 
+#okay1
+{
+  margin-top:6px;
+  margin-left:220px ;
+}
+
+#okay2
+{
+  margin-top:6px;
+  margin-left:220px ;
+}
+
+
+#okay3
+{
+  margin-top:6px;
+  margin-left:220px ;
+}
+
+.okay1
+{
+  display: none;
+}
+
 .okay2
 {
   display: none;
 }
+
+.okay3
+{
+  display: none;
+}
+
 
 .teste
 {

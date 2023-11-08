@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Tempo de geração: 07-Nov-2023 às 16:10
+-- Tempo de geração: 08/11/2023 às 02:13
 -- Versão do servidor: 10.4.28-MariaDB
--- versão do PHP: 8.2.4
+-- Versão do PHP: 8.0.28
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -24,7 +24,7 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Estrutura da tabela `amn_emer`
+-- Estrutura para tabela `amn_emer`
 --
 
 CREATE TABLE `amn_emer` (
@@ -51,7 +51,7 @@ CREATE TABLE `amn_emer` (
 -- --------------------------------------------------------
 
 --
--- Estrutura da tabela `amn_ges`
+-- Estrutura para tabela `amn_ges`
 --
 
 CREATE TABLE `amn_ges` (
@@ -82,7 +82,7 @@ CREATE TABLE `amn_ges` (
 -- --------------------------------------------------------
 
 --
--- Estrutura da tabela `ava_cine`
+-- Estrutura para tabela `ava_cine`
 --
 
 CREATE TABLE `ava_cine` (
@@ -106,7 +106,7 @@ CREATE TABLE `ava_cine` (
 -- --------------------------------------------------------
 
 --
--- Estrutura da tabela `ava_pac`
+-- Estrutura para tabela `ava_pac`
 --
 
 CREATE TABLE `ava_pac` (
@@ -154,7 +154,7 @@ CREATE TABLE `ava_pac` (
 -- --------------------------------------------------------
 
 --
--- Estrutura da tabela `cadastro`
+-- Estrutura para tabela `cadastro`
 --
 
 CREATE TABLE `cadastro` (
@@ -167,7 +167,7 @@ CREATE TABLE `cadastro` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
--- Extraindo dados da tabela `cadastro`
+-- Despejando dados para a tabela `cadastro`
 --
 
 INSERT INTO `cadastro` (`id`, `login`, `senha`, `cep`, `descricao`, `adm`) VALUES
@@ -182,7 +182,7 @@ INSERT INTO `cadastro` (`id`, `login`, `senha`, `cep`, `descricao`, `adm`) VALUE
 -- --------------------------------------------------------
 
 --
--- Estrutura da tabela `dados_finais`
+-- Estrutura para tabela `dados_finais`
 --
 
 CREATE TABLE `dados_finais` (
@@ -200,7 +200,7 @@ CREATE TABLE `dados_finais` (
 -- --------------------------------------------------------
 
 --
--- Estrutura da tabela `deci_trans`
+-- Estrutura para tabela `deci_trans`
 --
 
 CREATE TABLE `deci_trans` (
@@ -217,10 +217,19 @@ CREATE TABLE `deci_trans` (
   `equipe` varchar(45) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
+--
+-- Despejando dados para a tabela `deci_trans`
+--
+
+INSERT INTO `deci_trans` (`nOcorrencia`, `opcao1`, `opcao2`, `opcao3`, `opcao4`, `m`, `s1`, `s2`, `s3`, `demandante`, `equipe`) VALUES
+(19, '', 'Instável', '', '', '', '1', '1', '1', '', ''),
+(19, '', 'Instável', 'Parcialmente Instavel', '', '', '1', '1', '1', '', ''),
+(19, 'Crítico', '', '', 'Estável', '', '1', '1', '1', '1', '');
+
 -- --------------------------------------------------------
 
 --
--- Estrutura da tabela `form_cond`
+-- Estrutura para tabela `form_cond`
 --
 
 CREATE TABLE `form_cond` (
@@ -231,17 +240,22 @@ CREATE TABLE `form_cond` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
--- Extraindo dados da tabela `form_cond`
+-- Despejando dados para a tabela `form_cond`
 --
 
 INSERT INTO `form_cond` (`nOcorrencia`, `opcao1`, `opcao2`, `opcao3`) VALUES
 (17, '', 'Semi-sentada', ''),
-(17, '', 'Semi-sentada', '');
+(17, '', 'Semi-sentada', ''),
+(17, '', 'Semi-sentada', ''),
+(17, '', 'Semi-sentada', ''),
+(19, 'Deitada', '', ''),
+(19, 'Deitada', '', ''),
+(19, '', '', 'Sentada');
 
 -- --------------------------------------------------------
 
 --
--- Estrutura da tabela `impre`
+-- Estrutura para tabela `impre`
 --
 
 CREATE TABLE `impre` (
@@ -251,18 +265,22 @@ CREATE TABLE `impre` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
--- Extraindo dados da tabela `impre`
+-- Despejando dados para a tabela `impre`
 --
 
 INSERT INTO `impre` (`nOcorrencia`, `opcao1`, `opcao2`) VALUES
 (15, 'Sim', ''),
 (16, 'Sim', ''),
-(17, 'Sim', '');
+(17, 'Sim', ''),
+(15, 'Sim', ''),
+(16, 'Sim', ''),
+(17, 'Sim', ''),
+(19, '', 'Não');
 
 -- --------------------------------------------------------
 
 --
--- Estrutura da tabela `lo_tra`
+-- Estrutura para tabela `lo_tra`
 --
 
 CREATE TABLE `lo_tra` (
@@ -274,20 +292,16 @@ CREATE TABLE `lo_tra` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
--- Extraindo dados da tabela `lo_tra`
+-- Despejando dados para a tabela `lo_tra`
 --
 
 INSERT INTO `lo_tra` (`nOcorrencia`, `local`, `lado`, `face`, `tipo`) VALUES
-(18, 'Cabeça', 'Central', 'Frontal', 'Fraturas/Luxações/Entorses'),
-(18, 'Cabeça', 'Central', 'Frontal', 'Fraturas/Luxações/Entorses'),
-(18, 'Tronco', 'Central', 'Frontal', 'Ferimentos Diversos'),
-(18, 'Tronco', 'Central', 'Frontal', 'Hemorragia'),
-(18, 'Membro Inferior', 'Esquerdo', 'Posterior', 'Evisceração');
+(19, 'Tronco', 'Central', 'Frontal', 'F.A.B/F.A.F');
 
 -- --------------------------------------------------------
 
 --
--- Estrutura da tabela `mate_desc`
+-- Estrutura para tabela `mate_desc`
 --
 
 CREATE TABLE `mate_desc` (
@@ -330,7 +344,7 @@ CREATE TABLE `mate_desc` (
 -- --------------------------------------------------------
 
 --
--- Estrutura da tabela `mate_hosp`
+-- Estrutura para tabela `mate_hosp`
 --
 
 CREATE TABLE `mate_hosp` (
@@ -371,7 +385,7 @@ CREATE TABLE `mate_hosp` (
 -- --------------------------------------------------------
 
 --
--- Estrutura da tabela `obs_import`
+-- Estrutura para tabela `obs_import`
 --
 
 CREATE TABLE `obs_import` (
@@ -382,7 +396,7 @@ CREATE TABLE `obs_import` (
 -- --------------------------------------------------------
 
 --
--- Estrutura da tabela `paciente`
+-- Estrutura para tabela `paciente`
 --
 
 CREATE TABLE `paciente` (
@@ -400,19 +414,20 @@ CREATE TABLE `paciente` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
--- Extraindo dados da tabela `paciente`
+-- Despejando dados para a tabela `paciente`
 --
 
 INSERT INTO `paciente` (`nOcorrencia`, `Data`, `Sexo`, `Nome_hospital`, `Nomepac`, `Idadepac`, `CPFpac`, `Telefone`, `NOMEACOM`, `IDADEACOM`, `Localidade`) VALUES
 (15, '2023-11-16', 'Masculi', '1', '1', 1, 1, 1, '1', 1, '1'),
 (16, '2023-11-01', 'Feminin', 'dona helena', '1', 1, 1, 1, '1', 1, '1'),
 (17, '2023-11-08', 'Masculi', 'la', 'tissia', 1, 1, 1, '1', 1, '1'),
-(18, '2023-11-08', 'Feminin', '1', '1', 1, 1, 1, '1', 1, '1');
+(18, '2023-11-08', 'Feminin', '1', '1', 1, 1, 1, '1', 1, '1'),
+(19, '2023-11-15', 'Masculi', '1', '1', 1, 1, 1, '1', 1, '1');
 
 -- --------------------------------------------------------
 
 --
--- Estrutura da tabela `pes_form`
+-- Estrutura para tabela `pes_form`
 --
 
 CREATE TABLE `pes_form` (
@@ -442,19 +457,16 @@ CREATE TABLE `pes_form` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
--- Extraindo dados da tabela `pes_form`
+-- Despejando dados para a tabela `pes_form`
 --
 
 INSERT INTO `pes_form` (`nOcorrencia`, `id`, `opcao1`, `opcao2`, `opcao3`, `opcao4`, `opcao5`, `opcao6`, `opcao7`, `opcao8`, `opcao9`, `opcao10`, `opcao11`, `opcao12`, `opcao13`, `opcao14`, `opcao15`, `opcao16`, `opcao17`, `opcao18`, `opcao19`, `Outros`, `opcao21`) VALUES
-(15, 3, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', ''),
-(16, 4, 'Psiquiátrico', '', '', '', 'Diabetes', '', '', '', '', '', '', 'Transporte', '', '', '', '', 'Samu', '', '', 'tentativa de homicidio', ''),
-(17, 5, '', '', '', '', 'Diabetes', '', 'Hipoglicemia', '', '', '', '', '', '', '', '', '', '', '', '', 'tentativa de homicidio', ''),
-(18, 6, 'Psiquiátrico', '', '', 'Inalação Fumaça', '', '', '', '', '', '', 'Hemor.Excessiva', '', '', '', '', 'Pós-trauma ', '', '', '', 'batemos o carro', '');
+(19, 7, '', 'Respiratório', '', '', 'Diabetes', '', 'Hipoglicemia', '', '', '', '', 'Transporte', 'Aéreo', '', '', '', '', '', '', 'tentativa de homicidio', '');
 
 -- --------------------------------------------------------
 
 --
--- Estrutura da tabela `proc_efe`
+-- Estrutura para tabela `proc_efe`
 --
 
 CREATE TABLE `proc_efe` (
@@ -519,7 +531,7 @@ CREATE TABLE `proc_efe` (
 -- --------------------------------------------------------
 
 --
--- Estrutura da tabela `quei`
+-- Estrutura para tabela `quei`
 --
 
 CREATE TABLE `quei` (
@@ -539,17 +551,16 @@ CREATE TABLE `quei` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
--- Extraindo dados da tabela `quei`
+-- Despejando dados para a tabela `quei`
 --
 
 INSERT INTO `quei` (`nOcorrencia`, `opcao1`, `opcao2`, `opcao3`, `opcao4`, `opcao5`, `opcao6`, `opcao7`, `opcao8`, `opcao9`, `1grau`, `2grau`, `3grau`) VALUES
-(16, 'Cabeça', 'Pescoço', '', '', '', 0, 'M.I.E', '', '', '', '', ''),
-(17, 'Cabeça', 'Pescoço', '', '', 'Genit.', 0, '', '', '', '', '', '');
+(19, '', 'Pescoço', '', '', '', 0, 'M.I.E', '', '', '', '', '');
 
 -- --------------------------------------------------------
 
 --
--- Estrutura da tabela `ss_form`
+-- Estrutura para tabela `ss_form`
 --
 
 CREATE TABLE `ss_form` (
@@ -616,19 +627,19 @@ CREATE TABLE `ss_form` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
--- Extraindo dados da tabela `ss_form`
+-- Despejando dados para a tabela `ss_form`
 --
 
 INSERT INTO `ss_form` (`nOcorrencia`, `id`, `opcao1`, `opcao2`, `opcao3`, `opcao4`, `opcao5`, `opcao6`, `opcao7`, `opcao8`, `opcao9`, `opcao10`, `opcao11`, `opcao12`, `opcao13`, `opcao14`, `opcao15`, `opcao16`, `opcao17`, `opcao18`, `opcao19`, `opcao20`, `opcao21`, `opcao22`, `opcao23`, `opcao24`, `opcao25`, `opcao26`, `opcao27`, `opcao28`, `opcao29`, `opcao30`, `opcao31`, `opcao32`, `opcao33`, `opcao34`, `opcao35`, `opcao36`, `opcao37`, `opcao38`, `opcao39`, `opcao40`, `opcao41`, `opcao42`, `opcao43`, `opcao44`, `opcao45`, `opcao46`, `opcao47`, `opcao48`, `opcao49`, `opcao50`, `opcao51`, `opcao52`, `opcao53`, `opcao54`, `opcao55`, `opcao56`, `opcao57`, `Outros`) VALUES
 (15, 2, 'Abdomen Sensível/Rígido', '', '', '', 'Angina de peito ', '', '', '', '', '', '', '', 'Extremidades', '', '', '', '', '', '', 'Dispnéia ', 'Dor local ', '', '', '', '', '', '', 'Hemorragia ', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', ''),
 (16, 3, 'Abdomen Sensível/Rígido', '', '', '', '', '', 'Bradicardia  ', '', '', '', '', '', '', '', '', '', 'Descerebração', '', '', 'Dispnéia ', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', 'Otorragia ', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', 'morreu'),
 (17, 4, 'Abdomen Sensível/Rígido', '', '', '', 'Angina de peito ', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', 'Hipotensão', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', 'tentativa de homicidio'),
-(18, 5, '', 'Afundamendo de crânio', '', '', 'Angina de peito ', '', '', 'Bradpnéia', '', '', '', '', 'Extremidades', '', '', 'Deformidade ', '', '', '', 'Dispnéia ', '', '', '', 'Localizado ', '', '', '', '', '', '', '', 'Hipotensão', '', '', 'Óbito', '', 'Otorragia ', '', '', '', '', '', 'Prurido na pele', '', '', 'Isocoria', '', '', '', '', '', 'Sinal de Batile ', '', '', '', ' Taquicardia ', '', 'tentativa de homicidio');
+(19, 6, '', '', '', '', 'Angina de peito ', '', '', '', '', 'Cefaléia  ', 'Cianose ', '', 'Extremidades', '', '', '', '', '', '', '', '', 'Edema', 'Generalizado', '', '', '', '', 'Hemorragia ', 'Interna', '', '', '', '', '', '', '', '', '', 'Parada', 'Cardíaca', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', 'tentativa de homicidio');
 
 -- --------------------------------------------------------
 
 --
--- Estrutura da tabela `sv_form`
+-- Estrutura para tabela `sv_form`
 --
 
 CREATE TABLE `sv_form` (
@@ -648,19 +659,20 @@ CREATE TABLE `sv_form` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
--- Extraindo dados da tabela `sv_form`
+-- Despejando dados para a tabela `sv_form`
 --
 
 INSERT INTO `sv_form` (`nOcorrencia`, `id`, `pressao_arterial`, `pressao2`, `pulso`, `respiracao`, `saturacao`, `hgt`, `temperatura`, `opcao1`, `opcao2`, `perfusao_menor`, `perfusao_maior`) VALUES
 (15, 4, 5, 0, 5, 0, 6, 5, 0, '', 'Normal', '', '&lt;2SEG'),
 (16, 5, 11, 1, 1, 0, 1, 0, 0, 'Anormal', '', '', ''),
 (17, 6, 1, 0, 1, 10, 0, 1, 0, 'Anormal', '', '', ''),
-(18, 7, 1, 0, 1, 0, 1, 1, 0, '', 'Normal', '&gt;2SEG', '');
+(18, 7, 1, 0, 1, 0, 1, 1, 0, '', 'Normal', '&gt;2SEG', ''),
+(19, 8, 1, 0, 1, 1, 1, 1, 0, '', 'Normal', '', '&lt;2SEG');
 
 -- --------------------------------------------------------
 
 --
--- Estrutura da tabela `term_rec`
+-- Estrutura para tabela `term_rec`
 --
 
 CREATE TABLE `term_rec` (
@@ -674,7 +686,7 @@ CREATE TABLE `term_rec` (
 -- --------------------------------------------------------
 
 --
--- Estrutura da tabela `tipo_ocorrencia`
+-- Estrutura para tabela `tipo_ocorrencia`
 --
 
 CREATE TABLE `tipo_ocorrencia` (
@@ -704,7 +716,7 @@ CREATE TABLE `tipo_ocorrencia` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
--- Extraindo dados da tabela `tipo_ocorrencia`
+-- Despejando dados para a tabela `tipo_ocorrencia`
 --
 
 INSERT INTO `tipo_ocorrencia` (`nOcorrencia`, `id`, `opcao1`, `opcao2`, `opcao3`, `opcao4`, `opcao5`, `opcao6`, `opcao7`, `opcao8`, `opcao9`, `opcao10`, `opcao11`, `opcao12`, `opcao13`, `opcao14`, `opcao15`, `opcao16`, `opcao17`, `opcao18`, `opcao19`, `opcao20`, `Outros`) VALUES
@@ -712,12 +724,13 @@ INSERT INTO `tipo_ocorrencia` (`nOcorrencia`, `id`, `opcao1`, `opcao2`, `opcao3`
 (15, 6, '', 'Com meio de tra', '', '', '', '', 'Queda própria a', '', '', '', 'Choque elétrico', '', '', '', 'Intoxicação ', '', '', '', '', '', 'tentativa de homicidio'),
 (16, 7, '', '', '', '', '', '', '', '', '', '', '', '', '', 'Esportivo ', '', '', 'Queda de moto ', '', '', '', 'tentativa de homicidio'),
 (17, 8, '', '', '', '', 'Queda de altura', '', '', '', 'Agressão ', '', '', '', '', '', '', 'Queda de bicicleta', '', '', '', '', 'ablacarro'),
-(18, 9, 'Causado por ani', '', '', '', '', '', 'Queda própria a', '', '', '', '', '', '', '', '', 'Queda de bicicleta', '', 'Queda nível <2m', '', '', 'morreu');
+(18, 9, 'Causado por ani', '', '', '', '', '', 'Queda própria a', '', '', '', '', '', '', '', '', 'Queda de bicicleta', '', 'Queda nível <2m', '', '', 'morreu'),
+(19, 10, '', '', '', 'Emergência médi', '', '', '', '', '', '', '', '', 'Doméstico ', '', '', '', '', 'Queda nível <2m', '', '', 'tentativa de homicidio');
 
 -- --------------------------------------------------------
 
 --
--- Estrutura da tabela `ve_form`
+-- Estrutura para tabela `ve_form`
 --
 
 CREATE TABLE `ve_form` (
@@ -736,158 +749,159 @@ CREATE TABLE `ve_form` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
--- Extraindo dados da tabela `ve_form`
+-- Despejando dados para a tabela `ve_form`
 --
 
 INSERT INTO `ve_form` (`nOcorrencia`, `id`, `opcao1`, `opcao2`, `opcao3`, `opcao4`, `opcao5`, `opcao6`, `opcao7`, `opcao8`, `opcao9`, `opcao10`) VALUES
 (15, 2, '', '', '', '', '', '', '', '', '', ''),
 (16, 3, 'Ciclista', '', '', '', '', '', 'Clínico', '', '', ''),
 (17, 4, '', '', '', '', 'Pas.Moto ', '', 'Clínico', '', 'Pass.BCO trás', ''),
-(18, 5, '', 'Condutor Moto', '', '', '', '', '', 'Trauma', '', 'Pedestre ');
+(18, 5, '', 'Condutor Moto', '', '', '', '', '', 'Trauma', '', 'Pedestre '),
+(19, 6, 'Ciclista', '', '', '', '', '', 'Clínico', '', '', '');
 
 --
 -- Índices para tabelas despejadas
 --
 
 --
--- Índices para tabela `amn_emer`
+-- Índices de tabela `amn_emer`
 --
 ALTER TABLE `amn_emer`
   ADD KEY `nOcorrencia` (`nOcorrencia`);
 
 --
--- Índices para tabela `amn_ges`
+-- Índices de tabela `amn_ges`
 --
 ALTER TABLE `amn_ges`
   ADD KEY `nOcorrencia` (`nOcorrencia`);
 
 --
--- Índices para tabela `ava_cine`
+-- Índices de tabela `ava_cine`
 --
 ALTER TABLE `ava_cine`
   ADD KEY `nOcorrencia` (`nOcorrencia`);
 
 --
--- Índices para tabela `ava_pac`
+-- Índices de tabela `ava_pac`
 --
 ALTER TABLE `ava_pac`
   ADD KEY `nOcorrencia` (`nOcorrencia`);
 
 --
--- Índices para tabela `cadastro`
+-- Índices de tabela `cadastro`
 --
 ALTER TABLE `cadastro`
   ADD PRIMARY KEY (`id`);
 
 --
--- Índices para tabela `dados_finais`
+-- Índices de tabela `dados_finais`
 --
 ALTER TABLE `dados_finais`
   ADD KEY `nOcorrencia` (`nOcorrencia`);
 
 --
--- Índices para tabela `deci_trans`
+-- Índices de tabela `deci_trans`
 --
 ALTER TABLE `deci_trans`
   ADD KEY `nOcorrencia` (`nOcorrencia`);
 
 --
--- Índices para tabela `form_cond`
+-- Índices de tabela `form_cond`
 --
 ALTER TABLE `form_cond`
   ADD KEY `nOcorrencia` (`nOcorrencia`);
 
 --
--- Índices para tabela `impre`
+-- Índices de tabela `impre`
 --
 ALTER TABLE `impre`
   ADD KEY `nOcorrencia` (`nOcorrencia`);
 
 --
--- Índices para tabela `lo_tra`
+-- Índices de tabela `lo_tra`
 --
 ALTER TABLE `lo_tra`
   ADD KEY `nOcorrencia` (`nOcorrencia`);
 
 --
--- Índices para tabela `mate_desc`
+-- Índices de tabela `mate_desc`
 --
 ALTER TABLE `mate_desc`
   ADD KEY `nOcorrencia` (`nOcorrencia`);
 
 --
--- Índices para tabela `mate_hosp`
+-- Índices de tabela `mate_hosp`
 --
 ALTER TABLE `mate_hosp`
   ADD KEY `nOcorrencia` (`nOcorrencia`);
 
 --
--- Índices para tabela `obs_import`
+-- Índices de tabela `obs_import`
 --
 ALTER TABLE `obs_import`
   ADD KEY `nOcorrencia` (`nOcorrencia`);
 
 --
--- Índices para tabela `paciente`
+-- Índices de tabela `paciente`
 --
 ALTER TABLE `paciente`
   ADD PRIMARY KEY (`nOcorrencia`);
 
 --
--- Índices para tabela `pes_form`
+-- Índices de tabela `pes_form`
 --
 ALTER TABLE `pes_form`
   ADD PRIMARY KEY (`id`),
   ADD KEY `nOcorrencia` (`nOcorrencia`);
 
 --
--- Índices para tabela `proc_efe`
+-- Índices de tabela `proc_efe`
 --
 ALTER TABLE `proc_efe`
   ADD KEY `nOcorrencia` (`nOcorrencia`);
 
 --
--- Índices para tabela `quei`
+-- Índices de tabela `quei`
 --
 ALTER TABLE `quei`
   ADD KEY `nOcorrencia` (`nOcorrencia`);
 
 --
--- Índices para tabela `ss_form`
+-- Índices de tabela `ss_form`
 --
 ALTER TABLE `ss_form`
   ADD PRIMARY KEY (`id`),
   ADD KEY `nOcorrencia` (`nOcorrencia`);
 
 --
--- Índices para tabela `sv_form`
+-- Índices de tabela `sv_form`
 --
 ALTER TABLE `sv_form`
   ADD PRIMARY KEY (`id`),
   ADD KEY `nOcorrencia` (`nOcorrencia`);
 
 --
--- Índices para tabela `term_rec`
+-- Índices de tabela `term_rec`
 --
 ALTER TABLE `term_rec`
   ADD KEY `nOcorrencia` (`nOcorrencia`);
 
 --
--- Índices para tabela `tipo_ocorrencia`
+-- Índices de tabela `tipo_ocorrencia`
 --
 ALTER TABLE `tipo_ocorrencia`
   ADD PRIMARY KEY (`id`),
   ADD KEY `nOcorrencia` (`nOcorrencia`);
 
 --
--- Índices para tabela `ve_form`
+-- Índices de tabela `ve_form`
 --
 ALTER TABLE `ve_form`
   ADD PRIMARY KEY (`id`),
   ADD KEY `nOcorrencia` (`nOcorrencia`);
 
 --
--- AUTO_INCREMENT de tabelas despejadas
+-- AUTO_INCREMENT para tabelas despejadas
 --
 
 --
@@ -900,152 +914,152 @@ ALTER TABLE `cadastro`
 -- AUTO_INCREMENT de tabela `paciente`
 --
 ALTER TABLE `paciente`
-  MODIFY `nOcorrencia` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
+  MODIFY `nOcorrencia` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
 
 --
 -- AUTO_INCREMENT de tabela `pes_form`
 --
 ALTER TABLE `pes_form`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
 -- AUTO_INCREMENT de tabela `ss_form`
 --
 ALTER TABLE `ss_form`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT de tabela `sv_form`
 --
 ALTER TABLE `sv_form`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
 -- AUTO_INCREMENT de tabela `tipo_ocorrencia`
 --
 ALTER TABLE `tipo_ocorrencia`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 
 --
 -- AUTO_INCREMENT de tabela `ve_form`
 --
 ALTER TABLE `ve_form`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
--- Restrições para despejos de tabelas
+-- Restrições para tabelas despejadas
 --
 
 --
--- Limitadores para a tabela `amn_emer`
+-- Restrições para tabelas `amn_emer`
 --
 ALTER TABLE `amn_emer`
   ADD CONSTRAINT `amn_emer_ibfk_1` FOREIGN KEY (`nOcorrencia`) REFERENCES `paciente` (`nOcorrencia`);
 
 --
--- Limitadores para a tabela `amn_ges`
+-- Restrições para tabelas `amn_ges`
 --
 ALTER TABLE `amn_ges`
   ADD CONSTRAINT `amn_ges_ibfk_1` FOREIGN KEY (`nOcorrencia`) REFERENCES `paciente` (`nOcorrencia`);
 
 --
--- Limitadores para a tabela `ava_cine`
+-- Restrições para tabelas `ava_cine`
 --
 ALTER TABLE `ava_cine`
   ADD CONSTRAINT `ava_cine_ibfk_1` FOREIGN KEY (`nOcorrencia`) REFERENCES `paciente` (`nOcorrencia`);
 
 --
--- Limitadores para a tabela `dados_finais`
+-- Restrições para tabelas `dados_finais`
 --
 ALTER TABLE `dados_finais`
   ADD CONSTRAINT `dados_finais_ibfk_1` FOREIGN KEY (`nOcorrencia`) REFERENCES `paciente` (`nOcorrencia`);
 
 --
--- Limitadores para a tabela `deci_trans`
+-- Restrições para tabelas `deci_trans`
 --
 ALTER TABLE `deci_trans`
   ADD CONSTRAINT `deci_trans_ibfk_1` FOREIGN KEY (`nOcorrencia`) REFERENCES `paciente` (`nOcorrencia`);
 
 --
--- Limitadores para a tabela `form_cond`
+-- Restrições para tabelas `form_cond`
 --
 ALTER TABLE `form_cond`
   ADD CONSTRAINT `form_cond_ibfk_1` FOREIGN KEY (`nOcorrencia`) REFERENCES `paciente` (`nOcorrencia`);
 
 --
--- Limitadores para a tabela `impre`
+-- Restrições para tabelas `impre`
 --
 ALTER TABLE `impre`
   ADD CONSTRAINT `impre_ibfk_1` FOREIGN KEY (`nOcorrencia`) REFERENCES `paciente` (`nOcorrencia`);
 
 --
--- Limitadores para a tabela `lo_tra`
+-- Restrições para tabelas `lo_tra`
 --
 ALTER TABLE `lo_tra`
   ADD CONSTRAINT `lo_tra_ibfk_1` FOREIGN KEY (`nOcorrencia`) REFERENCES `paciente` (`nOcorrencia`);
 
 --
--- Limitadores para a tabela `mate_desc`
+-- Restrições para tabelas `mate_desc`
 --
 ALTER TABLE `mate_desc`
   ADD CONSTRAINT `mate_desc_ibfk_1` FOREIGN KEY (`nOcorrencia`) REFERENCES `paciente` (`nOcorrencia`);
 
 --
--- Limitadores para a tabela `mate_hosp`
+-- Restrições para tabelas `mate_hosp`
 --
 ALTER TABLE `mate_hosp`
   ADD CONSTRAINT `mate_hosp_ibfk_1` FOREIGN KEY (`nOcorrencia`) REFERENCES `paciente` (`nOcorrencia`);
 
 --
--- Limitadores para a tabela `obs_import`
+-- Restrições para tabelas `obs_import`
 --
 ALTER TABLE `obs_import`
   ADD CONSTRAINT `obs_import_ibfk_1` FOREIGN KEY (`nOcorrencia`) REFERENCES `paciente` (`nOcorrencia`);
 
 --
--- Limitadores para a tabela `pes_form`
+-- Restrições para tabelas `pes_form`
 --
 ALTER TABLE `pes_form`
   ADD CONSTRAINT `pes_form_ibfk_1` FOREIGN KEY (`nOcorrencia`) REFERENCES `paciente` (`nOcorrencia`);
 
 --
--- Limitadores para a tabela `proc_efe`
+-- Restrições para tabelas `proc_efe`
 --
 ALTER TABLE `proc_efe`
   ADD CONSTRAINT `proc_efe_ibfk_1` FOREIGN KEY (`nOcorrencia`) REFERENCES `paciente` (`nOcorrencia`);
 
 --
--- Limitadores para a tabela `quei`
+-- Restrições para tabelas `quei`
 --
 ALTER TABLE `quei`
   ADD CONSTRAINT `quei_ibfk_1` FOREIGN KEY (`nOcorrencia`) REFERENCES `paciente` (`nOcorrencia`);
 
 --
--- Limitadores para a tabela `ss_form`
+-- Restrições para tabelas `ss_form`
 --
 ALTER TABLE `ss_form`
   ADD CONSTRAINT `ss_form_ibfk_1` FOREIGN KEY (`nOcorrencia`) REFERENCES `paciente` (`nOcorrencia`);
 
 --
--- Limitadores para a tabela `sv_form`
+-- Restrições para tabelas `sv_form`
 --
 ALTER TABLE `sv_form`
   ADD CONSTRAINT `sv_form_ibfk_1` FOREIGN KEY (`nOcorrencia`) REFERENCES `paciente` (`nOcorrencia`);
 
 --
--- Limitadores para a tabela `term_rec`
+-- Restrições para tabelas `term_rec`
 --
 ALTER TABLE `term_rec`
   ADD CONSTRAINT `term_rec_ibfk_1` FOREIGN KEY (`nOcorrencia`) REFERENCES `paciente` (`nOcorrencia`);
 
 --
--- Limitadores para a tabela `tipo_ocorrencia`
+-- Restrições para tabelas `tipo_ocorrencia`
 --
 ALTER TABLE `tipo_ocorrencia`
   ADD CONSTRAINT `tipo_ocorrencia_ibfk_1` FOREIGN KEY (`nOcorrencia`) REFERENCES `paciente` (`nOcorrencia`);
 
 --
--- Limitadores para a tabela `ve_form`
+-- Restrições para tabelas `ve_form`
 --
 ALTER TABLE `ve_form`
   ADD CONSTRAINT `ve_form_ibfk_1` FOREIGN KEY (`nOcorrencia`) REFERENCES `paciente` (`nOcorrencia`);
