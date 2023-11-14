@@ -1,3 +1,5 @@
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -56,6 +58,8 @@
                             echo("$login");
                         ?>
             </div>
+            
+        
         <img class="foto" src="../img/perfil2.png" width="200px">
     </div>
     <div class= "texto">

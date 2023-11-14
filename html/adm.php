@@ -132,7 +132,7 @@
             </div>
             <br>
             <div class="senha">
-                <input class="caixa" type="senha" id="senha" name="senha" placeholder="Senha">
+                <input class="caixa" type="senha" id="senha" name="senha" placeholder="código">
             </div>
             <div class="cpf">
                 <input class="caixa" type="cep" id="cep" name="cep" placeholder="CEP"  onkeyup="ValidarCEP()";>
