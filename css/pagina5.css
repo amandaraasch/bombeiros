@@ -166,12 +166,6 @@ border-color: transparent;
   border-style: solid;
   border-color: transparent;
 }
-#okay
-{
-  margin-top:6px;
-  margin-left:220px ;
-  
-}
 
 .setaa
 {
@@ -327,4 +321,45 @@ border-radius: 10px;
   width: 25PX;
   height: 25PX;
   top: 0px;
+}
+
+#okay
+{
+  margin-top:6px;
+  margin-left:220px ;
+  
+}
+
+#okay1
+{
+  margin-top:6px;
+  margin-left:220px ;
+}
+
+#okay2
+{
+  margin-top:6px;
+  margin-left:220px ;
+}
+
+
+#okay3
+{
+  margin-top:6px;
+  margin-left:220px ;
+}
+
+.okay1
+{
+  display: none;
+}
+
+.okay2
+{
+  display: none;
+}
+
+.okay3
+{
+  display: none;
 }

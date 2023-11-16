@@ -47,7 +47,7 @@
             <div class="teste" id="teste" onclick="animar('d1');">
 
               <div id="imageDiv">
-                 <img class="okay2"  id="okay" src="../img/okay.png" width="20px">
+                <img class="okay1"  id="okay1" src="../img/okay.png" width="20px">
               </div>
 
               </div>
@@ -174,7 +174,9 @@
         <div id="d2" class="d2">
           <div class="empurrar"></div>
           <div class="inicial">
-            <div class="teste" id="teste" onclick="animar('d2');"></div>
+            <div class="teste" id="teste" onclick="animar('d2');">
+              <img class="okay2"  id="okay2" src="../img/okay.png" width="20px">
+            </div>
 
             <br><p>ANAMNESE GESTACIONAL </p></br>
           </div>
@@ -272,21 +274,25 @@
         <div id="d3" class="d3">
           <div class="empurrar"></div>
           <div class="inicial">
-          <div class="teste" id="teste" onclick="animar('d3');"></div>
+          <div class="teste" id="teste" onclick="animar('d3');">
+
+            <img class="okay3"  id="okay3" src="../img/okay.png" width="20px">
+
+          </div>
           
           <br><p>OBSERVAÇÕES IMPORTANTES</p></br> <br>
           </div>
 <br>
             <div class="esconder" id="esconder3">
              
-              <form  method="post" action="" id="form3">
+              <form  method="post" action="obs_import.php" id="form3">
                 <br>
                 <div class="espaco">Digite alguma observação importante:</div>
                 <br>
-                <input class="espaco1" type="text" name="opcao1" value="">
+                <input class="espaco1" type="text" name="obs" value="">
                <br>
                <br>
-                <input class="enviar" type="button" name="enviar" value="Enviar" onclick="pes_form()" >
+                <input class="enviar" type="submit" name="enviar" value="Enviar" onclick="" >
 
               </form>
             </div>

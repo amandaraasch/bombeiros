@@ -47,7 +47,7 @@
             <div class="teste" id="teste" onclick="animar('d1');">
 
               <div id="imageDiv">
-                <img class="okay1"  id="okay1" src="" width="20px">
+                <img class="okay1"  id="okay1" src="../img/okay.png" width="20px">
               </div>
 
               </div>
@@ -58,7 +58,7 @@
 
             <div class="esconder" id="esconder1">
 
-          <form method="post" action="proc_efe.php" id="form1">
+          <form method="post" action="" id="form1">
             <br>
             <input class="caixinha" type="checkbox" name="opcao1" value=""> Aspiração
             <br>
@@ -224,7 +224,7 @@
             
             
             <br> <br>
-            <input class="enviar" type="submit" name="enviar" value="Enviar" onclick="" >
+            <input class="enviar" type="button" name="enviar" value="Enviar" onclick="proc_efe()" >
           </form>
 
 
@@ -237,7 +237,7 @@
           <div class="inicial">
             <div class="teste" id="teste" onclick="animar('d2');">
 
-              <img class="okay2"  id="okay2" src="" width="20px">
+              <img class="okay2"  id="okay2" src="../img/okay.png" width="20px">
             </div>
 
             <br><p>ANAMNESE DA EMERGENCIA  </p></br>
@@ -249,78 +249,78 @@
                 <BR>
                 <div class="espaco">Sinais e sintomas</div>
                 <br>
-                <input class="espaco1" typr="text" name="opcao1" value="">
+                <input class="espaco1" typr="text" name="ss" value="">
                 <BR>
                   <br>
                 <div class="espaco">Aconteceu outras vezes?</div>
                 
-                <input class="caixa2" type="radio" name="opcao2" value="opcao2"> Sim
+                <input class="caixa2" type="radio" name="opcao1" value=""> Sim
                 <br>
-                <input class="caixa2" type="radio" name="opcao2" value="opcao2"> Não
+                <input class="caixa2" type="radio" name="opcao2" value=""> Não
                 <br>
                 <br>
                 <div class="espaco">A quanto tempo isso aconteceu:</div>
                 <br>
-                <input class="espaco1" typr="text" name="opcao1" value="">
+                <input class="espaco1" typr="text" name="tempo" value="">
                 <BR>
                   <BR>
                 
                   <div class="espaco">Possui algum problema de saúde:</div>
                     
-                  <input class="caixa2" type="radio" name="opcao2" value="opcao2"> Sim
+                  <input class="caixa2" type="radio" name="opcao3" value=""> Sim
                 <br>
-                <input class="caixa2" type="radio" name="opcao2" value="opcao2"> Não
+                <input class="caixa2" type="radio" name="opcao4" value=""> Não
                 <br>
                 <br>
                 <div class="espaco">Quais:</div>
                 <br>
-                <input class="espaco1" typr="text" name="opcao1" value="">
+                <input class="espaco1" typr="text" name="quais" value="">
                 <br>
                 <br>
                 <div class="espaco">Faz algum uso de medicação?</div>
                     
-                  <input class="caixa2" type="radio" name="opcao2" value="opcao2"> Sim
+                  <input class="caixa2" type="radio" name="opcao5" value=""> Sim
                 <br>
-                <input class="caixa2" type="radio" name="opcao2" value="opcao2"> Não
+                <input class="caixa2" type="radio" name="opcao6" value=""> Não
                 <br>
                 <br>
                 <div class="espaco">Horário da última medicação:</div>
                 <br>
-                <input class="espaco1" typr="text" name="opcao1" value="">
+                <input class="espaco1" typr="text" name="horario" value="">
                 <br>
                 <br>
                 <div class="espaco">Quais:</div>
                 <br>
-                <input class="espaco1" typr="text" name="opcao1" value="">
+                <input class="espaco1" typr="text" name="quaismed" value="">
                 <br>
                 <br>
                 <div class="espaco">É alergico a alguma coisa?</div>
                     
-                  <input class="caixa2" type="radio" name="opcao2" value="opcao2"> Sim
+                  <input class="caixa2" type="radio" name="opcao7" value=""> Sim
                 <br>
-                <input class="caixa2" type="radio" name="opcao2" value="opcao2"> Não
+                <input class="caixa2" type="radio" name="Opcao8" value=""> Não
                 <br>
                 <br>
                 <div class="espaco">Se sim, especifique :</div>
                 <br>
-                <input class="espaco1" typr="text" name="opcao1" value="">
+                <input class="espaco1" typr="text" name="especifique" value="">
                 <br>
                 <br>
                 <div class="espaco">Ingeriu alimento/líquido? >6horas?</div>
                     
-                  <input class="caixa2" type="radio" name="opcao2" value="opcao2"> Sim
+                  <input class="caixa2" type="radio" name="opcao9" value=""> Sim
                 <br>
-                <input class="caixa2" type="radio" name="opcao2" value="opcao2"> Não
+                <input class="caixa2" type="radio" name="opcao10" value=""> Não
                 <br>
                 <br>
                 <div class="espaco">Que horas:</div>
                 <br>
-                <input class="espaco1" typr="text" name="opcao1" value="">
+                <input class="espaco1" typr="text" name="horas" value="">
                 <br>
                 <br>
 
 
-                <input class="enviar" type="button" name="enviar" value="Enviar" onclick="pes_form()" >
+                <input class="enviar" type="button" name="enviar" value="Enviar" onclick="amn_emer()" >
 
               </form>
             </div>
@@ -331,7 +331,8 @@
           <div class="empurrar"></div>
           <div class="inicial">
           <div class="teste" id="teste" onclick="animar('d3');">
-            <img class="okay3"  id="okay3" src="" width="20px">
+
+            <img class="okay3"  id="okay3" src="../img/okay.png" width="20px">
           </div>
           
           <br><p>AVALIAÇÃO DA CINEMÁTICA</p></br> 
@@ -343,54 +344,54 @@
                 <br>
                 <div class="espaco">Distúrbio de comportamento:</div>
                 
-                <input class="caixa2" type="radio" name="opcao2" value=""> Sim
+                <input class="caixa2" type="radio" name="opcao1" value=""> Sim
                 <br>
                 <input class="caixa2" type="radio" name="opcao2" value=""> Não
                 <br>
                 <br>
                 <div class="espaco">Encontrado de capacete:</div>
                 
-                <input class="caixa2" type="radio" name="opcao2" value=""> Sim
+                <input class="caixa2" type="radio" name="opcao3" value=""> Sim
                 <br>
-                <input class="caixa2" type="radio" name="opcao2" value=""> Não
+                <input class="caixa2" type="radio" name="opcao4" value=""> Não
                 <br>
                 <br>
                 <div class="espaco">Encontrado de cinto:</div>
                 
-                <input class="caixa2" type="radio" name="opcao2" value=""> Sim
+                <input class="caixa2" type="radio" name="opcao5" value=""> Sim
                 <br>
-                <input class="caixa2" type="radio" name="opcao2" value=""> Não
+                <input class="caixa2" type="radio" name="opcao6" value=""> Não
                 <br>
                 <br>
                 <div class="espaco">Para-brisas avariado:</div>
                 
-                <input class="caixa2" type="radio" name="opcao2" value=""> Sim
+                <input class="caixa2" type="radio" name="opcao7" value=""> Sim
                 <br>
-                <input class="caixa2" type="radio" name="opcao2" value=""> Não
+                <input class="caixa2" type="radio" name="opcao8" value=""> Não
                 <br>
                 <br>
                 <div class="espaco">Caminhando na cena:</div>
                 
-                <input class="caixa2" type="radio" name="opcao2" value=""> Sim
+                <input class="caixa2" type="radio" name="opcao9" value=""> Sim
                 <br>
-                <input class="caixa2" type="radio" name="opcao2" value=""> Não
+                <input class="caixa2" type="radio" name="opcao10" value=""> Não
                 <br>
                 <br>
                 <div class="espaco">Painel avariado:</div>
                 
-                <input class="caixa2" type="radio" name="opcao2" value=""> Sim
+                <input class="caixa2" type="radio" name="opcao11" value=""> Sim
                 <br>
-                <input class="caixa2" type="radio" name="opcao2" value=""> Não
+                <input class="caixa2" type="radio" name="opcao12" value=""> Não
                 <br>
                 <br>
                 <div class="espaco">Volante torcido:</div>
                 
-                <input class="caixa2" type="radio" name="opcao2" value=""> Sim
+                <input class="caixa2" type="radio" name="opcao13" value=""> Sim
                 <br>
-                <input class="caixa2" type="radio" name="opcao2" value=""> Não
+                <input class="caixa2" type="radio" name="opcao14" value=""> Não
                 <br>
                 <br>
-                <input class="enviar" type="button" name="enviar" value="Enviar" onclick="" >
+                <input class="enviar" type="button" name="enviar" value="Enviar" onclick="ava_cine()" >
 
               </form>
             </div>
@@ -463,12 +464,12 @@ menu.classList.toggle('open');
 });
 
 
-    function ajax() {
+    function proc_efe() {
     var dados = $('#form1').serialize();
 
             $.ajax({
                 type: "POST",
-                url: "",
+                url: "proc_efe.php",
                 data: dados,
                 dataType: 'json',
                                 
@@ -496,12 +497,12 @@ menu.classList.toggle('open');
 
 
 
-          function ajax() {
+          function amn_emer() {
     var dados = $('#form2').serialize();
 
             $.ajax({
                 type: "POST",
-                url: "",
+                url: "amn_emer.php",
                 data: dados,
                 dataType: 'json',
                                 
@@ -529,12 +530,12 @@ menu.classList.toggle('open');
 
 
 
-          function ajax() {
+          function ava_cine() {
     var dados = $('#form3').serialize();
 
             $.ajax({
                 type: "POST",
-                url: "",
+                url: "ava_cine.php",
                 data: dados,
                 dataType: 'json',
                                 
