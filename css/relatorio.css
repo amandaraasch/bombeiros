@@ -13,6 +13,15 @@ body
     margin: 0px;
     
 }
+.banco
+{
+  color:#e2353b;
+}
+.organiza
+{
+  display: flex;
+  
+}
 #gerarRelatorio
 {
   color:rgb(0, 0, 0);
