@@ -213,7 +213,7 @@ while( $linhas = $comando->fetch()){
     $flexao=$linhas["opcao13"];
     $extensao=$linhas["opcao14"];
     $nd=$linhas["opcao15"];
-    $aber_ocular16=$linhas["aber_ocular16"];
+    $aber_ocular16=$linhas["aber_ocu16"];
     $espontanea2=$linhas["opcao17"];
     $coman_verb2=$linhas["opcao18"];
     $estim_dolo2=$linhas["opcao19"];
@@ -405,12 +405,12 @@ while( $linhas = $comando->fetch()){
     $pre=$linhas["pre"];
     $prf=$linhas["prf"];
     $def_civil=$linhas["def_civil"];
-    $igp=$linhas["igp/pc"];
+    $igp=$linhas["igppc"];
     $samu=$linhas["opcao43"];
     $usa=$linhas["usa"];
     $usb=$linhas["usb"];
     $cit=$linhas["opcao43"];
-    $outros=$linhas["outrosss"];
+    $outros=$linhas["outros"];
 
 
 }
@@ -431,12 +431,12 @@ while( $linhas = $comando->fetch()){
     $tomou=$linhas["opcao5"];
     $n_tomou=$linhas["opcao6"];
     $horaio_med=$linhas["horario"];
-    $quais_med=$linhas["quais-med"];
+    $quais_med=$linhas["quaismed"];
     $e_alergico=$linhas["opcao7"];
     $sn_alergico=$linhas["opcao8"];
     $especifique=$linhas["especifique"];
     $ingeriu=$linhas["opcao9"];
-    $n_ingeriu=$linhas["opcao19"];
+    $n_ingeriu=$linhas["opcao10"];
     $hora_ingeriu=$linhas["horas"];
 
     
@@ -446,8 +446,8 @@ $resultado = $comando->execute();
 
 while( $linhas = $comando->fetch()){
 
-    $quero=$linhas["sim"];
-    $n_quero=$linhas["nao"];
+    $quero=$linhas["opcao1"];
+    $n_quero=$linhas["opcao2"];
    
     
 }
@@ -464,6 +464,87 @@ while( $linhas = $comando->fetch()){
     $hch=$linhas["h.ch"];
     $km_final=$linhas["km_final"];
     $cod=$linhas["opcao3"];
+    
+
+}
+$comando = $pdo->prepare("SELECT * FROM mate_desc where nOcorrencia='$id'");
+$resultado = $comando->execute();
+
+while( $linhas = $comando->fetch()){
+
+    $atadurass=$linhas["opcao1"];
+    $oito=$linhas["opcao2"];
+    $doze=$linhas["opcao3"];
+    $vinte=$linhas["opcao4"];
+    $mais=$linhas["quantidade"];
+    $tp_oculos=$linhas["opcao5"];
+    $maiss=$linhas["qtd"];
+    $comum=$linhas["opcao6"];
+    $kits=$linhas["opcao7"];
+    $aga=$linhas["opcao8"];
+    $pee=$linhas["opcao9"];
+    $que=$linhas["opcao10"];
+    $maisss=$linhas["qtds"];
+    $iluminada=$linhas["opcao11"];
+    $maissss=$linhas["quantidadees"];
+    $masca=$linhas["opcao12"];
+    $maisssss=$linhas["quantidaades"];
+    $paz=$linhas["opcao13"];
+    $maissssss=$linhas["quantiidades"];
+    $aspiracao=$linhas["opcao14"];
+    $maisssssss=$linhas["quantiidade"];
+    $soro=$linhas["opcao15"];
+    $maissssssss=$linhas["quantidaade"];
+    $telaspap=$linhas["opcao16"];
+    $phe=$linhas["quaantidade"];
+    $ge=$linhas["opcao17"];
+    $maisssssssss=$linhas["opcao18"];
+    $outrosssss=$linhas["opcao19"];
+    $maissssssssss=$linhas["opcao20"];
+    
+    
+    
+    
+
+}
+$comando = $pdo->prepare("SELECT * FROM mate_hosp where nOcorrencia='$id'");
+$resultado = $comando->execute();
+
+while( $linhas = $comando->fetch()){
+
+    $estabeliza=$linhas["opcao1"];
+    $add=$linhas["qtd"];
+    $colar=$linhas["opcao2"];
+    $ene=$linhas["opcao3"];
+    $pepe=$linhas["opcao4"];
+    $pe=$linhas["opcao5"];
+    $add2=$linhas["qtds"];
+    $colar2=$linhas["opcao6"];
+    $eme=$linhas["opcao7"];
+    $gee=$linhas["opcao8"];
+    $add3=$linhas["quantidade"];
+    $ked=$linhas["opcao9"];
+    $adulto=$linhas["opcao10"];
+    $crianca=$linhas["opcao11"];
+    $add4=$linhas["quantidades"];
+    $rigida=$linhas["opcao12"];
+    $add5=$linhas["quantidadess"];
+    $coxins=$linhas["opcao13"];
+    $add6=$linhas["quantidadees"];
+    $canola=$linhas["opcao14"];
+    $add7=$linhas["quantidaades"];
+    $tirante=$linhas["opcao15"];
+    $add8=$linhas["quantiidades"];
+    $aranha=$linhas["opcao16"];
+    $add9=$linhas["quaantidades"];
+    $ttf=$linhas["opcao17"];
+    $adulto=$linhas["opcao18"];
+    $infantil=$linhas["opcao19"];
+    $add10=$linhas["	quuantidades"];
+    $ouou=$linhas["outros"];
+    $add11=$linhas["qquantidades"];
+    
+    
     
 
 }
@@ -513,310 +594,308 @@ while( $linhas = $comando->fetch()){
     <br>
     <P>DADOS PACIENTE:</P>
     <br>
-    Nome: <?php echo("<span class='banco' $nome</span>");?> <br>
+    Nome: <?php echo( "$nome");?> <br>
     <br>
-    Data:<?php echo("<span class='banco' $data</span>");?><br>
+    Data:<?php echo("$data");?><br>
     <br>
-    Sexo:<?php echo("<span class='banco' $sexo</span>");?><br>
+    Sexo:<?php echo("$sexo");?><br>
     <br>
-    RG/CPF:<?php echo("<span class='banco' $cpf</span>");?><br>
+    RG/CPF:<?php echo("$cpf");?><br>
     <br>
-    Idade:<?php echo("<span class='banco'$idade</span>");?><br>
+    Idade:<?php echo("$idade");?><br>
     <br>
-    Nome hospital:<?php echo("<span class='banco' $nome_hosp</span>");?><br>
+    Nome hospital:<?php echo("$nome_hosp");?><br>
     <br>
-    Fone:<?php echo("<span class='banco' $fone</span>");?><br>
+    Fone:<?php echo("$fone");?><br>
     <br>
-    Local ocorrência:<?php echo("<span class='banco' $localidade</span>");?><br>
+    Local ocorrência:<?php echo($localidade);?><br>
     <br>
     <P>DADOS ACOMPANHANTE:</P>
     <br>
-    Nome: <?php echo("<span class='banco' $nomeA</span>");?><br>
+    Nome: <?php echo( $nomeA);?><br>
     <br>
-    Idade:<?php echo("<span class='banco' $idadeA</span>");?><br>
+    Idade:<?php echo( $idadeA);?><br>
     <br>
     <P>SINAIS VITAIS:</P>
     <br>
-    Pressão arterial:<?php echo("<span class='banco'$pressao</span>") ?> X <?php echo("<span class='banco'$pressao2</span>");?> <br>
+    Pressão arterial:<?php echo($pressao) ?> X <?php echo($pressao2);?> <br>
     <br>
-    Pulso:  <?php echo("<span class='banco'$pulso</span>");?><br>
+    Pulso:  <?php echo($pulso);?><br>
     <br>
-    Temperatura:  <?php echo("<span class='banco'$temperatura</span>");?> : <?php echo("<span class='banco'$maior</span>");?>  <?php echo("<span class='banco'$menor</span>");?><br>
+    Temperatura:  <?php echo($temperatura);?> : <?php echo($maior);?>  <?php echo($menor);?><br>
     <br>
-    Saturação: <?php echo("<span class='banco'$saturacao</span>");?><br>
+    Saturação: <?php echo($saturacao);?><br>
     <br>
-    Perfusão: <?php echo("<span class='banco'$perfusao</span>");?> <?php echo("<span class='banco'$perfusao2</span>");?><br>
+    Perfusão: <?php echo($perfusao);?> <?php echo($perfusao2);?><br>
     <br>
-    Respiração: <?php echo("<span class='banco'$respiracao</span>");?><br>
+    Respiração: <?php echo($respiracao);?><br>
     <br>
     <P>PROBLEMAS ENCONTRADOS:</P>
     <br>
-    <?php echo("<span class='banco'$opcao1</span>");?>: <br>
-    <?php echo("<span class='banco'$opcao2</span>");?> : <?php echo("<span class='banco'$opcao3</span>");?>  <?php echo("<span class='banco'$opcao3</span>");?><br>
+    <?php echo($opcao1);?>: <br>
+    <?php echo($opcao2);?> : <?php echo($opcao3);?>  <?php echo($opcao3);?><br>
     
-    <?php echo("<span class='banco'$opcao5</span>");?>: <?php echo("<span class='banco'$opcao6</span>");?> <?php echo("<span class='banco'$opcao7</span>");?> <br>
+    <?php echo($opcao5);?>: <?php echo($opcao6);?> <?php echo($opcao7);?> <br>
    
-    <?php echo("<span class='banco'$opcao8</span>");?>:  <?php echo("<span class='banco'$opcao9</span>");?> <?php echo("<span class='banco'$opcao10</span>");?> <?php echo("<span class='banco'$opcao11</span>");?><br>
+    <?php echo($opcao8);?>:  <?php echo($opcao9);?> <?php echo($opcao10);?> <?php echo($opcao11);?><br>
    
-    <?php echo("<span class='banco'$opcao12</span>");?>:  <?php echo("<span class='banco'$opcao13</span>");?> <?php echo("<span class='banco'$opcao14</span>");?> <?php echo("<span class='banco'$opcao15</span>");?> <?php echo("<span class='banco'$opcao16</span>");?> <?php echo("<span class='banco'$opcao17</span>");?> <?php echo("<span class='banco'$opcao18</span>");?> <?php echo("<span class='banco'$opcao19</span>");?> <br>
+    <?php echo($opcao12);?>:  <?php echo($opcao13);?> <?php echo($opcao14);?> <?php echo($opcao15);?> <?php echo($opcao16);?> <?php echo($opcao17);?> <?php echo($opcao18);?> <?php echo($opcao19);?> <br>
    
-    <?php echo("<span class='banco'$outros</span>");?>:<?php echo("<span class='banco'$opcao21</span>");?> <br>
+    <?php echo($outros);?>:<?php echo($opcao21);?> <br>
     
     <P>TIPO DE OCORRÊNCIA:</P>
     
     
-    <?php echo("<span class='banco'$animais</span>");?> <br>
+    <?php echo($animais);?> <br>
     
-    <?php echo("<span class='banco'$transporte</span>");?>  
+    <?php echo($transporte);?>  
    
-    <?php echo("<span class='banco' $desmoronamento</span>");?>  
+    <?php echo( $desmoronamento);?>  
     
-    <?php echo("<span class='banco'$emergencia</span>");?> 
+    <?php echo($emergencia);?> 
     
-    <?php echo("<span class='banco'$queda</span>");?> 
+    <?php echo($queda);?> 
     
-    <?php echo("<span class='banco'$suicidio</span>");?> 
+    <?php echo($suicidio);?> 
     
-    <?php echo("<span class='banco'$queda_altura</span>");?> 
+    <?php echo($queda_altura);?> 
 
-    <?php echo("<span class='banco'$afogamento</span>");?> 
+    <?php echo($afogamento);?> 
     
-    <?php echo("<span class='banco'$agressao</span>");?> 
+    <?php echo($agressao);?> 
     
-    <?php echo("<span class='banco'$atropelamento</span>");?> 
+    <?php echo($atropelamento);?> 
     
-    <?php echo("<span class='banco'$choque</span>");?> 
+    <?php echo($choque);?> 
     
-    <?php echo("<span class='banco'$desabamento</span>");?>
+    <?php echo($desabamento);?>
     
-    <?php echo("<span class='banco'$domestico</span>");?> 
+    <?php echo($domestico);?> 
     
-    <?php echo("<span class='banco'$esportivo</span>");?> 
+    <?php echo($esportivo);?> 
     
-    <?php echo("<span class='banco'$intoxicacao</span>");?> 
+    <?php echo($intoxicacao);?> 
     
-    <?php echo("<span class='banco'$queda_bike</span>");?>
+    <?php echo($queda_bike);?>
    
-    <?php echo( "<span class='banco'$queda_moto</span>");?> 
+    <?php echo($queda_moto);?> 
     
-    <?php echo("<span class='banco'$queda_nivel</span>");?> 
+    <?php echo($queda_nivel);?> 
     
-    <?php echo("<span class='banco'$trabalho</span>");?> 
+    <?php echo($trabalho);?> 
 
-    <?php echo("<span class='banco'$transferencia</span>");?> 
+    <?php echo($transferencia);?> 
 
-    <?php echo("<span class='banco'$outross</span>");?> 
+    <?php echo($outross);?> 
 
 
     <P>AVALIAÇÃO DO PACIENTE:</P>
     <br>
-    <div class="organiza" >Idade: <?php  echo("<span class='banco'>$idade</span>");?> <?php echo("<span class='banco'>$idade2");?></div><br>
+    <div class="organiza" >Maior que 5 anos: <?php  echo($idade);?> <br>
+    Menos que 5 anos:<?php echo($idade2);?></div><br>
     <br>
-    <div class="organiza" >Abertura Ocular:<?php echo("<span class='banco'>$espontanea</span>");?> <?php echo("<span class='banco'>$espontanea2</span>");?><?php echo("<span class='banco'>$nenhuma</span>");?> <?php echo("<span class='banco'>$nenhuma2</span>");?> <?php echo("<span class='banco'>$coman_verb</span>");?> <?php echo("<span class='banco'>$coman_verb2</span>");?><?php echo("<span class='banco'>$estim_dolo</span>");?> <?php echo("<span class='banco'>$estim_dolo2</span>");?></div><br>
+    <div class="organiza" >Abertura Ocular:<?php echo($espontanea);?> <?php echo($espontanea2);?><?php echo($nenhuma);?> <?php echo($nenhuma2);?> <?php echo($coman_verb);?> <?php echo($coman_verb2);?><?php echo($estim_dolo);?> <?php echo($estim_dolo2);?></div><br>
     <br>
-    <div class="organiza" >Resposta Verbal:<?php echo("<span class='banco'>$orientado</span>");?> <?php echo("<span class='banco'>$confuso</span>");?><?php echo("<span class='banco'>$pala_ina</span>");?> <?php echo("<span class='banco'>$pala_ina2</span>");?><?php echo("<span class='banco'>$pala_apro</span>");?> <?php echo("<span class='banco'>$never</span>");?><?php echo("<span class='banco'>$choro</span>");?> <?php echo("<span class='banco'>$sons</span>");?></div><br>
+    <div class="organiza" >Resposta Verbal:<?php echo($orientado);?> <?php echo($confuso);?><?php echo($pala_ina);?> <?php echo($pala_ina2);?><?php echo($pala_apro);?> <?php echo($never);?><?php echo($choro);?> <?php echo($sons);?></div><br>
     <br>
-    <div class="organiza" >Resposta motora:<?php echo("<span class='banco'>$obedece</span>");?><?php echo("<span class='banco'>$obedece2</span>");?><?php echo("<span class='banco'>$localiza</span>");?> <?php echo("<span class='banco'>$retira</span>");?><?php echo("<span class='banco'>$localizado</span>");?><?php echo("<span class='banco'>$espontanea</span>");?> <?php echo("<span class='banco'>$movimento</span>");?><?php echo("<span class='banco'>$flexao</span>");?> <?php echo("<span class='banco'>$extensao</span>");?><?php echo("<span class='banco'>$nd</span>");?><?php echo("<span class='banco'>$flexao2</span>");?><?php echo("<span class='banco'>$extensao2</span>");?><?php echo("<span class='banco'>$ausencia</span>");?></div><br>
+    <div class="organiza" >Resposta motora:<?php echo($obedece);?><?php echo($obedece2);?><?php echo($localiza);?> <?php echo($retira);?><?php echo($localizado);?><?php echo($espontanea);?> <?php echo($movimento);?><?php echo($flexao);?> <?php echo($extensao);?><?php echo($nd);?><?php echo($flexao2);?><?php echo($extensao2);?><?php echo($ausencia);?></div><br>
     <br>
 
     <P>LOCALIZAÇÃO DOS TRAUMAS:</P>
-   <div class="organiza"> Local:  <?php echo("<span class='banco'>$local</span>");?> </div><br>
+   <div class="organiza"> Local:  <?php echo($local);?> </div><br>
     <br>
-    <div class="organiza"> Lado: <?php echo("<span class='banco'>$lado</span>");?></div><br>
+    <div class="organiza"> Lado: <?php echo($lado);?></div><br>
     <br>
-    <div class="organiza">Face: <?php echo("<span class='banco'>$face</span>");?></div><br>
+    <div class="organiza">Face: <?php echo($face);?></div><br>
     <br>
-    <div class="organiza">Tipo: <?php echo("<span class='banco'>$tipo</span>");?></div><br>
+    <div class="organiza">Tipo: <?php echo($tipo);?></div><br>
     
     <br>
     <P>QUEIMADURAS:</P>
     <br>
-    <div class="organiza"> Local:<?php echo("<span class='banco'>$cab</span>");?><?php echo("<span class='banco'>$pes</span>");?><?php echo("<span class='banco'>$mie</span>");?> <?php echo("<span class='banco'>$mid</span>");?> <?php echo("<span class='banco'>$msd</span>");?> <?php echo("<span class='banco'>$mse</span>");?> <?php echo("<span class='banco'>$genit</span>");?> <?php echo("<span class='banco'>$tan</span>");?> <?php echo("<span class='banco'>$tpos</span>");?></div><br>
+    <div class="organiza"> Local:<?php echo($cab);?><?php echo($pes);?><?php echo($mie);?> <?php echo($mid);?> <?php echo($msd);?> <?php echo($mse);?> <?php echo($genit);?> <?php echo($tan);?> <?php echo($tpos);?></div><br>
     <br>
-    <div class="organiza"> Grau:<?php echo("<span class='banco'>$pgrau</span>");?> <?php echo("<span class='banco'>$sgrau</span>");?> <?php echo("<span class='banco'>$tgrau</span>");?></div><br>
+    <div class="organiza"> Grau:<?php echo($pgrau);?> <?php echo($sgrau);?> <?php echo($tgrau);?></div><br>
     <br>
     <P>OBJETOS RECOLHIDOS:</P>
     <br>
     <P>SINAI E SINTOMAS:</P>
     <br>
-    <?php echo("<span class='banco'>$abdomen</span>");?>
-    <?php echo("<span class='banco'>$afundamento</span>");?>
-    <?php echo("<span class='banco'>$agitacao</span>");?>
-    <?php echo("<span class='banco'>$amnesia</span>");?>
-    <?php echo("<span class='banco'>$angina</span>");?>
-    <?php echo("<span class='banco'>$apneia</span>");?>
-    <?php echo("<span class='banco'>$bradi</span>");?>
-    <?php echo("<span class='banco'>$bradp</span>");?>
-    <?php echo("<span class='banco'>$bronco</span>");?>
-    <?php echo("<span class='banco'>$cefaleia</span>");?>
-    <?php echo("<span class='banco'>$cianose</span>");?> :   <?php echo("<span class='banco'>$labios</span>");?>  <?php echo("<span class='banco'>$extremidades</span>");?>  
-    <?php echo("<span class='banco'>$consulsao</span>");?>
-    <?php echo("<span class='banco'>$decorticao</span>");?>    
-    <?php echo("<span class='banco'>$deformidade</span>");?>  
-    <?php echo("<span class='banco'>$descerebracao</span>");?>  
-    <?php echo("<span class='banco'>$desmaio</span>");?>  
-    <?php echo( "<span class='banco'>$desv_tra</span>");?>  
-    <?php echo("<span class='banco'>$dispineia</span>");?>  
-    <?php echo("<span class='banco'>$dor_local</span>");?>  
-    <?php echo( "<span class='banco'>$edema</span>");?>  <?php echo("<span class='banco'>$generalizado</span>");?>  <?php echo("<span class='banco'>$localizado</span>");?>  
+    <?php echo($abdomen);?>
+    <?php echo($afundamento);?>
+    <?php echo($agitacao);?>
+    <?php echo($amnesia);?>
+    <?php echo($angina);?>
+    <?php echo($apneia);?>
+    <?php echo($bradi);?>
+    <?php echo($bradp);?>
+    <?php echo($bronco);?>
+    <?php echo($cefaleia);?>
+    <?php echo($cianose);?> :   <?php echo($labios);?>  <?php echo($extremidades);?>  
+    <?php echo($consulsao);?>
+    <?php echo($decorticao);?>    
+    <?php echo($deformidade);?>  
+    <?php echo($descerebracao);?>  
+    <?php echo($desmaio);?>  
+    <?php echo($desv_tra);?>  
+    <?php echo($dispineia);?>  
+    <?php echo($dor_local);?>  
+    <?php echo($edema);?>  <?php echo($generalizado);?>  <?php echo($localizado);?>  
     
-    <?php echo("<span class='banco'>$enfisema</span>");?>  
-    <?php echo("<span class='banco'>$estase</span>");?>  
-    <?php echo( "<span class='banco'>$face</span>");?>  
-    <?php echo("<span class='banco'>$hemorragia</span>");?>  <?php echo("<span class='banco'>$interna</span>");?>   <?php echo("<span class='banco'>$externa</span>");?>   
-    <?php echo("<span class='banco'>$hiper</span>");?>  
-    <?php echo("<span class='banco'>$hipo</span>");?>  
-    <?php echo("<span class='banco'> $nau</span>");?>  
-    <?php echo("<span class='banco'> $naso</span>");?>  
-    <?php echo("<span class='banco'>$obito</span>");?>  
-    <?php echo("<span class='banco'>$otorre</span>");?>  
-    <?php echo("<span class='banco'>$otorra</span>");?>  
-    <?php echo("<span class='banco'>$ovaca</span>");?>  
+    <?php echo($enfisema);?>  
+    <?php echo($estase);?>  
+    <?php echo($face);?>  
+    <?php echo($hemorragia);?>  <?php echo($interna);?>   <?php echo($externa);?>   
+    <?php echo($hiper);?>  
+    <?php echo($hipo);?>  
+    <?php echo( $nau);?>  
+    <?php echo($naso);?>  
+    <?php echo($obito);?>  
+    <?php echo($otorre);?>  
+    <?php echo($otorra);?>  
+    <?php echo($ovaca);?>  
 
-    <?php echo("<span class='banco'>$parada</span>");?>  <?php echo("<span class='banco'>$card</span>");?>  <?php echo("<span class='banco'>$resp</span>");?> 
+    <?php echo($parada);?>  <?php echo($card);?>  <?php echo($resp);?> 
      
-    <?php echo("<span class='banco'>$pri</span>");?>  
-    <?php echo("<span class='banco'>$pru</span>");?>
-    <?php echo("<span class='banco'>$pupilas</span>");?>    <?php echo( "<span class='banco'>$an</span>");?>    <?php echo("<span class='banco'>$iso</span>");?>   <?php echo("<span class='banco'>$midri</span>");?>   <?php echo("<span class='banco'>$mio</span>");?>   <?php echo("<span class='banco'>$rea</span>");?>   <?php echo("<span class='banco'>$nrea</span>");?>
-    <?php echo( "<span class='banco'>$sede</span>");?>
-    <?php echo("<span class='banco'> $sinal</span>");?>
-    <?php echo( "<span class='banco'>$sinalg</span>");?>
-    <?php echo("<span class='banco'>$sudo</span>");?>
-    <?php echo( "<span class='banco'>$taquip</span>");?>
-    <?php echo( "<span class='banco'> $taquic</span>");?>
-    <?php echo( "<span class='banco'> $tont</span>");?>
-    <?php echo( "<span class='banco'>$ooutros </span>");?><br>
+    <?php echo($pri);?>  
+    <?php echo($pru);?>
+    <?php echo($pupilas);?>    <?php echo($an);?>    <?php echo($iso);?>   <?php echo($midri);?>   <?php echo($mio);?>   <?php echo($rea);?>   <?php echo($nrea);?>
+    <?php echo($sede);?>
+    <?php echo($sinal);?>
+    <?php echo($sinalg);?>
+    <?php echo($sudo);?>
+    <?php echo( $taquip);?>
+    <?php echo( $taquic);?>
+    <?php echo( $tont);?>
+    <?php echo( $ooutros );?><br>
     <br>
     <P>FORMA DE CONDUÇÃO:</P>
     <br>
-    <?php echo( "<span class='banco'>$deitada </span>");?><br>
-    <?php echo( "<span class='banco'>$semi </span>");?><br>
-    <?php echo( "<span class='banco'>$sentada </span>");?><br>
+    <?php echo( $deitada );?><br>
+    <?php echo( $semi );?><br>
+    <?php echo( $sentada);?><br>
 
 
 
     <P>VÍTIMA ERA:</P>
     <br>
 
-    <?php echo("<span class='banco'>$ciclista</span>");?>
-    <?php echo("<span class='banco'> $cond_moto</span>");?>
-    <?php echo("<span class='banco'>$gestante</span>");?>
-    <?php echo("<span class='banco'>$pass_frente</span>");?>
-    <?php echo("<span class='banco'>$pass_moto</span>");?>
-    <?php echo("<span class='banco'> $cond_carro</span>");?>
-    <?php echo("<span class='banco'>$clinico</span>");?>
-    <?php echo("<span class='banco'>$trauma</span>");?>
-    <?php echo("<span class='banco'> $pass_tras</span>");?>
-    <?php echo("<span class='banco'>$pedestre</span>");?>
+    <?php echo($ciclista);?>
+    <?php echo( $cond_moto);?>
+    <?php echo($gestante);?>
+    <?php echo($pass_frente);?>
+    <?php echo($pass_moto);?>
+    <?php echo($cond_carro);?>
+    <?php echo($clinico);?>
+    <?php echo($trauma);?>
+    <?php echo( $pass_tras);?>
+    <?php echo($pedestre);?>
 
     <P>DECISÃO DE TRANSPORTE:</P>
     <br>
-    <?php echo("<span class='banco'>$cri</span>");?>
-    <?php echo("<span class='banco'> $ins</span>");?>
-    <?php echo("<span class='banco'>$pi</span>");?>
-    <?php echo("<span class='banco'>$es</span>");?>
-    <?php echo("<span class='banco'>$m</span>");?>
-    <?php echo("<span class='banco'> $s1</span>");?>
-    <?php echo("<span class='banco'>$s2</span>");?>
-    <?php echo("<span class='banco'>$s3</span>");?>
-    <?php echo("<span class='banco'> $demandante</span>");?>
-    <?php echo("<span class='banco'>$equipe</span>");?>
+    Situação:<?php echo($cri);?><?php echo($ins);?><?php echo($pi);?> <?php echo($es);?><br>
+    Motorista:<?php echo($m);?><br>
+    Socorrista 1:<?php echo( $s1);?><br>
+    Socorrista 2:<?php echo($s2);?><br>
+    Socorrista 3:<?php echo($s3);?><br>
+    Demandante:<?php echo( $demandante);?><br>
+    Equipe:<?php echo($equipe);?><br>
 
 
 
     <P>OBSERVAÇÕES IMPORTANTES:</P>
     <br>
-    <?php echo("<span class='banco'>$obs</span>");?><br>
+    <?php echo($obs);?><br>
     <br>
     <P>TERMO DE RECUSA:</P>
     <br>
-    <?php echo("<span class='banco'>$nome</span>");?>
-    <?php echo("<span class='banco'>$rg</span>");?>
-    <?php echo("<span class='banco'> $ass</span>");?>
-    <?php echo("<span class='banco'>$test</span>");?>
+    <?php echo($nome);?>
+    <?php echo($rg);?>
+    <?php echo($ass);?>
+    <?php echo($test);?>
 
     <P>AMNASE GESTACIONAL:</P>
     <br>
-    Período gestacional: <?php echo("<span class='banco'>$periodo</span>");?><br>
+    Período gestacional: <?php echo($periodo);?><br>
     <br>
-    Fez pré natal: <?php echo("<span class='banco'>$com_pre</span>");?> <?php echo("<span class='banco'>$sem_pre</span>");?><br>
+    Fez pré natal: <?php echo($com_pre);?> <?php echo($sem_pre);?><br>
     <br>
-    Nome médico: <?php echo("<span class='banco'>$nome_med</span>");?><br>
+    Nome médico: <?php echo($nome_med);?><br>
     <br>
-    Possibilidade de complicações: <?php echo("<span class='banco'>$com_comp</span>");?> <?php echo("<span class='banco'>$sem_compli</span>");?><br>
+    Possibilidade de complicações: <?php echo($com_comp);?> <?php echo($sem_compli);?><br>
     <br>
-    Primeiro filho:  <?php echo("<span class='banco'>$op</span>");?> <?php echo("<span class='banco'>$neop</span>");?><br>
+    Primeiro filho:  <?php echo($op);?> <?php echo($neop);?><br>
     <br>
-    Quantos: <?php echo("<span class='banco'>$qtd_filhos</span>");?><br>
+    Quantos: <?php echo(qtd_filhos);?><br>
     <br>
-    Horário inicio das contrações:  <?php echo("<span class='banco'>$ini_contra</span>");?><br>
+    Horário inicio das contrações:  <?php echo($ini_contra);?><br>
     <br>
-    Duração contrações: <?php echo("<span class='banco'>$dura_contra</span>");?><br>
+    Duração contrações: <?php echo($dura_contra);?><br>
     <br>
-    Intervalo Contrações: <?php echo("<span class='banco'>$inter_contra</span>");?><br>
+    Intervalo Contrações: <?php echo($inter_contra);?><br>
     <br>
-    Pressão na região do quadril ou vontade de evacuar: <?php echo("<span class='banco'>$com_pre</span>");?> <?php echo("<span class='banco'>$sem_pre</span>");?><br>
+    Pressão na região do quadril ou vontade de evacuar: <?php echo($com_pre);?> <?php echo($sem_pre);?><br>
     <br>
-    Ruptura da bolsa: <?php echo("<span class='banco'>$com_rup</span>");?> <?php echo("<span class='banco'>$sem_rup</span>");?><br>
+    Ruptura da bolsa: <?php echo($com_rup);?> <?php echo($sem_rup);?><br>
     <br>
-    Inspesão visual: <?php echo("<span class='banco'>$com_inp</span>");?> <?php echo("<span class='banco'>$sem_inp</span>");?><br>
+    Inspesão visual: <?php echo($com_inp);?> <?php echo($sem_inp);?><br>
     <br>
-    Parto realizado:  <?php echo("<span class='banco'>$parto_re</span>");?> <?php echo("<span class='banco'>$parto_nr</span>");?><br>
+    Parto realizado:  <?php echo($parto_re);?> <?php echo($parto_nr);?><br>
     <br>
-    Sexo do bebê: <?php echo("<span class='banco'>$fe</span>");?> <?php echo("<span class='banco'>$ma</span>");?><br>
+    Sexo do bebê: <?php echo($fe);?> <?php echo($ma);?><br>
     <br>
-    Nome do bebê: <?php echo("<span class='banco'>$nome_bb</span>");?>
+    Nome do bebê: <?php echo($nome_bb);?>
     <br>
     <br>
 
     <P>PROCESSOS EFETUADOS:</P>
     <br>
-    <?php echo("<span class='banco'>$aspiracao</span>");?>
-    <?php echo("<span class='banco'>$ava_ini</span>");?>
-    <?php echo("<span class='banco'> $ava_dire</span>");?>
-    <?php echo("<span class='banco'>$ava_cont</span>");?>
-    <?php echo("<span class='banco'>$chave</span>");?>
-    <?php echo("<span class='banco'>$canula</span>");?>
-    <?php echo("<span class='banco'> $deso</span>");?>
-    <?php echo("<span class='banco'>$emprego</span>");?>
-    <?php echo("<span class='banco'>$gere</span>");?>
-    <?php echo("<span class='banco'>$limpeza</span>");?>
-    <?php echo("<span class='banco'> $curativos</span>");?>
-    <?php echo("<span class='banco'>$compre</span>");?>
-    <?php echo("<span class='banco'>$encrave</span>");?>
-    <?php echo("<span class='banco'>$ocular</span>");?>
-    <?php echo("<span class='banco'> $queimadura</span>");?>
-    <?php echo("<span class='banco'>$simples</span>");?>
-    <?php echo("<span class='banco'>$tpontas</span>");?>
-    <?php echo("<span class='banco'> $imo</span>");?>
-    <?php echo("<span class='banco'>$midi</span>");?>
-    <?php echo("<span class='banco'>$mies</span>");?>
-    <?php echo("<span class='banco'> $mses$</span>");?>
-    <?php echo("<span class='banco'>$msdi</span>");?>
-    <?php echo("<span class='banco'>$qua</span>");?>
-    <?php echo("<span class='banco'> $cer</span>");?>
-    <?php echo("<span class='banco'>$maca</span>");?>
-     <?php echo("<span class='banco'>$macari</span>");?>
-    <?php echo("<span class='banco'> $ponte</span>");?>
-    <?php echo("<span class='banco'>$ret</span>");?>
-    <?php echo("<span class='banco'>$rpc</span>");?>
-     <?php echo("<span class='banco'>$rola90</span>");?>
-    <?php echo("<span class='banco'> $rola180</span>");?>
-    <?php echo("<span class='banco'>$uso_ca</span>");?>
-    <?php echo("<span class='banco'>$uso_colar</span>");?>
-     <?php echo("<span class='banco'>$toma_choque</span>");?>
-    <?php echo("<span class='banco'> $toma_deci</span>");?>
-    <?php echo("<span class='banco'>$tamanho</span>");?>
-    <?php echo("<span class='banco'>$ked</span>");?>
-     <?php echo("<span class='banco'>$ttf</span>");?>
-    <?php echo("<span class='banco'> $vent</span>");?>
-    <?php echo("<span class='banco'>$oxi</span>");?>
-    <?php echo("<span class='banco'>$rea</span>");?><br>
-     <?php echo("<span class='banco'>$meio</span>");?>  <?php echo("<span class='banco'> $celesc</span>");?><?php echo("<span class='banco'>$militar</span>");?>
-    <?php echo("<span class='banco'>$pre</span>");?><?php echo("<span class='banco'>$prf</span>");?><?php echo("<span class='banco'> $policia</span>");?><?php echo("<span class='banco'>$def_civil</span>");?><?php echo("<span class='banco'>$igp</span>");?><br><br>
-    <?php echo("<span class='banco'>$samu</span>");?> <?php echo("<span class='banco'>$usa</span>");?> <?php echo("<span class='banco'> $usb</span>");?><br>
-    <?php echo("<span class='banco'>$cit</span>");?>
-     <?php echo("<span class='banco'>$outrosss</span>");?>
+    <?php echo($aspiracao);?>
+    <?php echo($ava_ini);?>
+    <?php echo( $ava_dire);?>
+    <?php echo($ava_cont);?>
+    <?php echo($chave);?>
+    <?php echo($canula);?>
+    <?php echo($deso);?>
+    <?php echo($emprego);?>
+    <?php echo($gere);?>
+    <?php echo($limpeza);?>
+    <?php echo( $curativos);?>
+    <?php echo($compre);?>
+    <?php echo($encrave);?>
+    <?php echo($ocular);?>
+    <?php echo( $queimadura);?>
+    <?php echo($simples);?>
+    <?php echo($tpontas);?>
+    <?php echo( $imo);?>
+    <?php echo($midi);?>
+    <?php echo($mies);?>
+    <?php echo( $mses);?>
+    <?php echo($msdi);?>
+    <?php echo($qua);?>
+    <?php echo( $cer);?>
+    <?php echo($maca);?>
+     <?php echo($macari);?>
+    <?php echo($ponte);?>
+    <?php echo($ret);?>
+    <?php echo($rpc);?>
+     <?php echo($rola90);?>
+    <?php echo ($rola180);?>
+    <?php echo($uso_ca);?>
+    <?php echo($uso_colar);?>
+     <?php echo($toma_choque);?>
+    <?php echo( $toma_deci);?>
+    <?php echo($tamanho);?>
+    <?php echo($ked);?>
+     <?php echo($ttf);?>
+    <?php echo( $vent);?>
+    <?php echo($oxi);?>
+    <?php echo($rea);?><br>
+     <?php echo($meio);?>  <?php echo( $celesc);?><?php echo($militar);?>
+    <?php echo($pre);?><?php echo($prf);?><?php echo($policia);?><?php echo($def_civil);?><?php echo($igp);?><br><br>
+    <?php echo($samu);?> <?php echo($usa);?> <?php echo( $usb);?><br>
+    <?php echo($cit);?>
+     <?php echo($outrosss);?>
    
 
 
@@ -826,49 +905,77 @@ while( $linhas = $comando->fetch()){
 
     <P>AMNASE DA EMERGÊNCIA:</P>
     <br>
-    O que aconteceu:<?php echo("<span class='banco'>$sinais_s</span>");?><br>
+    O que aconteceu:<?php echo($sinais_s);?><br>
     <br>
-    Aconteceu outras vezes:<?php echo("<span class='banco'>$ja_acon</span>");?><?php echo("<span class='banco'>$n_acon</span>");?><br>
+    Aconteceu outras vezes:<?php echo($ja_acon);?><?php echo($n_acon);?><br>
     <br>
-    A quanto tempo isso aconteceu:<?php echo("<span class='banco'>$tempo</span>");?><br>
+    A quanto tempo isso aconteceu:<?php echo($tempo);?><br>
     <br>
-    Possui problemas de saúde:<?php echo("<span class='banco'>$ppro</span>");?><?php echo("<span class='banco'>$nppro</span>");?><br>
+    Possui problemas de saúde:<?php echo($ppro);?><?php echo($nppro);?><br>
     <br>
-    Quais:<?php echo("<span class='banco'>$quais</span>");?><br>
+    Quais:<?php echo($quais);?><br>
     <br>
-    Faz uso de medicações:<?php echo("<span class='banco'>$tomou</span>");?><?php echo("<span class='banco'>$n_tomou</span>");?><br>
+    Faz uso de medicações:<?php echo($tomou);?><?php echo($n_tomou);?><br>
     <br>
-    Horário da última medicação:<?php echo("<span class='banco'>$horario_med</span>");?><br>
+    Horário da última medicação:<?php echo($horario_med);?><br>
     <br>
-    Quais:<?php echo("<span class='banco'>$quais_med</span>");?><br>
+    Quais:<?php echo($quais_med);?><br>
     <br>
-    Alérgico a algo:<?php echo("<span class='banco'>$e_alergico</span>");?><?php echo("<span class='banco'>$sn_alergico</span>");?><br>
+    Alérgico a algo:<?php echo($e_alergico);?><?php echo($sn_alergico);?><br>
     <br>
-    Qual alergia:<?php echo("<span class='banco'>$especifique</span>");?><br>
+    Qual alergia:<?php echo($especifique);?><br>
     <br>
-    Ingeriu líquido ou alimento> 2 horas:<?php echo("<span class='banco'>$ingeriu</span>");?><?php echo("<span class='banco'>$n_ingeriu</span>");?><br>
+    Ingeriu líquido ou alimento> 2 horas:<?php echo($ingeriu);?><?php echo($n_ingeriu);?><br>
     <br>
-    Que horas:<?php echo("<span class='banco'>$hora_ingeriu</span>");?><br>
-    <br>
+    Que horas:<?php echo($hora_ingeriu);?><br>
+    
 
 
     <P>MATERIAIS UTILIZADOS DESCARTÁVEIS:</P>
     <br>
-    <P>MATERIAIS UTILIZADOS DEIXADOS NO HOSPITAL:</P>
+    <?php echo($atadurass);?>  <?php echo($oito);?> <?php echo($doze);?>  <?php echo($vinte);?> <?php echo($mais);?> <br>
+    <?php echo($tp_oculos);?>  <?php echo($maiss);?><br>
+    <?php echo($comum);?><br>
+    <?php echo($kits);?>  <?php echo($aga);?><?php echo($pee);?><?php echo($que);?> <?php echo($maisss);?><br>
+
+    <?php echo($iminada);?>  <?php echo($maissss);?><br>
+    <?php echo($masca);?>  <?php echo($maisssss);?><br>
+    <?php echo($paz);?>  <?php echo($maissssss);?><br>
+
+    <?php echo($aspiracao);?>  <br>
+
+    
+    <?php echo($soro);?>  <?php echo($maissssssss);?><br>
+    <?php echo($telaspap);?>  <?php echo($phe);?> <?php echo($ge);?> <?php echo($maisssssssss);?><br>
+    <?php echo($outros);?>  <?php echo($maissssssssss);?><br>
+
     <br>
+    <P>MATERIAIS UTILIZADOS DEIXADOS NO HOSPITAL:</P>
+    <br> 
+    <?php echo($estabeliza);?>  <?php echo($add);?><br>
+    <?php echo($colar);?>  <?php echo($ene);?> <?php echo($pepe);?>  <?php echo($pe);?> <?php echo($add2);?> <br>
+    <?php echo($colar2);?>  <?php echo($eme);?> <?php echo($gee);?>  <?php echo($add3);?><br>
+    <?php echo($ked);?>  <?php echo($adulto);?> <?php echo($crianca);?>  <?php echo($add4);?><br>
+    <?php echo($rigida);?>  <?php echo($add5);?><br>
+    <?php echo($coxins);?>  <?php echo($add6);?><br>
+    <?php echo($canola);?>  <?php echo($add7);?><br>
+    <?php echo($tirante);?>  <?php echo($add8);?><br>
+    <?php echo($aranha);?>  <?php echo($add9);?><br>
+    <?php echo($ttf);?>  <?php echo($adulto);?> <?php echo($infaltil);?>  <?php echo($add20);?><br>
+    <?php echo($ouou);?>  <?php echo($add11);?><br>
     <P>DIVILGAR NA IMPRENSSA:</P>
     <br>
-    <?php echo("<span class='banco'>$quero</span>");?>
-    <?php echo("<span class='banco'>$n_quero</span>");?>
+    <?php echo($quero);?>
+    <?php echo($n_quero);?>
     <br>
     <P>DADOS FINAIS:</P>
     <br>
-    <?php echo("<span class='banco'>$n_usb</span>");?> <?php echo("<span class='banco'>$digita</span>");?><br>
-    <?php echo("<span class='banco'>$n_ocor</span>");?> <?php echo("<span class='banco'>$digita2</span>");?><br>
-    <?php echo("<span class='banco'>$desp</span>");?>
-    <?php echo("<span class='banco'>$hch</span>");?>
-    <?php echo("<span class='banco'>$km_final</span>");?>
-    <?php echo("<span class='banco'>$cod/span>");?>
+    <?php echo($n_usb);?> <?php echo($digita);?><br>
+    <?php echo($n_ocor);?> <?php echo($digita2);?><br>
+    <?php echo($desp);?>
+    <?php echo($hch);?>
+    <?php echo($km_final);?>
+    <?php echo($cod);?>
    </div>
   <br>
   <div class="oi"></div>
