@@ -1,0 +1,415 @@
+body
+{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    justify-items: center;
+    align-content: center;
+    align-items: center;
+    overflow: hidden;
+    background-color:#FFFFFF;
+    margin: 0px;
+    
+}
+.menu2 p 
+{
+   margin-top: -45px;
+   color: rgba(240, 248, 255, 0.726);
+    font-family: 'Effra Heavy', sans-serif;
+font-family: 'Effra Light', sans-serif;
+font-family: 'Effra Medium', sans-serif;
+font-family: 'Effra', sans-serif;
+}
+.menu2 p :hover{
+  outline: #343186;
+}
+.confirmar
+{
+  background-color: #343186;
+  color:#fff;
+  width: 100px;
+  height: 50px;
+   margin-top: -20px;
+   margin-left: 140px;
+
+}
+.enviar
+{
+  margin-top: 10px;
+  margin-left: 65px;
+  width: 80px;
+  height: 30px;
+  border-radius: 5px;
+  background-color: #e2353b;
+  color: white;
+  border-color: transparent;
+  align-items: center;
+}
+.espaco
+{
+  margin-left: 10px;
+  
+}
+.espaco1
+{
+  margin-left: 10px;
+  border-radius: 10px;
+  border-color: transparent;
+}
+
+.verm
+{
+  background-color: #e2353b;
+  top: 0px;
+  width: 360px;
+  height: 60px;
+}
+
+
+.menu2
+{
+  background-color: #e2353b;
+  margin-top: 10px;
+  width: 360px;
+  height: 60px;
+  z-index: 0;
+
+  overflow: hidden;
+}
+.um
+{
+  display: flex;
+  flex-direction: row;
+  margin-top: 20px;
+  margin-left: -20px;
+}
+
+.escrita
+{
+  height: 70px;
+  display: flex;
+  flex-direction: column;
+  margin-top: 30px;
+}
+
+.titulo
+{
+  font-size: 18px;
+  font-family: 'Effra Heavy', sans-serif;
+font-family: 'Effra Light', sans-serif;
+font-family: 'Effra Medium', sans-serif;
+font-family: 'Effra', sans-serif;
+}
+
+
+.sub
+{
+  font-family: 'Poppins', sans-serif;
+  font-size: 15px;
+}
+
+.principal{
+  width: 320px;
+  height: 500px;
+  /*background-color: black;*/
+  overflow: scroll;
+}
+
+.d1{
+  width: 250px;
+  height: 130px;
+  border-radius: 10px;
+  border-color: rgb(143, 137, 137);
+  background-color: silver;
+  margin-top: 25px;
+  margin-left: 40px;
+  position:relative
+}
+
+.d2{
+  width: 250px;
+  height: 130px;
+  border-radius: 10px;
+  background-color: silver;
+  margin-top: 25px;
+  margin-left: 40px;
+  position:relative
+  
+}
+
+.d3{
+  width: 250px;
+  height: 130px;
+  background-color: silver;
+  border-radius: 10px;
+  margin-top: 25px;
+  margin-left: 40px;
+  position:relative
+  
+}
+
+.caixinha
+{
+  margin-top: 5px;
+  min-width: 20px;
+  min-height: 20px;
+}
+.caixa
+{
+width: 200px;
+height: 30px;
+border-radius: 10px;
+margin-top: 5px;
+font-size: 15px;
+border-style: solid;
+border-color: transparent;
+}
+#gerarRelatorio
+{
+  color:rgb(0, 0, 0);
+  
+  z-index: 2;
+  font-size: 17px;
+  font-family: 'Effra Heavy', sans-serif;
+  font-family: 'Effra Light', sans-serif;
+  font-family: 'Effra Medium', sans-serif;
+  font-family: 'Effra', sans-serif;
+  
+  text-decoration: none;
+  
+
+
+}
+#gerarRelatorioContainer
+{
+  flex-direction: row;
+  display: flex;
+  background-color:#e2353b88;
+  width: 180px;
+  justify-items: center;
+  border-radius: 20px;
+  justify-content:center ;
+  align-items: center;
+  align-content: center;
+  height: 30px;
+  margin-left: 70px;
+  padding-left: 5px;
+  
+}
+.icone
+{
+ width: 20px;
+ margin-left: 2px;
+ 
+}
+.caixa2
+{
+
+  height: 15px;
+  border-radius: 10px;
+  margin-top: 5px;
+  font-size: 15px;
+  margin-left: 30px;
+  border-style: solid;
+  border-color: transparent;
+}
+
+.setaa
+{
+  margin-left: 225px;
+}
+
+.caixa3
+{
+width: 200px;
+height: 30px;
+border-radius: 10px;
+margin-top: 5px;
+font-size: 15px;
+border-style: solid;
+border-color: transparent;
+}
+
+.Enviar
+{
+margin-left: 65px;
+width: 80px;
+height: 40px;
+border-radius: 5px;
+background-color: #e2353b;
+color: white;
+align-items: center;
+}
+
+
+.teste
+{
+  margin-left: 0px;
+  left: 0px;
+  top: 0px;
+  background-color:rgb(180, 179, 179);
+  width: 100%;
+  height: 30px;
+  margin-top: 0px;
+  position: absolute;
+  border-radius:  10px 10px 0px 0px;
+  /*226, 30, 30*/
+}
+
+.esconder
+{
+margin-top: 5px;
+margin-left: 10px;
+width: 90%;
+font-size: 15px;
+background-color: rgb(180, 179, 179);
+border-radius: 10px;
+font-family: 'Poppins', sans-serif;
+display: none;
+
+}
+.espaco01
+{
+  width: 100px;
+  border-radius: 10px;
+  border-color: transparent;
+}
+.empurrar
+{
+width: 90%;
+height: 10px;
+}
+
+.inicial
+{
+margin-top:30px;
+margin-left: 10px;
+width: 90%;
+height: 40px;
+/*background-color: pink;*/
+}
+
+p
+{
+  margin-top: 10px;
+font-size: 15px;
+color: #343186;
+display: flex;
+font-family: 'Effra Heavy', sans-serif;
+font-family: 'Effra Light', sans-serif;
+font-family: 'Effra Medium', sans-serif;
+font-family: 'Effra', sans-serif;
+justify-content: center;
+justify-items: center;
+align-items: center;
+align-content: center;
+
+}
+
+.ok 
+{
+display: block;
+height: 150px;
+background-color: rgb(172, 52, 52);
+border-radius: 10px;
+
+ margin: 10px auto; /* Centraliza os botões horizontalmente */
+}
+
+#menu {
+  position: fixed;
+  top: 0;
+  right: -33.33%; /* Inicialmente escondido */
+  width: 33.33%;
+  height: 100%;
+  background-color:#343186 ;
+  color: #fff;
+  transition: right 0.3s ease-in-out;
+  z-index: 999;
+  }
+  
+  #menu.open 
+  {
+   right: 0; /* Exibe o menu */
+  }
+  
+   #menu ul {
+   list-style: none;
+  padding: 0;
+  margin: 50px 20px;
+   }
+  
+   #menu li {
+   margin-bottom: 15px;
+   display: flex;
+   flex-direction: row;
+   justify-items: center;
+   }
+  
+   #menu a {
+    text-decoration: none;
+    margin-left: 10px;
+    margin-top: 5px;
+    color: #fff;
+    font-family: 'Poppins', sans-serif;
+   }
+  
+   #menu-button {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  cursor: pointer;
+  z-index: 1000;
+  color:white;
+}
+
+
+.boneco
+{
+  width: 25PX;
+  height: 25PX;
+  top: 0px;
+}
+
+#okay
+{
+  margin-top:6px;
+  margin-left:220px ;
+  
+}
+
+#okay1
+{
+  margin-top:6px;
+  margin-left:220px ;
+}
+
+#okay2
+{
+  margin-top:6px;
+  margin-left:220px ;
+}
+
+
+#okay3
+{
+  margin-top:6px;
+  margin-left:220px ;
+}
+
+.okay1
+{
+  display: none;
+}
+
+.okay2
+{
+  display: none;
+}
+
+.okay3
+{
+  display: none;
+}

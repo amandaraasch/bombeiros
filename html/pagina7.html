@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.cdnfonts.com/css/effra-heavy" rel="stylesheet">
-    <link rel="stylesheet" href="../css/pagina6.css">
+    <link rel="stylesheet" href="../css/pagina7.css">
     <link rel="Website Icon" type="png"
     href="../img/logo_grande.png">
     <script src="../jquery-1.8.2.min.js"></script>
@@ -47,7 +47,7 @@
             <div class="teste" id="teste" onclick="animar('d1');">
 
               <div id="imageDiv">
-                 <img class="okay2"  id="okay" src="../img/okay.png" width="20px">
+                 <img class="okay1"  id="okay" src="../img/okay.png" width="20px">
               </div>
 
               </div>
@@ -171,7 +171,14 @@
         <div id="d2" class="d2">
           <div class="empurrar"></div>
           <div class="inicial">
-            <div class="teste" id="teste" onclick="animar('d2');"></div>
+            <div class="teste" id="teste" onclick="animar('d2');">
+            
+            
+              <div id="imageDiv">
+                <img class="okay2"  id="okay" src="../img/okay.png" width="20px">
+             </div>
+
+            </div>
 
             <br><p>TERMOS DE RECUSA </p></br>
           </div>
@@ -180,17 +187,17 @@
 
               <form method="post" action="" id="form2">
                 <br>
-                EU<input class="espaco1" type="text" name="opcao1" value=""><br>
-                PORTADOR DA CARTEIRA DE IDENTIDADE N°<input class="espaco01" type="text" name="opcao2" value="">
+                EU<input class="espaco1" type="text" name="nome" value=""><br>
+                PORTADOR DA CARTEIRA DE IDENTIDADE N°<input class="espaco01" type="text" name="rg" value="">
                 
                 NA QUALIDADE DE VÍTIMA/PACIENTE, USANDO DOS DIREITOS QUE ALEIME GARANTE,ME RECUSO NESTE ATO ATENDIMENTO E/OU TRANSPORTE OFERECIDO PELOS BOMBEIROS VOLUNTÁRIOS DE GUARAMIRIM/SC, E ASSUMO, INDIVIDUALMENTE A RESPONSABILIDADE PELAS CONSEQUÊNCIAS QUE POSSAM OCORRER POR RAZÃO DA MINHA SECUSA. DECLARO QUE FUI DEVIDAMENTE INFORMADO SOBRE O PROSSEDIMENTO PELO QUAL EU DEVERIA ME SUBMETER, E ALERTADO SOBRE OS RISCOS Á SAÚDE DA SUA NÃO REALIZAÇÃO.
                 <BR>
                   <BR>
-                ASS<input class="espaco1" type="text" name="opcao3" value=""><br>
+                ASS<input class="espaco1" type="text" name="ass" value=""><br>
                 <BR>
-                TEST.<input class="espaco01" type="text" name="opcao3" value=""><br>
+                TEST.<input class="espaco01" type="text" name="test" value=""><br>
                 <BR>
-                <input class="enviar" type="button" name="enviar" value="Enviar" onclick="pes_form()" >
+                <input class="enviar" type="button" name="enviar" value="Enviar" onclick="term_rec() " >
 
               </form>
             </div>
@@ -200,7 +207,14 @@
         <div id="d3" class="d3">
           <div class="empurrar"></div>
           <div class="inicial">
-          <div class="teste" id="teste" onclick="animar('d3');"></div>
+          <div class="teste" id="teste" onclick="animar('d3');">
+          
+            <div id="imageDiv">
+            <img class="okay2"  id="okay" src="../img/okay.png" width="20px">
+         </div>
+          
+          
+          </div>
           
           <br><p>DADOS FINAIS</p></br> <br>
         
@@ -211,22 +225,29 @@
               <form  method="post" action="" id="form3">
                <br>
                <div class="espaco"> N° USB </div>
-               <input class="espaco1" type="text" name="opcao1" value=""><br>
-               <input class="caixinha" type="checkbox" name="opcao2" value="opcao2"> Cód.IR<br><BR>
+               <input class="espaco1" type="text" name="n_usb" value=""><br>
+
+               <input class="caixinha" type="checkbox" name="opcao1" value=""> Cód.IR<br><BR>
+
                <div class="espaco"> N° OCORRÊNCIA </div>
-               <input class="espaco1" type="text" name="opcao3" value=""><br>
-               <input class="caixinha" type="checkbox" name="opcao4" value="opcao4"> Cód.PS<br><BR>
+               <input class="espaco1" type="text" name="n_ocorr" value=""><br>
+
+               <input class="caixinha" type="checkbox" name="opcao2" value=""> Cód.PS<br><BR>
+
                <div class="espaco"> DESP. </div>
-               <input class="espaco1" type="text" name="opcao5" value=""><br><BR>
+               <input class="espaco1" type="text" name="desp" value=""><br><BR>
+
                <div class="espaco"> H.CH </div>
-               <input class="espaco1" type="text" name="opcao6" value=""><br><BR>
+               <input class="espaco1" type="text" name="h_ch" value=""><br><BR>
+
                <div class="espaco"> KM FINAL: </div>
-               <input class="espaco1" type="text" name="opcao7" value=""><br>
-               <input class="caixinha" type="checkbox" name="opcao8" value="opcao8"> CÓD.SIA/SUS<br>
+               <input class="espaco1" type="text" name="km_final" value=""><br>
+
+               <input class="caixinha" type="checkbox" name="opcao3" value=""> CÓD.SIA/SUS<br>
 
                
                <br>
-                <input class="enviar" type="button" name="enviar" value="Enviar" onclick="pes_form()" >
+                <input class="enviar" type="button" name="enviar" value="Enviar" onclick="dados_finais()" >
 
               </form>
               
@@ -257,7 +278,7 @@
    
 
 
-    function animar(ID) {
+   function animar(ID) {
     var divHeight = $("#" + ID).height();
 
     esconder1.style.display="none"
@@ -266,13 +287,15 @@
     
     // Se a div estiver aberta (com altura maior que 130px), fechar a div
     if (divHeight > 130) {
-       
+        $("#" + ID).animate({ height: "130px" });
     } else { // Caso contrário, abrir a div para 850px
-       
-        if(ID=="d1")
+   
+      
+         if(ID=="d1")
         {
           $("#" + ID).animate({ height: "1550px" });
           esconder1.style.display="block"// esconder as div com os dados
+
         }
 
         if(ID=="d2")
@@ -307,18 +330,19 @@ menuButton.addEventListener('click', () => {
 menu.classList.toggle('open');
 });
 
+
     function ajax() {
     var dados = $('#form1').serialize();
 
             $.ajax({
                 type: "POST",
-                url: "arquivopac.php",
+                url: "",
                 data: dados,
                 dataType: 'json',
                                 
                 success: function(meu_json)
                 {
-                    okay.style.display="block"
+                    okay1.style.display="block"
                     var valores = meu_json;          // Vem do arquivo.php
                     var lista = valores.empregados;  // Pega os dados dos "empregados"
                   
@@ -338,6 +362,67 @@ menu.classList.toggle('open');
             });
           }
             
+          function term_rec() {
+    var dados = $('#form2').serialize();
+
+            $.ajax({
+                type: "POST",
+                url: "term_rec.php",
+                data: dados,
+                dataType: 'json',
+                                
+                success: function(meu_json)
+                {
+                    okay2.style.display="block"
+                    var valores = meu_json;          // Vem do arquivo.php
+                    var lista = valores.empregados;  // Pega os dados dos "empregados"
+                  
+                },
+                error: function(xhr, status, error) {
+                    // Aqui poderíamos preencher uma <div> com o innerHTML por exemplo
+                    console.error('Ocorreu um erro ao enviar os dados: ' + error);
+                },
+                beforeSend: function(xhr) {
+                    // Faz algo antes do envio, como exibir uma animação por exemplo.
+                },
+                complete: function(xhr, status) {
+                    // Faz algo após a conclusão, como ocultar uma animação por exemplo. 
+                    // Vai ser executado mesmo se ocorrer um erro.
+                },
+                timeout: 5000    // Define um tempo limite de 5 segundos (5000 milissegundos)
+            });
+          }
+
+          function dados_finais() {
+    var dados = $('#form3').serialize();
+
+            $.ajax({
+                type: "POST",
+                url: "dados_finais.php",
+                data: dados,
+                dataType: 'json',
+                                
+                success: function(meu_json)
+                {
+                    okay3.style.display="block"
+                    var valores = meu_json;          // Vem do arquivo.php
+                    var lista = valores.empregados;  // Pega os dados dos "empregados"
+                  
+                },
+                error: function(xhr, status, error) {
+                    // Aqui poderíamos preencher uma <div> com o innerHTML por exemplo
+                    console.error('Ocorreu um erro ao enviar os dados: ' + error);
+                },
+                beforeSend: function(xhr) {
+                    // Faz algo antes do envio, como exibir uma animação por exemplo.
+                },
+                complete: function(xhr, status) {
+                    // Faz algo após a conclusão, como ocultar uma animação por exemplo. 
+                    // Vai ser executado mesmo se ocorrer um erro.
+                },
+                timeout: 5000    // Define um tempo limite de 5 segundos (5000 milissegundos)
+            });
+          }
           
 
 
