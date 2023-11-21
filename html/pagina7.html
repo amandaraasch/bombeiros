@@ -47,7 +47,7 @@
             <div class="teste" id="teste" onclick="animar('d1');">
 
               <div id="imageDiv">
-                 <img class="okay1"  id="okay" src="../img/okay.png" width="20px">
+                 <img class="okay1"  id="okay1" src="../img/okay.png" width="20px">
               </div>
 
               </div>
@@ -175,7 +175,7 @@
             
             
               <div id="imageDiv">
-                <img class="okay2"  id="okay" src="../img/okay.png" width="20px">
+                <img class="okay2"  id="okay2" src="../img/okay.png" width="20px">
              </div>
 
             </div>
@@ -210,7 +210,7 @@
           <div class="teste" id="teste" onclick="animar('d3');">
           
             <div id="imageDiv">
-            <img class="okay2"  id="okay" src="../img/okay.png" width="20px">
+            <img class="okay2"  id="okay3" src="../img/okay.png" width="20px">
          </div>
           
           
@@ -405,8 +405,6 @@ menu.classList.toggle('open');
                 success: function(meu_json)
                 {
                     okay3.style.display="block"
-                    var valores = meu_json;          // Vem do arquivo.php
-                    var lista = valores.empregados;  // Pega os dados dos "empregados"
                   
                 },
                 error: function(xhr, status, error) {
@@ -422,7 +420,8 @@ menu.classList.toggle('open');
                 },
                 timeout: 5000    // Define um tempo limite de 5 segundos (5000 milissegundos)
             });
-          }
+      }
+
           
 
 
