@@ -28,7 +28,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $opcao14 = isset($_POST["opcao14"]) ? "Cânula" : "";
     $quantidade6 = $_POST["quantidade6"];
     $opcao15 = isset($_POST["opcao15"]) ? "Tirante cabeça" : "";
-    $quantidade7 = $_POST["quantidade7"];
+    $quantidade7 = isset($_POST["quantidade7"]);
     $opcao16 = isset($_POST["opcao16"]) ? "Tirante aranha" : "";
     $quantidade8 = $_POST["quantidade8"];
     $opcao17 = isset($_POST["opcao17"]) ? "T.T.F" : "";
@@ -40,7 +40,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
 
     $comando = $pdo->prepare("INSERT INTO mate_hosp 
-    (nOcorrencia, opcao1, quantidade, opcao2, opcao3, opcao4, opcao5,quantidade1 ,opcao6, opcao7, opcao8, quantidade2,
+    (nOcorrencia, opcao1, quantidade, opcao2, opcao3, opcao4, opcao5, quantidade1, opcao6, opcao7, opcao8, quantidade2,
     opcao9, opcao10, opcao11, quantidade3, opcao12, quantidade4, opcao13, quantidade5, opcao14, quantidade6, opcao15, quantidade7, 
     opcao16, quantidade8, opcao17, opcao18, opcao19, quantidade9, outros, quantidade10)
 

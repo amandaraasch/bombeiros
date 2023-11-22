@@ -59,7 +59,7 @@
 
             <div class="esconder" id="esconder1">
 
-          <form method="post" action="mate_hosp.php" id="form1">
+          <form method="post" action="" id="form1">
             <br>
             <input class="caixinha" type="checkbox" name="opcao1" value="opcao1">Base do estabeliza
             <br>
@@ -160,7 +160,7 @@
 
 
           
-            <input class="enviar" type="submit" name="enviar" value="Enviar" onclick="" >
+            <input class="enviar" type="button" name="enviar" value="Enviar" onclick="mate_hosp()" >
           </form>
 
 
@@ -331,12 +331,12 @@ menu.classList.toggle('open');
 });
 
 
-    function ajax() {
+    function mate_hosp() {
     var dados = $('#form1').serialize();
 
             $.ajax({
                 type: "POST",
-                url: "",
+                url: "mate_hosp.php",
                 data: dados,
                 dataType: 'json',
                                 
