@@ -334,7 +334,6 @@ while( $linhas = $comando->fetch()){
     $qtd_filhos=$linhas["qtd_filhos"];
     $ini_contra=$linhas["ini_contra"];
     $dura_contra=$linhas["dura_contra"];
-    $inter_contra=$linhas["inter_contra"];
     $com_pre=$linhas["opcao7"];
     $sem_pre=$linhas["opcao8"];
     $com_rup=$linhas["opcao9"];
@@ -346,11 +345,6 @@ while( $linhas = $comando->fetch()){
     $fe=$linhas["opcao15"];
     $ma=$linhas["opcao16"];
     $nome_bb=$linhas["nome_bb"];
-    $nome_med=$linhas["nome_med"];
-
-
-
-
     
 }
 $comando = $pdo->prepare("SELECT * FROM proc_efe where nOcorrencia='$id'");

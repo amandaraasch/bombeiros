@@ -18,7 +18,7 @@
                 <img title="Tela inicial" class="casinha" src="../img/casinha.png">
             </div>
            <div title="Ocorrências" class="add">
-           <a href="ocorrencias.html" onclick="return showAlertt();">
+           <a href="ocorrencias.php" onclick="return showAlertt();">
             <img title="Ocorrências" class="add2"src="../img/ficha.png">
             </a>
         </div>

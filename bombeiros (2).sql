@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Tempo de geração: 22/11/2023 às 01:51
+-- Tempo de geração: 23/11/2023 às 00:46
 -- Versão do servidor: 10.4.28-MariaDB
 -- Versão do PHP: 8.0.28
 
@@ -53,9 +53,7 @@ CREATE TABLE `amn_emer` (
 --
 
 INSERT INTO `amn_emer` (`nOcorrencia`, `ss`, `opcao1`, `opcao2`, `tempo`, `opcao3`, `opcao4`, `quais`, `opcao5`, `opcao6`, `horario`, `quaismed`, `opcao7`, `opcao8`, `especifique`, `opcao9`, `opcao10`, `horas`) VALUES
-(22, '1', '', 'não', '1', 'Sim', '', '1', 'Sim', '', '1', '1', '', '', '1', '', 'Não', '1'),
-(22, '1', '', 'não', '1', '', 'Não', '1', 'Sim', '', '1', '1', 'Sim', '', '', 'Sim', '', ''),
-(21, '323', 'sim', '', '232', 'Sim', 'Não', '323', 'Sim', '', '323', '232', '', '', '323', '', 'Não', '323');
+(25, 'caxumba', 'sim', '', 'sla', '', 'Não', '', '', '', '', '', 'Sim', '', 'cachorro mordeu', '', 'Não', '20;00');
 
 -- --------------------------------------------------------
 
@@ -94,14 +92,7 @@ CREATE TABLE `amn_ges` (
 --
 
 INSERT INTO `amn_ges` (`nOcorrencia`, `periodo`, `opcao1`, `opcao2`, `opcao3`, `opcao4`, `opcao5`, `opcao6`, `qtd_filhos`, `ini_contra`, `dura_contra`, `opcao7`, `opcao8`, `opcao9`, `opcao10`, `opcao11`, `opcao12`, `opcao13`, `opcao14`, `opcao15`, `opcao16`, `opcao17`, `nome_bb`) VALUES
-(21, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', ''),
-(21, '', '', 'Não', '', '', 'Sim', '', '2', '4', '', 'wallace', '', '', '', '', '', '', '', '', 'Sim', '', ''),
-(21, '', '', 'Não', '', '', 'Sim', '', '2', '4', '', 'wallace', '', '', '', '', '', '', '', '', 'Sim', '', ''),
-(21, '', '', '', '', '', '', '', '8', '8', '8', 'wallaca', '', '', '', '', '', '', '', '', '', '', ''),
-(21, '', '', '', '', '', '', '', '', '', '', '3', '', '', '', '', '', '', '', '', '', '', 'feijao'),
-(21, '', '', '', '', 'Não', 'Sim', '', '', '', '', '', 'Sim', '', '', '', '', '', 'Sim', '', 'Sim', '', 'feijao'),
-(21, '', '', '', '', 'Não', 'Sim', '', '', '', '', '', 'Sim', '', '', '', '', '', 'Sim', '', 'Sim', '', 'feijao'),
-(23, '', 'Sim', '', '', 'Não', 'Sim', '', '4', '2', '2', '32', '', 'Não', 'Sim', '', '', 'Não', 'Sim', '', '', 'Não', 'feijao');
+(25, '', '', 'Não', 'Sim', '', '', 'Não', 'terceiro', '', '', '', '', 'Não', 'Sim', '', '', 'Não', 'Sim', '', '', 'Não', 'josé antonio');
 
 -- --------------------------------------------------------
 
@@ -132,10 +123,7 @@ CREATE TABLE `ava_cine` (
 --
 
 INSERT INTO `ava_cine` (`nOcorrencia`, `opcao1`, `opcao2`, `opcao3`, `opcao4`, `opcao5`, `opcao6`, `opcao7`, `opcao8`, `opcao9`, `opcao10`, `opcao11`, `opcao12`, `opcao13`, `opcao14`) VALUES
-(22, 'sim', '', '', 'não', '', 'não', '', 'não', '', '', '', 'não', '', ''),
-(22, 'sim', '', '', 'não', '', 'não', '', 'não', '', '', '', 'não', '', ''),
-(22, 'sim', '', '', '', '', 'não', '', 'não', '', '', '', '', '', ''),
-(21, '', 'não', 'sim', '', '', 'não', 'sim', '', '', 'não', 'sim', '', '', 'não');
+(25, '', 'não', 'sim', '', '', 'não', 'sim', '', '', 'não', 'sim', '', '', 'não');
 
 -- --------------------------------------------------------
 
@@ -190,7 +178,7 @@ CREATE TABLE `ava_pac` (
 --
 
 INSERT INTO `ava_pac` (`nOcorrencia`, `+5`, `-5`, `aber_ocu`, `opcao1`, `opcao2`, `opcao3`, `opcao4`, `resp_verb`, `opcao5`, `opcao6`, `opcao7`, `opcao8`, `opcao9`, `resp_moto`, `opcao10`, `opcao11`, `opcao12`, `opcao13`, `opcao14`, `opcao15`, `aber_ocu16`, `opcao17`, `opcao18`, `opcao19`, `opcao20`, `resp_verb21`, `opcao22`, `opcao23`, `opcao24`, `opcao25`, `opcao26`, `resp_moto27`, `opcao28`, `opcao29`, `opcao30`, `opcao31`, `opcao32`, `opcao33`) VALUES
-(22, 'sim', 'não', 'Abertura Ocular', '', 'Comando Verbal', 'Estímulo Doloroso', '', '', 'Orientado', '', 'Palavras Inapropriadas', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '');
+(25, 'não', 'sim', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', 'Estímulo Doloroso', '', '', '', '', '', '', '', '', '', 'Localiza Dor/Estímulo Tátil', '', '', 'Extensão Anormal', '');
 
 -- --------------------------------------------------------
 
@@ -212,13 +200,8 @@ CREATE TABLE `cadastro` (
 --
 
 INSERT INTO `cadastro` (`id`, `login`, `senha`, `cep`, `descricao`, `adm`) VALUES
-(3, 'maicol', '123', '89209466', 'professor', 'n'),
-(4, 'josi', '154', '89209466', 'mae', 'n'),
-(5, 'Henrique Osmar', '123', '89209466', 'Estudante', 'n'),
-(6, 'João filipe Tissi', '187', '89209466', 'aluno', 'n'),
-(7, 'prof', '187', '89209466', 'prof', 'n'),
-(8, 'emily', '145', '89209466', 'aluna', 'n'),
-(10, 'raasch', '123', '', '', 's');
+(10, 'raasch', '123', '', '', 's'),
+(11, 'Alexandre', '123', '89206-230', 'Desenvolvedor magoado ', 'n');
 
 -- --------------------------------------------------------
 
@@ -243,23 +226,7 @@ CREATE TABLE `dados_finais` (
 --
 
 INSERT INTO `dados_finais` (`nOcorrencia`, `n_usb`, `opcao1`, `n_ocorr`, `opcao2`, `desp`, `h_ch`, `km_final`, `opcao3`) VALUES
-(21, '1', 'Cód.IR', '1', 'Cód.PS', '2', '3', '2', 'CÓD.SIA/SUS'),
-(21, '2', 'Cód.IR', '3', 'Cód.PS', '4', '', '5', 'CÓD.SIA/SUS'),
-(21, '1', 'Cód.IR', '1', 'Cód.PS', '1', '1', '1', 'CÓD.SIA/SUS'),
-(21, '1', '', '1', '', '1', '1', '1', ''),
-(21, '1', '', '1', '', '1', '1', '1', ''),
-(21, '1', '', '2', '', '2', '2', '2', ''),
-(21, '1', 'Cód.IR', '2', 'Cód.PS', '3', '4', '5', 'CÓD.SIA/SUS'),
-(21, '45', 'Cód.IR', '', '', '', '', '', ''),
-(21, '', '', '45', 'Cód.PS', '', '', '', ''),
-(21, '890', 'Cód.IR', '', '', '', '', '', ''),
-(21, '890', 'Cód.IR', '', '', '', '', '', ''),
-(21, '890', 'Cód.IR', '', '', '', '', '', ''),
-(21, '1', 'Cód.IR', '', '', '', '', '', ''),
-(21, '1', '', '', '', '', '', '', ''),
-(21, '890', 'Cód.IR', '1', '', '1', '1', '1', ''),
-(21, '1', 'Cód.IR', '1', 'Cód.PS', '1', '1', '1', 'CÓD.SIA/SUS'),
-(21, '890', 'Cód.IR', '1', '', '1', '', '', '');
+(25, '', '', '16', 'Cód.PS', '', '', '300km', '');
 
 -- --------------------------------------------------------
 
@@ -286,10 +253,7 @@ CREATE TABLE `deci_trans` (
 --
 
 INSERT INTO `deci_trans` (`nOcorrencia`, `opcao1`, `opcao2`, `opcao3`, `opcao4`, `m`, `s1`, `s2`, `s3`, `demandante`, `equipe`) VALUES
-(19, '', 'Instável', '', '', '', '1', '1', '1', '', ''),
-(19, '', 'Instável', 'Parcialmente Instavel', '', '', '1', '1', '1', '', ''),
-(19, 'Crítico', '', '', 'Estável', '', '1', '1', '1', '1', ''),
-(22, '', '', 'Parcialmente Instavel', '', '1', '1', '11', '1', '1', '1');
+(25, '', 'Instável', '', '', 'brandao', 'porniquete', 'cabo mais', 'cabo menos', 'josé berranteiro', 'zé guedes');
 
 -- --------------------------------------------------------
 
@@ -309,14 +273,7 @@ CREATE TABLE `form_cond` (
 --
 
 INSERT INTO `form_cond` (`nOcorrencia`, `opcao1`, `opcao2`, `opcao3`) VALUES
-(17, '', 'Semi-sentada', ''),
-(17, '', 'Semi-sentada', ''),
-(17, '', 'Semi-sentada', ''),
-(17, '', 'Semi-sentada', ''),
-(19, 'Deitada', '', ''),
-(19, 'Deitada', '', ''),
-(19, '', '', 'Sentada'),
-(22, 'Deitada', '', 'Sentada');
+(25, '', 'Semi-sentada', '');
 
 -- --------------------------------------------------------
 
@@ -335,16 +292,7 @@ CREATE TABLE `impre` (
 --
 
 INSERT INTO `impre` (`nOcorrencia`, `opcao1`, `opcao2`) VALUES
-(15, 'Sim', ''),
-(16, 'Sim', ''),
-(17, 'Sim', ''),
-(15, 'Sim', ''),
-(16, 'Sim', ''),
-(17, 'Sim', ''),
-(19, '', 'Não'),
-(22, 'Sim', ''),
-(22, '', 'Não'),
-(22, '', 'Não');
+(25, 'Sim', '');
 
 -- --------------------------------------------------------
 
@@ -365,8 +313,7 @@ CREATE TABLE `lo_tra` (
 --
 
 INSERT INTO `lo_tra` (`nOcorrencia`, `local`, `lado`, `face`, `tipo`) VALUES
-(19, 'Tronco', 'Central', 'Frontal', 'F.A.B/F.A.F'),
-(22, 'Tronco', 'Central', 'Frontal', 'Evisceração');
+(25, 'Tronco', 'Central', 'Posterior', 'Hemorragia');
 
 -- --------------------------------------------------------
 
@@ -415,9 +362,7 @@ CREATE TABLE `mate_desc` (
 --
 
 INSERT INTO `mate_desc` (`nOcorrencia`, `opcao1`, `opcao2`, `opcao3`, `opcao4`, `quantidade1`, `opcao5`, `quantidade2`, `opcao6`, `quantidade3`, `opcao7`, `opcao8`, `opcao9`, `opcao10`, `quantidade4`, `opcao11`, `quantidade5`, `opcao12`, `quantidade6`, `opcao13`, `quantidade7`, `opcao14`, `quantidade8`, `opcao15`, `quantidade9`, `opcao16`, `quantidade10`, `opcao17`, `opcao18`, `opcao19`, `quantidade11`, `opcao20`, `quantidade12`) VALUES
-(21, 'ataduras', '', '', '', '34', 'Cateter.tp óculos', '34', 'Compressa comum', '34', '', '', '', '', '34', '', '34', '', '34', '', '34', '', '34', '', '', '', '34', '', '', '', '', '', '20'),
-(21, 'ataduras', '', '12', '', '34', 'Cateter.tp óculos', '44', 'Compressa comum', '44', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '30'),
-(21, 'ataduras', '8', '', '', '34', '', '', '', '34', 'Kit\'s', '', '', 'Q', '', '', '', '', '', '', '', '', '', '', '', '', '', 'talas.PAP', 'P', '', '', '', '20');
+(25, 'ataduras', '', '12', '', '3', 'Cateter.tp óculos', '4', 'Compressa comum', '5', 'Kit\'s', '', 'P', '', '6', '', '', '', '', 'Máscara.DESC', '2', '', '', '', '', 'Soro fisiológico', '1', 'talas.PAP', '', 'G', '1', 'Outros', '2');
 
 -- --------------------------------------------------------
 
@@ -460,6 +405,13 @@ CREATE TABLE `mate_hosp` (
   `quantidade10` varchar(20) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
+--
+-- Despejando dados para a tabela `mate_hosp`
+--
+
+INSERT INTO `mate_hosp` (`nOcorrencia`, `opcao1`, `quantidade`, `opcao2`, `opcao3`, `opcao4`, `opcao5`, `quantidade1`, `opcao6`, `opcao7`, `opcao8`, `quantidade2`, `opcao9`, `opcao10`, `opcao11`, `quantidade3`, `opcao12`, `quantidade4`, `opcao13`, `quantidade5`, `opcao14`, `quantidade6`, `opcao15`, `quantidade7`, `opcao16`, `quantidade8`, `opcao17`, `opcao18`, `opcao19`, `quantidade9`, `outros`, `quantidade10`) VALUES
+(25, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', 'T.T.F', '', 'Infantil', '2', 'Outros', '3');
+
 -- --------------------------------------------------------
 
 --
@@ -476,12 +428,7 @@ CREATE TABLE `obs_import` (
 --
 
 INSERT INTO `obs_import` (`nOcorrencia`, `obs`) VALUES
-(22, '292929229'),
-(21, 'andre '),
-(21, 'andre cagao'),
-(21, ''),
-(21, 'pexe besta'),
-(21, 'pexe besta');
+(25, 'não entendi nd');
 
 -- --------------------------------------------------------
 
@@ -508,15 +455,7 @@ CREATE TABLE `paciente` (
 --
 
 INSERT INTO `paciente` (`nOcorrencia`, `Data`, `Sexo`, `Nome_hospital`, `Nomepac`, `Idadepac`, `CPFpac`, `Telefone`, `NOMEACOM`, `IDADEACOM`, `Localidade`) VALUES
-(15, '2023-11-16', 'Masculi', '1', '1', 1, 1, 1, '1', 1, '1'),
-(16, '2023-11-01', 'Feminin', 'dona helena', '1', 1, 1, 1, '1', 1, '1'),
-(17, '2023-11-08', 'Masculi', 'la', 'tissia', 1, 1, 1, '1', 1, '1'),
-(18, '2023-11-08', 'Feminin', '1', '1', 1, 1, 1, '1', 1, '1'),
-(19, '2023-11-15', 'Masculi', '1', '1', 1, 1, 1, '1', 1, '1'),
-(20, '2023-11-17', 'Feminin', '1', '1', 1, 1, 1, '1', 1, '1'),
-(21, '2023-11-24', 'Masculi', '2', '2', 2, 2, 2, '2', 2, '2'),
-(22, '2023-11-10', 'Masculi', '1', '1', 1, 1, 1, '1', -1, '1'),
-(23, '2023-11-09', 'Feminin', 'Dona Helena', 'evelin', 12, 12123, 213213, 'André', 12323, '123123');
+(25, '2023-11-22', 'Masculi', 'Dona Helena', 'Roberto', 45, 2345678, 8765432, 'lindosvalda', 88, 'Rua albano shchimt');
 
 -- --------------------------------------------------------
 
@@ -555,8 +494,7 @@ CREATE TABLE `pes_form` (
 --
 
 INSERT INTO `pes_form` (`nOcorrencia`, `id`, `opcao1`, `opcao2`, `opcao3`, `opcao4`, `opcao5`, `opcao6`, `opcao7`, `opcao8`, `opcao9`, `opcao10`, `opcao11`, `opcao12`, `opcao13`, `opcao14`, `opcao15`, `opcao16`, `opcao17`, `opcao18`, `opcao19`, `Outros`, `opcao21`) VALUES
-(19, 7, '', 'Respiratório', '', '', 'Diabetes', '', 'Hipoglicemia', '', '', '', '', 'Transporte', 'Aéreo', '', '', '', '', '', '', 'tentativa de homicidio', ''),
-(22, 8, '', 'Respiratório', '', 'Inalação Fumaça', '', '', 'Hipoglicemia', '', '', '', '', '', '', '', 'Emergencial ', '', '', 'Outros', '', 'ta todo se tremendo', '');
+(25, 1, '', 'Respiratório', 'DPOC', '', '', '', '', 'Obstétrico', '', 'Gestante', '', '', '', '', '', '', '', '', '', 'carro de boi', '');
 
 -- --------------------------------------------------------
 
@@ -628,14 +566,7 @@ CREATE TABLE `proc_efe` (
 --
 
 INSERT INTO `proc_efe` (`nOcorrencia`, `opcao1`, `opcao2`, `opcao3`, `opcao4`, `opcao5`, `opcao6`, `opcao7`, `opcao8`, `opcao9`, `opcao10`, `opcao11`, `opcao12`, `opcao13`, `opcao14`, `opcao15`, `opcao16`, `opcao17`, `opcao18`, `opcao19`, `opcao20`, `opcao21`, `opcao22`, `opcao23`, `opcao24`, `opcao25`, `opcao26`, `opcao27`, `opcao28`, `opcao29`, `opcao30`, `opcao31`, `opcao32`, `opcao33`, `opcao34`, `opcao35`, `tam`, `opcao36`, `opcao37`, `opcao38`, `opcao39`, `opcao40`, `opcao41`, `celesc`, `policia`, `civil`, `militar`, `pre`, `prf`, `def_civil`, `igppc`, `opcao42`, `usa`, `usb`, `opcao43`, `outros`) VALUES
-(22, 'Aspiração', '', '', 'Avaliação continuada', '', '', '', '', '', '', '', '', '', 'Ocular', '', '', '', 'Imobilizações ', '', '', '', 'membro sp.esq', '', '', '', '', '', '', '', '', '', '', '', '', '', '1', '', '', '', '', '', '', '', '', '', '0', '', '', '', '', '', '', '', '', ''),
-(22, '', 'Avaliação inicia', '', '', '', '', '', '', '', '', '', 'Compressivo', '', '', 'Queimadura', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '1', '', '', '', '', '', '', '', '', '', '0', '', '', '', '', '', '', '', '', ''),
-(22, '', 'Avaliação inicia', '', '', '', '', '', '', '', '', '', 'Compressivo', '', '', 'Queimadura', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '1', '', '', '', '', '', '', '', '', '', '0', '', '', '', '', '', '', '', '', ''),
-(22, '', 'Avaliação inicia', '', '', '', '', '', '', '', '', '', 'Compressivo', '', '', 'Queimadura', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '1', '', '', '', '', '', '', 'Celesc ', 'Polícia', 'Civil', '0', 'PRE', 'PRF', 'Def.civil', '', '', '', '', '', ''),
-(21, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', 'Imobilizações ', '', 'Membro inf.esq', '', '', 'Quadril', '', '', '', '', '', '', '', '', '', '', '', '', '1', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', NULL),
-(21, 'Aspiração', '', '', 'Avaliação continuada', '', 'Cânula de guedel', '', '', '', '', '', 'Compressivo', '', 'Ocular', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', 'Rolamento 180°', 'Tomada decisão', '', 'Uso de cânula', '', '1', '', '', '', '', 'Reanimador_lpm', 'Meios auxiliares', '', '', '', '', '', '', '', '', '', '', '', '', NULL),
-(21, 'Aspiração', '', '', 'Avaliação continuada', 'Chave de rauteck', '', '', '', '', '', '', '', '', '', '', '', '3 pontas', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '1', '', '', '', '', '', 'Meios auxiliares', 'Celesc ', '', '', '', '', '', '', '', '', '', '', '', NULL),
-(21, 'Aspiração', '', '', 'Avaliação continuada', 'Chave de rauteck', '', '', '', '', '', '', '', '', '', '', '', '3 pontas', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '1', '', '', '', '', '', 'Meios auxiliares', 'Celesc ', '', '', '', '', '', '', '', '', '', '', '', '');
+(25, 'Aspiração', '', '', '', '', '', 'Desobstrução de v.a', '', '', '', '', 'Compressivo', 'Encravamento', '', '', '', '', '', '', '', 'membro sup.dir', 'membro sp.esq', '', '', '', '', '', '', '', '', '', '', '', '', 'Uso colar', '1', '', '', '', '', '', 'Meios auxiliares', 'Celesc ', '', '', '', '', '', '', '', 'Samu', '', 'USB', '', '');
 
 -- --------------------------------------------------------
 
@@ -658,14 +589,6 @@ CREATE TABLE `quei` (
   `2grau` varchar(45) NOT NULL,
   `3grau` varchar(45) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
-
---
--- Despejando dados para a tabela `quei`
---
-
-INSERT INTO `quei` (`nOcorrencia`, `opcao1`, `opcao2`, `opcao3`, `opcao4`, `opcao5`, `opcao6`, `opcao7`, `opcao8`, `opcao9`, `1grau`, `2grau`, `3grau`) VALUES
-(19, '', 'Pescoço', '', '', '', 0, 'M.I.E', '', '', '', '', ''),
-(22, 'Cabeça', 'Pescoço', 'T.ANT', '', 'Genit.', 0, '', '', '', '', '', '');
 
 -- --------------------------------------------------------
 
@@ -741,11 +664,7 @@ CREATE TABLE `ss_form` (
 --
 
 INSERT INTO `ss_form` (`nOcorrencia`, `id`, `opcao1`, `opcao2`, `opcao3`, `opcao4`, `opcao5`, `opcao6`, `opcao7`, `opcao8`, `opcao9`, `opcao10`, `opcao11`, `opcao12`, `opcao13`, `opcao14`, `opcao15`, `opcao16`, `opcao17`, `opcao18`, `opcao19`, `opcao20`, `opcao21`, `opcao22`, `opcao23`, `opcao24`, `opcao25`, `opcao26`, `opcao27`, `opcao28`, `opcao29`, `opcao30`, `opcao31`, `opcao32`, `opcao33`, `opcao34`, `opcao35`, `opcao36`, `opcao37`, `opcao38`, `opcao39`, `opcao40`, `opcao41`, `opcao42`, `opcao43`, `opcao44`, `opcao45`, `opcao46`, `opcao47`, `opcao48`, `opcao49`, `opcao50`, `opcao51`, `opcao52`, `opcao53`, `opcao54`, `opcao55`, `opcao56`, `opcao57`, `Outros`) VALUES
-(15, 2, 'Abdomen Sensível/Rígido', '', '', '', 'Angina de peito ', '', '', '', '', '', '', '', 'Extremidades', '', '', '', '', '', '', 'Dispnéia ', 'Dor local ', '', '', '', '', '', '', 'Hemorragia ', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', ''),
-(16, 3, 'Abdomen Sensível/Rígido', '', '', '', '', '', 'Bradicardia  ', '', '', '', '', '', '', '', '', '', 'Descerebração', '', '', 'Dispnéia ', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', 'Otorragia ', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', 'morreu'),
-(17, 4, 'Abdomen Sensível/Rígido', '', '', '', 'Angina de peito ', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', 'Hipotensão', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', 'tentativa de homicidio'),
-(19, 6, '', '', '', '', 'Angina de peito ', '', '', '', '', 'Cefaléia  ', 'Cianose ', '', 'Extremidades', '', '', '', '', '', '', '', '', 'Edema', 'Generalizado', '', '', '', '', 'Hemorragia ', 'Interna', '', '', '', '', '', '', '', '', '', 'Parada', 'Cardíaca', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', 'tentativa de homicidio'),
-(22, 7, 'Abdomen Sensível/Rígido', '', '', 'Amnésia', '', '', 'Bradicardia  ', '', '', 'Cefaléia  ', '', 'Lábios', '', '', '', '', '', '', '', '', '', 'Edema', 'Generalizado', '', '', 'Êstase de jugular', '', 'Hemorragia ', '', '', '', 'Hipotensão', '', '', 'Óbito', '', '', '', '', '', '', '', 'Prurido na pele', '', '', '', '', '', '', '', '', '', '', '', ' Taquipnéia', ' Taquicardia ', '', '');
+(25, 1, 'Abdomen Sensível/Rígido', '', '', 'Amnésia', '', '', '', 'Bradpnéia', '', '', 'Cianose ', 'Lábios', '', '', '', '', '', '', '', '', '', 'Edema', '', 'Localizado ', '', '', '', 'Hemorragia ', '', 'Externa', '', '', '', '', '', '', '', '', 'Parada', 'Cardíaca', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', ' Taquicardia ', 'Tontura  ', 'não sabemos oq deu');
 
 -- --------------------------------------------------------
 
@@ -774,12 +693,7 @@ CREATE TABLE `sv_form` (
 --
 
 INSERT INTO `sv_form` (`nOcorrencia`, `id`, `pressao_arterial`, `pressao2`, `pulso`, `respiracao`, `saturacao`, `hgt`, `temperatura`, `opcao1`, `opcao2`, `perfusao_menor`, `perfusao_maior`) VALUES
-(15, 4, 5, 0, 5, 0, 6, 5, 0, '', 'Normal', '', '&lt;2SEG'),
-(16, 5, 11, 1, 1, 0, 1, 0, 0, 'Anormal', '', '', ''),
-(17, 6, 1, 0, 1, 10, 0, 1, 0, 'Anormal', '', '', ''),
-(18, 7, 1, 0, 1, 0, 1, 1, 0, '', 'Normal', '&gt;2SEG', ''),
-(19, 8, 1, 0, 1, 1, 1, 1, 0, '', 'Normal', '', '&lt;2SEG'),
-(22, 9, 3, 33, 0, 3, 3, 3, 0, '', 'Normal', '', '');
+(25, 1, 3, 3, 2, 56, 54, 0, 0, 'Anormal', '', '', '&lt;2SEG');
 
 -- --------------------------------------------------------
 
@@ -800,11 +714,7 @@ CREATE TABLE `term_rec` (
 --
 
 INSERT INTO `term_rec` (`nOcorrencia`, `nome`, `rg`, `ass`, `test`) VALUES
-(21, '4', '4', '4', '4'),
-(21, 'andre', '323232', '2323', '2323'),
-(21, '1', '1', '1', '1'),
-(21, 'andre', '4', '4', '2323'),
-(23, 'amanda', '323232', '4', '56');
+(25, 'roberto', '2345677', 'embaixo', 'amém');
 
 -- --------------------------------------------------------
 
@@ -843,13 +753,7 @@ CREATE TABLE `tipo_ocorrencia` (
 --
 
 INSERT INTO `tipo_ocorrencia` (`nOcorrencia`, `id`, `opcao1`, `opcao2`, `opcao3`, `opcao4`, `opcao5`, `opcao6`, `opcao7`, `opcao8`, `opcao9`, `opcao10`, `opcao11`, `opcao12`, `opcao13`, `opcao14`, `opcao15`, `opcao16`, `opcao17`, `opcao18`, `opcao19`, `opcao20`, `Outros`) VALUES
-(15, 5, '', 'Com meio de tra', '', '', '', '', 'Queda própria a', '', '', '', 'Choque elétrico', '', '', '', 'Intoxicação ', '', '', '', '', '', 'tentativa de homicidio'),
-(15, 6, '', 'Com meio de tra', '', '', '', '', 'Queda própria a', '', '', '', 'Choque elétrico', '', '', '', 'Intoxicação ', '', '', '', '', '', 'tentativa de homicidio'),
-(16, 7, '', '', '', '', '', '', '', '', '', '', '', '', '', 'Esportivo ', '', '', 'Queda de moto ', '', '', '', 'tentativa de homicidio'),
-(17, 8, '', '', '', '', 'Queda de altura', '', '', '', 'Agressão ', '', '', '', '', '', '', 'Queda de bicicleta', '', '', '', '', 'ablacarro'),
-(18, 9, 'Causado por ani', '', '', '', '', '', 'Queda própria a', '', '', '', '', '', '', '', '', 'Queda de bicicleta', '', 'Queda nível <2m', '', '', 'morreu'),
-(19, 10, '', '', '', 'Emergência médi', '', '', '', '', '', '', '', '', 'Doméstico ', '', '', '', '', 'Queda nível <2m', '', '', 'tentativa de homicidio'),
-(22, 11, 'Causado por ani', '', '', '', 'Queda de altura', '', '', '', '', '', '', '', 'Doméstico ', '', '', '', '', '', '', '', 'bu bu');
+(25, 1, 'Causado por ani', '', '', 'Emergência médi', '', '', 'Queda própria a', '', 'Agressão ', '', '', 'Desabamento ', '', '', '', 'Queda de bicicleta', '', '', '', '', 'bateu e morreu');
 
 -- --------------------------------------------------------
 
@@ -877,11 +781,7 @@ CREATE TABLE `ve_form` (
 --
 
 INSERT INTO `ve_form` (`nOcorrencia`, `id`, `opcao1`, `opcao2`, `opcao3`, `opcao4`, `opcao5`, `opcao6`, `opcao7`, `opcao8`, `opcao9`, `opcao10`) VALUES
-(15, 2, '', '', '', '', '', '', '', '', '', ''),
-(16, 3, 'Ciclista', '', '', '', '', '', 'Clínico', '', '', ''),
-(17, 4, '', '', '', '', 'Pas.Moto ', '', 'Clínico', '', 'Pass.BCO trás', ''),
-(18, 5, '', 'Condutor Moto', '', '', '', '', '', 'Trauma', '', 'Pedestre '),
-(19, 6, 'Ciclista', '', '', '', '', '', 'Clínico', '', '', '');
+(25, 1, '', '', '', '', '', 'Condutor Carro', '', '', '', '');
 
 --
 -- Índices para tabelas despejadas
@@ -1032,43 +932,43 @@ ALTER TABLE `ve_form`
 -- AUTO_INCREMENT de tabela `cadastro`
 --
 ALTER TABLE `cadastro`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 
 --
 -- AUTO_INCREMENT de tabela `paciente`
 --
 ALTER TABLE `paciente`
-  MODIFY `nOcorrencia` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=24;
+  MODIFY `nOcorrencia` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=26;
 
 --
 -- AUTO_INCREMENT de tabela `pes_form`
 --
 ALTER TABLE `pes_form`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT de tabela `ss_form`
 --
 ALTER TABLE `ss_form`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT de tabela `sv_form`
 --
 ALTER TABLE `sv_form`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT de tabela `tipo_ocorrencia`
 --
 ALTER TABLE `tipo_ocorrencia`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT de tabela `ve_form`
 --
 ALTER TABLE `ve_form`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- Restrições para tabelas despejadas
