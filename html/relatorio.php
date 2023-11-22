@@ -323,6 +323,7 @@ $resultado = $comando->execute();
 
 while( $linhas = $comando->fetch()){
 
+
     $periodo=$linhas["periodo"];
     $com_pre=$linhas["opcao1"];
     $sem_pre=$linhas["opcao2"];
@@ -369,7 +370,7 @@ while( $linhas = $comando->fetch()){
     $limpeza=$linhas["opcao10"];
     $curativos=$linhas["opcao11"];
     $compre=$linhas["opcao12"];
-    $encrava=$linhas["opcao13"];
+    $encrave=$linhas["opcao13"];
     $ocular=$linhas["opcao14"];
     $queimadura=$linhas["opcao15"];
     $simples=$linhas["opcao16"];
@@ -385,7 +386,7 @@ while( $linhas = $comando->fetch()){
     $macari=$linhas["opcao26"];
     $ponte=$linhas["opcao26"];
     $ret=$linhas["opcao28"];
-    $rcp=$linhas["opcao29"];
+    $rpc=$linhas["opcao29"];
     $rola90=$linhas["opcao30"];
     $rola180=$linhas["opcao31"];
     $toma_deci=$linhas["opcao32"];
@@ -427,10 +428,10 @@ while( $linhas = $comando->fetch()){
     $tempo=$linhas["tempo"];
     $ppro=$linhas["opcao3"];
     $nppro=$linhas["opcao4"];
-    $quaiss=$linhas["quais"];
+    $quais=$linhas["quais"];
     $tomou=$linhas["opcao5"];
     $n_tomou=$linhas["opcao6"];
-    $horaio_med=$linhas["horario"];
+    $horario_med=$linhas["horario"];
     $quais_med=$linhas["quaismed"];
     $e_alergico=$linhas["opcao7"];
     $sn_alergico=$linhas["opcao8"];
@@ -461,7 +462,7 @@ while( $linhas = $comando->fetch()){
     $n_ocorr=$linhas["n_ocorr"];
     $digita2=$linhas["opcao2"];
     $desp=$linhas["desp"];
-    $hch=$linhas["h.ch"];
+    $hch=$linhas["h_ch"];
     $km_final=$linhas["km_final"];
     $cod=$linhas["opcao3"];
     
@@ -513,36 +514,36 @@ $resultado = $comando->execute();
 while( $linhas = $comando->fetch()){
 
     $estabeliza=$linhas["opcao1"];
-    $add=$linhas["qtd"];
+    $add=$linhas["quantidade"];
     $colar=$linhas["opcao2"];
     $ene=$linhas["opcao3"];
     $pepe=$linhas["opcao4"];
     $pe=$linhas["opcao5"];
-    $add2=$linhas["qtds"];
+    $add2=$linhas["quantidade1"];
     $colar2=$linhas["opcao6"];
     $eme=$linhas["opcao7"];
     $gee=$linhas["opcao8"];
-    $add3=$linhas["quantidade"];
+    $add3=$linhas["quantidade2"];
     $ked=$linhas["opcao9"];
     $adulto=$linhas["opcao10"];
     $crianca=$linhas["opcao11"];
-    $add4=$linhas["quantidades"];
+    $add4=$linhas["quantidade3"];
     $rigida=$linhas["opcao12"];
-    $add5=$linhas["quantidadess"];
+    $add5=$linhas["quantidade4"];
     $coxins=$linhas["opcao13"];
-    $add6=$linhas["quantidadees"];
+    $add6=$linhas["quantidade5"];
     $canola=$linhas["opcao14"];
-    $add7=$linhas["quantidaades"];
+    $add7=$linhas["quantidade6"];
     $tirante=$linhas["opcao15"];
-    $add8=$linhas["quantiidades"];
+    $add8=$linhas["quantidade7"];
     $aranha=$linhas["opcao16"];
-    $add9=$linhas["quaantidades"];
+    $add9=$linhas["quantidade8"];
     $ttf=$linhas["opcao17"];
     $adulto=$linhas["opcao18"];
     $infantil=$linhas["opcao19"];
-    $add10=$linhas["	quuantidades"];
+    $add10=$linhas["quantidade9"];
     $ouou=$linhas["outros"];
-    $add11=$linhas["qquantidades"];
+    $add11=$linhas["quantidade10"];
     
     
     
@@ -809,10 +810,10 @@ while( $linhas = $comando->fetch()){
     <br>
     <P>TERMO DE RECUSA:</P>
     <br>
-    <?php echo($nome);?>
-    <?php echo($rg);?>
-    <?php echo($ass);?>
-    <?php echo($test);?>
+    NOME:<?php echo($nome);?><BR>
+    RG:<?php echo($rg);?>
+    ASSINATURA:<?php echo($ass);?><BR>
+    TESTEMUNHA:<?php echo($test);?>
 
     <P>AMNASE GESTACIONAL:</P>
     <br>
@@ -826,7 +827,7 @@ while( $linhas = $comando->fetch()){
     <br>
     Primeiro filho:  <?php echo($op);?> <?php echo($neop);?><br>
     <br>
-    Quantos: <?php echo(qtd_filhos);?><br>
+    Quantos: <?php echo($qtd_filhos);?><br>
     <br>
     Horário inicio das contrações:  <?php echo($ini_contra);?><br>
     <br>
@@ -845,7 +846,6 @@ while( $linhas = $comando->fetch()){
     Sexo do bebê: <?php echo($fe);?> <?php echo($ma);?><br>
     <br>
     Nome do bebê: <?php echo($nome_bb);?>
-    <br>
     <br>
 
     <P>PROCESSOS EFETUADOS:</P>
@@ -895,7 +895,7 @@ while( $linhas = $comando->fetch()){
     <?php echo($pre);?><?php echo($prf);?><?php echo($policia);?><?php echo($def_civil);?><?php echo($igp);?><br><br>
     <?php echo($samu);?> <?php echo($usa);?> <?php echo( $usb);?><br>
     <?php echo($cit);?>
-     <?php echo($outrosss);?>
+     <?php echo($outros);?>
    
 
 
@@ -931,26 +931,21 @@ while( $linhas = $comando->fetch()){
     
 
 
-    <P>MATERIAIS UTILIZADOS DESCARTÁVEIS:</P>
+    <P>MATERIAIS UTIL. DESCARTÁVEIS:</P>
     <br>
     <?php echo($atadurass);?>  <?php echo($oito);?> <?php echo($doze);?>  <?php echo($vinte);?> <?php echo($mais);?> <br>
     <?php echo($tp_oculos);?>  <?php echo($maiss);?><br>
     <?php echo($comum);?><br>
     <?php echo($kits);?>  <?php echo($aga);?><?php echo($pee);?><?php echo($que);?> <?php echo($maisss);?><br>
-
-    <?php echo($iminada);?>  <?php echo($maissss);?><br>
+    <?php echo($iluminada);?>  <?php echo($maissss);?><br>
     <?php echo($masca);?>  <?php echo($maisssss);?><br>
     <?php echo($paz);?>  <?php echo($maissssss);?><br>
-
     <?php echo($aspiracao);?>  <br>
-
-    
     <?php echo($soro);?>  <?php echo($maissssssss);?><br>
-    <?php echo($telaspap);?>  <?php echo($phe);?> <?php echo($ge);?> <?php echo($maisssssssss);?><br>
-    <?php echo($outros);?>  <?php echo($maissssssssss);?><br>
+    <?php echo($telaspap);?>  <?php echo($phe);?> <?php echo($ge);?> <?php echo($maissssssss);?><br>
+    <?php echo($outros);?>  <?php echo($maisssssssss);?><br>
 
-    <br>
-    <P>MATERIAIS UTILIZADOS DEIXADOS NO HOSPITAL:</P>
+    <P>MATERIAIS U.D NO HOSPITAL:</P>
     <br> 
     <?php echo($estabeliza);?>  <?php echo($add);?><br>
     <?php echo($colar);?>  <?php echo($ene);?> <?php echo($pepe);?>  <?php echo($pe);?> <?php echo($add2);?> <br>
@@ -961,8 +956,9 @@ while( $linhas = $comando->fetch()){
     <?php echo($canola);?>  <?php echo($add7);?><br>
     <?php echo($tirante);?>  <?php echo($add8);?><br>
     <?php echo($aranha);?>  <?php echo($add9);?><br>
-    <?php echo($ttf);?>  <?php echo($adulto);?> <?php echo($infaltil);?>  <?php echo($add20);?><br>
+    <?php echo($ttf);?>  <?php echo($adulto);?> <?php echo($infantil);?>  <?php echo($add10);?><br>
     <?php echo($ouou);?>  <?php echo($add11);?><br>
+    <BR>
     <P>DIVILGAR NA IMPRENSSA:</P>
     <br>
     <?php echo($quero);?>
@@ -970,17 +966,18 @@ while( $linhas = $comando->fetch()){
     <br>
     <P>DADOS FINAIS:</P>
     <br>
-    <?php echo($n_usb);?> <?php echo($digita);?><br>
-    <?php echo($n_ocor);?> <?php echo($digita2);?><br>
-    <?php echo($desp);?>
-    <?php echo($hch);?>
-    <?php echo($km_final);?>
-    <?php echo($cod);?>
+    N° USB:<?php echo($n_usb);?> <?php echo($digita);?><br>
+    N° OCORRÊNCIA:<?php echo($n_ocorr);?> <?php echo($digita2);?><br>
+    DESP:<?php echo($desp);?>
+    H.CH<?php echo($hch);?>
+    KM_FINAL:<?php echo($km_final);?>
+    COD:<?php echo($cod);?>
+    <BR>
    </div>
   <br>
   <div class="oi"></div>
   <div id="gerarRelatorioContainer">
-          <a id="gerarRelatorio" href="../html/relatorio.php">ENVIAR RELATÓRIO </a>
+          <a id="gerarRelatorio" href="animafim.html">ENVIAR RELATÓRIO </a>
          
         </div>
     <div class="menu2">
