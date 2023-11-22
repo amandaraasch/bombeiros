@@ -312,7 +312,7 @@ $resultado = $comando->execute();
 
 while( $linhas = $comando->fetch()){
 
-    $nome=$linhas["nomme"];
+    $nome=$linhas["nome"];
     $rg=$linhas["rg"];
     $ass=$linhas["ass"];
     $test=$linhas["test"];
@@ -476,31 +476,31 @@ while( $linhas = $comando->fetch()){
     $oito=$linhas["opcao2"];
     $doze=$linhas["opcao3"];
     $vinte=$linhas["opcao4"];
-    $mais=$linhas["quantidade"];
+    $mais=$linhas["quantidade1"];
     $tp_oculos=$linhas["opcao5"];
-    $maiss=$linhas["qtd"];
+    $maiss=$linhas["quantidade2"];
     $comum=$linhas["opcao6"];
     $kits=$linhas["opcao7"];
     $aga=$linhas["opcao8"];
     $pee=$linhas["opcao9"];
     $que=$linhas["opcao10"];
-    $maisss=$linhas["qtds"];
+    $maisss=$linhas["quantidade3"];
     $iluminada=$linhas["opcao11"];
-    $maissss=$linhas["quantidadees"];
+    $maissss=$linhas["quantidade4"];
     $masca=$linhas["opcao12"];
-    $maisssss=$linhas["quantidaades"];
+    $maisssss=$linhas["quantidade5"];
     $paz=$linhas["opcao13"];
-    $maissssss=$linhas["quantiidades"];
+    $maissssss=$linhas["quantidade6"];
     $aspiracao=$linhas["opcao14"];
-    $maisssssss=$linhas["quantiidade"];
+    $maisssssss=$linhas["quantidade7"];
     $soro=$linhas["opcao15"];
-    $maissssssss=$linhas["quantidaade"];
+    $maissssssss=$linhas["quantidade8"];
     $telaspap=$linhas["opcao16"];
-    $phe=$linhas["quaantidade"];
+    $phe=$linhas["quantidade9"];
     $ge=$linhas["opcao17"];
     $maisssssssss=$linhas["opcao18"];
     $outrosssss=$linhas["opcao19"];
-    $maissssssssss=$linhas["opcao20"];
+   
     
     
     

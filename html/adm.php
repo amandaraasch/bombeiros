@@ -143,7 +143,7 @@
             <div id="mensagemErro" ></div>
             
         </div>
-        <button class="entrar" type="submit">CONFIRMAR</button>
+        <button class="entrar" type="submit" onclick="return showAlerttt();">CONFIRMAR</button>
         
     </form>
         </div>
@@ -157,6 +157,10 @@
     }
     function showAlertt() {
         alert('Você irá para página de ocorrências!');
+        return true; // permite que a navegação continue após mostrar o alerta
+    }
+    function showAlerttt() {
+        alert('Usuário cadastrado!');
         return true; // permite que a navegação continue após mostrar o alerta
     }
 
