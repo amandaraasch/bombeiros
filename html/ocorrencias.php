@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/ocorrencias.css">
     <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
-   
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <link href="https://fonts.cdnfonts.com/css/effra-heavy" rel="stylesheet">
     <link rel="Website Icon" type="png"
     href="../img/noar.png">
@@ -90,7 +90,7 @@
                                 echo "<div class='informacoes2 '>  NOME: &nbsp" . $row["Nomepac"] . "</div>";
                                 echo "<div class='informacoes3 '>  DATA: &nbsp" . $row["Data"] . "</div>";
                                 echo "</div>";
-                                echo "<div class=' ' data-userid='" . $row["nOcorrencia"] . "'>Excluir</div>";
+                                echo "<button' ' data-userid='" . $row["nOcorrencia"] . "'></button>";
                                 echo "</div>";
                             }
                         } else {
@@ -194,29 +194,6 @@
         });
     }
 
-    $('.cadastros').on('click', '.excluir', function () {
-        var userId = $(this).data('userid');
-        if (confirm('Tem certeza de que deseja excluir este usuário?')) {
-            $.ajax({
-                url: 'excluir.php',
-                method: 'POST',
-                data: { id: userId },
-                success: function (data) {
-                    // Atualize a lista de usuários após a exclusão
-                    listarUsuarios($('#ordenacao').val());
-                    alert(data); // Exibe uma mensagem com o resultado da exclusão
-                }
-            });
-        }
-    });
-
-    // Quando o valor selecionado no <select> muda, chame a função de ordenação
-    $('#ordenacao').on('change', function () {
-        listarUsuarios($(this).val());
-    });
-
-    // Chame a função listarUsuarios com a ordenação padrão
-    listarUsuarios($('#ordenacao').val());
 });
 
 function redirectToProfile(element) {
