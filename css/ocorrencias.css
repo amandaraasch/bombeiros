@@ -12,6 +12,37 @@ body
    
     
 }
+
+.usuario
+{
+   
+    background-color: silver;
+    margin: 10px 5px;
+    width: 90%;
+    border-radius: 20px;
+    height: 50px;
+    margin-top:10px ;
+    margin-left: 30px;
+    justify-items: center;
+    align-items: center;
+    align-content: center;
+    flex-direction: row;
+    display: flex;
+    justify-content: space-around;
+    z-index: 1;
+
+}
+
+
+
+.informacoes
+{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
 .menu
 {
     background-color: #343186;
@@ -193,8 +224,9 @@ body
  flex-direction: column;
  display: flex;
 
- margin
+ 
 }
+
 .calendario {
     font-family: Arial, sans-serif;
     max-width: 350px;
@@ -202,7 +234,7 @@ body
   padding: 20px;
 
     margin-top: 90px;
-    box-shadow: 0 0 10px white);
+    box-shadow: 0 0 10px white;
 }
 
 .cabecalho {
@@ -307,6 +339,7 @@ body
     border-color: rgba(0, 0, 0, 0.196);
     height:250px;
     margin-left: -50px;
+    overflow-y: scroll;
     flex-direction: column;
     border-radius: 20px; 
     display: flex;
