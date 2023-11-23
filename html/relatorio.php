@@ -333,6 +333,7 @@ while( $linhas = $comando->fetch()){
     $neop=$linhas["opcao6"];
     $qtd_filhos=$linhas["qtd_filhos"];
     $ini_contra=$linhas["ini_contra"];
+    $inter_contra=$linhas["inter_contra"];
     $dura_contra=$linhas["dura_contra"];
     $com_pre=$linhas["opcao7"];
     $sem_pre=$linhas["opcao8"];
@@ -345,6 +346,7 @@ while( $linhas = $comando->fetch()){
     $fe=$linhas["opcao15"];
     $ma=$linhas["opcao16"];
     $nome_bb=$linhas["nome_bb"];
+    $nome_med=$linhas["nome_med"];
     
 }
 $comando = $pdo->prepare("SELECT * FROM proc_efe where nOcorrencia='$id'");
@@ -805,7 +807,7 @@ while( $linhas = $comando->fetch()){
     <P>TERMO DE RECUSA:</P>
     <br>
     NOME:<?php echo($nome);?><BR>
-    RG:<?php echo($rg);?>
+    RG:<?php echo($rg);?><br>
     ASSINATURA:<?php echo($ass);?><BR>
     TESTEMUNHA:<?php echo($test);?>
 

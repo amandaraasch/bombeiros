@@ -60,7 +60,7 @@ if (isset($_GET['nOcorrencia'])) {
             </div>
             <div class="doisemeio">
                 <div class="dadospessoais2"> <p>Relatório da ocorrência:</p>
-                
+                <br>
                 <?php
 
 
@@ -1001,7 +1001,10 @@ while( $linhas = $comando->fetch()){
                
                 <div class="calendario">
 
+                <div class="dadospessoais5"> <p>Ocorrências registradas:</p></div>
                 <div class="oco">
+                
+                <br>
                 <?php
             // Inclua o arquivo de conexão com o banco de dados
             include("../conecta.php");
