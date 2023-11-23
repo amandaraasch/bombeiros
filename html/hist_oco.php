@@ -4,7 +4,7 @@ session_start();
 include("../conecta.php");
 
 if (isset($_GET['nOcorrencia'])) {
-    $numOcorrencia = $_GET['nOcorrencia'];
+    $id = $_GET['nOcorrencia'];
 
 
 }
@@ -19,7 +19,7 @@ if (isset($_GET['nOcorrencia'])) {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/ocorrencias.css">
     <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
-   
+  
     <link href="https://fonts.cdnfonts.com/css/effra-heavy" rel="stylesheet">
     <link rel="Website Icon" type="png"
     href="../img/noar.png">
@@ -42,17 +42,10 @@ if (isset($_GET['nOcorrencia'])) {
                 <div class="logo">
                     <img src="../img/logo_grande.png" width="250px">
                 </div>
-                <div class="dadospessoais"> <p>Enviado por:</p></div>
+                <div class="dadospessoais"> <p>Página de histórico</p></div>
                 <div class="dados">
                 
-                  <p> <b> Nome bombeiro:</b> 
-                    <br>
-                    <br>
-                    <b>Localidade bombeiro:</b>
-                    <br>
-                    <br>
-                    <b>Descrição bombeiro:</b>
-                    <br>
+                  <P><B>Selecione a Ocorrência desejada e acompanhe o relatório</B></p>
                   
                 </p>
 
@@ -64,11 +57,12 @@ if (isset($_GET['nOcorrencia'])) {
                 <?php
 
 
-$id=$_SESSION["id"];
 
-include('../conecta.php');
+
+
 
 $comando = $pdo->prepare("SELECT * FROM paciente where nOcorrencia='$id'");
+
 $resultado = $comando->execute();
 
 while( $linhas = $comando->fetch()){
@@ -375,7 +369,7 @@ $resultado = $comando->execute();
 
 while( $linhas = $comando->fetch()){
 
-    $nome=$linhas["nome"];
+    $nomes=$linhas["nome"];
     $rg=$linhas["rg"];
     $ass=$linhas["ass"];
     $test=$linhas["test"];
@@ -389,13 +383,14 @@ while( $linhas = $comando->fetch()){
 
     $periodo=$linhas["periodo"];
     $com_pre=$linhas["opcao1"];
-    $sem_pre=$linhas["opcao2"];
+    $sem_pree=$linhas["opcao2"];
     $com_comp=$linhas["opcao3"];
     $sem_compli=$linhas["opcao4"];
     $op=$linhas["opcao5"];
     $neop=$linhas["opcao6"];
     $qtd_filhos=$linhas["qtd_filhos"];
     $ini_contra=$linhas["ini_contra"];
+    $inter_contra=$linhas["inter_contra"];
     $dura_contra=$linhas["dura_contra"];
     $com_pre=$linhas["opcao7"];
     $sem_pre=$linhas["opcao8"];
@@ -408,6 +403,7 @@ while( $linhas = $comando->fetch()){
     $fe=$linhas["opcao15"];
     $ma=$linhas["opcao16"];
     $nome_bb=$linhas["nome_bb"];
+    $nome_med=$linhas["nome_med"];
 
 
 
@@ -614,20 +610,25 @@ while( $linhas = $comando->fetch()){
 <div class="rela">
     <br>
     <P>DADOS PACIENTE:</P>
+    <br> 
+    Nome:<input class="quadradinho" type="text" name="Nomepac" value="<?php if ($nome==""){}else echo $nome ?>" id="Nomepac"readonly >
+    <button class="alterar" onclick="alterarInformacao('Nomepac')">Alterar</button><br>
     <br>
-    Nome: <?php echo( "$nome");?> <br>
-    <br>
-    Data:<?php echo("$data");?><br>
+    Data:<input class="quadradinho" type="text" name="Data" value="<?php if ($data==""){}else echo $data ?>" id="Data"readonly>
+    <button class="alterar" onclick="alterarInformacao('Data')">Alterar</button><br>
     <br>
     Sexo:<?php echo("$sexo");?><br>
     <br>
-    RG/CPF:<?php echo("$cpf");?><br>
+    RG/CPF:<input class="quadradinho" type="text" name="CPFpac" value="<?php if ($cpf==""){}else echo $cpf ?>" id="CPFpac" readonly>
+    <button class="alterar"onclick="alterarInformacao('CPFpac')">Alterar</button><br>
     <br>
-    Idade:<?php echo("$idade");?><br>
+    Idade:<input class="quadradinho" type="text" name="Idadepac" value="<?php if ($idade==""){}else echo $idade ?>" id="Idadepac" readonly>
+    <button class="alterar"onclick="alterarInformacao('Idadepac')">Alterar</button><br>
     <br>
     Nome hospital:<?php echo("$nome_hosp");?><br>
     <br>
-    Fone:<?php echo("$fone");?><br>
+    Fone:<input class="quadradinho" type="text" name="Telefone" value="<?php if ($fone==""){}else echo $fone ?>" id="Telefone" readonly>
+    <button class="alterar"onclick="alterarInformacao('Telefone')">Alterar </button><br>
     <br>
     Local ocorrência:<?php echo($localidade);?><br>
     <br>
@@ -830,7 +831,7 @@ while( $linhas = $comando->fetch()){
     <br>
     <P>TERMO DE RECUSA:</P>
     <br>
-    NOME:<?php echo($nome);?><BR>
+    NOME:<?php echo($nomes);?><BR>
     RG:<?php echo($rg);?>
     ASSINATURA:<?php echo($ass);?><BR>
     TESTEMUNHA:<?php echo($test);?>
@@ -839,7 +840,7 @@ while( $linhas = $comando->fetch()){
     <br>
     Período gestacional: <?php echo($periodo);?><br>
     <br>
-    Fez pré natal: <?php echo($com_pre);?> <?php echo($sem_pre);?><br>
+    Fez pré natal: <?php echo($com_pre);?> <?php echo($sem_pree);?><br>
     <br>
     Nome médico: <?php echo($nome_med);?><br>
     <br>
@@ -1006,62 +1007,69 @@ while( $linhas = $comando->fetch()){
                 
                 <br>
                 <?php
-            // Inclua o arquivo de conexão com o banco de dados
-            include("../conecta.php");
+                        // Inclua o arquivo de conexão com o banco de dados
+                        include("../conecta.php");
 
-            // Função para recuperar 3 dados da tabela exemplo
+                        // Função para recuperar 3 dados da tabela exemplo
+                        function obterTresDados($pdo) {
+                            $sql = "SELECT nOcorrencia, Nomepac, `Data` FROM paciente ";
+                            $stmt = $pdo->query($sql);
 
-            
-            function obterTresDados($pdo) {
-
-            
-            $sql = "SELECT nOcorrencia, Nomepac, `Data` FROM paciente "; 
-            
-
-            
-            
-            $stmt = $pdo->query($sql);
-            
-
-            
-            
-            if ($stmt !== false) {
-                    if ($stmt->rowCount() > 0) {
-                        if ($stmt->rowCount() > 0) {
-                            while ($row = $stmt->fetch()) {
-                                echo "<div class='usuario' >";
-                                echo "<div class='informacoes'"  . $row["nOcorrencia"] . "' onclick='redirecionarParaHistOco()'>";
-                                echo "<div class='informacoes1 '>  ID:  &nbsp " . $row["nOcorrencia"] . "</div>";
-                                echo "<div class='informacoes1 '>  NOME: &nbsp" . $row["Nomepac"] . "</div>";
-                                echo "<div class='informacoes1 '>  DATA: &nbsp" . $row["Data"] . "</div>";
-                                echo "</div>";
-                                echo "</div>";
+                            if ($stmt !== false) {
+                                if ($stmt->rowCount() > 0) {
+                                    while ($row = $stmt->fetch()) {
+                                        echo "<div class='usuario' >";
+                                        echo "<a href='hist_oco.php?nOcorrencia=" . $row["nOcorrencia"] . "' class='informacoes'>";
+                                        echo "<div class='informacoes1 '>  ID:  &nbsp " . $row["nOcorrencia"] . "</div>";
+                                        echo "<div class='informacoes1 '>  NOME: &nbsp" . $row["Nomepac"] . "</div>";
+                                        echo "<div class='informacoes1 '>  DATA: &nbsp" . $row["Data"] . "</div>";
+                                        echo "</a>";
+                                        echo "</div>";
+                                    }
+                                }
                             }
-                        
                         }
 
-                    }
-                }
-            }
-
-           
-
-            
-            obterTresDados($pdo);
-            ?>
+                        obterTresDados($pdo);
+                        ?>
+                    </div>
                 </div>
             </div>
         </div>
-                
-               
-    <script>
-        
-        function redirecionarParaHistOco(nOcorrencia) {
-        window.location.href = 'hist_oco.php'
-        window.loc
-'hist_oco.php?nOcorrencia=' + nOcorrencia;
-    }
-      
-       </script>
+    </div>
+    
 </body>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+                function showAlertt() {
+                    alert('Você irá para tela inicial!');
+                    return true; // permite que a navegação continue após mostrar o alerta
+                }
+
+             
+        function alterarInformacao(campo) {
+            var novoValor = prompt("Informe o novo valor para " + campo + ":");
+            if (novoValor !== null) {
+                // Requisição AJAX usando jQuery
+                $.ajax({
+                    type: 'POST',
+                    url: 'atualizar_valor.php',
+                    data: {
+                        campo: campo,
+                        novoValor: novoValor,
+                        nOcorrencia: '<?php echo $id; ?>'
+                    },
+                    success: function (response) {
+                        console.log(response);
+                        // Atualize o valor no campo, se necessário
+                        $('#' + campo).val(novoValor);
+                    },
+                    error: function (error) {
+                        console.error(error);
+                    }
+                });
+            }
+        }
+    </script>
+         
 </html>

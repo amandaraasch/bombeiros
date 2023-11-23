@@ -326,7 +326,7 @@ while( $linhas = $comando->fetch()){
 
     $periodo=$linhas["periodo"];
     $com_pre=$linhas["opcao1"];
-    $sem_pre=$linhas["opcao2"];
+    $sem_pree=$linhas["opcao2"];
     $com_comp=$linhas["opcao3"];
     $sem_compli=$linhas["opcao4"];
     $op=$linhas["opcao5"];
@@ -815,7 +815,7 @@ while( $linhas = $comando->fetch()){
     <br>
     Período gestacional: <?php echo($periodo);?><br>
     <br>
-    Fez pré natal: <?php echo($com_pre);?> <?php echo($sem_pre);?><br>
+    Fez pré natal: <?php echo($com_pre);?> <?php echo($sem_pree);?><br>
     <br>
     Nome médico: <?php echo($nome_med);?><br>
     <br>

@@ -13,6 +13,33 @@ body
     
 }
 
+
+
+.quadradinho
+{
+background-color: rgba(255, 255, 255, 0.542);
+border-radius: 5px;
+width: 180px;
+border-color: transparent;
+
+}
+.alterar
+{
+width: 50px;
+height: 50px;
+border-radius: 20px;
+background-color: #e2353b;
+border-color: transparent;
+color: white;
+justify-content: center;
+justify-items: center;
+align-items: center;
+align-content: center;
+margin-top: -20px;
+margin-left: 200px;
+
+}
+
 .rela
 {
     width: 120%;
@@ -47,19 +74,22 @@ body
 
 }
 
-.informacoes1
+.informacoes
 {
     width: 100%;
     height: 100%;
     display: flex;
     flex-direction: row;
-   
-}.informacoes2
+   cursor: pointer;
+
+}.informacoes1
 {
     width: 100%;
     height: 100%;
     display: flex;
     flex-direction: row;
+    color: black;
+    margin-top: 20px;
     
 }
 
